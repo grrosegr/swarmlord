@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Swarm_member_controller : MonoBehaviour {
+public class SwarmMemberController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
