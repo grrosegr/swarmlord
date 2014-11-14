@@ -15,7 +15,7 @@ public class BlendedSteering : MonoBehaviour {
 		public float weight;
 	};
 
-	private List<BehaviorAndWeight> behaviors;
+	private List<BehaviorWeight> behaviors;
 
 	//Constructor
 	public BlendedSteering(SwarmerController character) {
