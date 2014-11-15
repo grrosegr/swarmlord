@@ -10,7 +10,7 @@ public class Separate {
 	public float maxAcceleration;
 	
 	public Separate (SwarmerController newCharacter) {
-		targets = GameObject.FindGameObjectsWithTag ("Swarmer");
+		targets = GameObject.FindGameObjectsWithTag ("swarmer");
 		character = newCharacter;
 		threshold = 8.0f;
 		decayCoefficient = 14.0f;

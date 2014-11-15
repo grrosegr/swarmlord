@@ -10,6 +10,7 @@ public class SwarmerController : MonoBehaviour {
 	public Steering test;
 	public Arrive arriveContributer;
 	public Align alignContributer;
+	public Separate sepContributer;
 
 	public Vector3 velocity;
 	public float rotationVelo;
@@ -20,6 +21,8 @@ public class SwarmerController : MonoBehaviour {
 		velocity = new Vector3 (0, 0, 0);
 		arriveContributer = new Arrive (myTarget, this);
 		alignContributer = new Align (myTarget, this);
+		sepContributer = new Separate (this);
+
 	}
 	
 	// Update is called once per frame
@@ -31,11 +34,12 @@ public class SwarmerController : MonoBehaviour {
 	void SteerUpdate () {
 		Steering nextArrive = arriveContributer.GetSteering ();
 		Steering nextAlign = alignContributer.GetSteering ();
+		Steering nextSep = sepContributer.GetSteering ();
 
 		transform.position = transform.position + (velocity * Time.deltaTime);
 		transform.Rotate (0, 0, rotationVelo * Time.deltaTime);
 
-		velocity = velocity + (nextArrive.linear * Time.deltaTime);
+		velocity = velocity + (nextArrive.linear * Time.deltaTime) + 2 * (nextSep.linear * Time.deltaTime);
 		if (nextAlign.stop)
 			rotationVelo = 0;
 		else
