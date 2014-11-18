@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Separate {
+public class Separate : Behavior {
 	GameObject[] targets;
 	SwarmerController character;
 	
@@ -17,7 +17,7 @@ public class Separate {
 		maxAcceleration = 20.0f;
 	}
 
-	public Steering GetSteering () {
+	public override Steering GetSteering () {
 		//Debug.Log ("Steer!");
 		Steering returnSteering = new Steering ();
 

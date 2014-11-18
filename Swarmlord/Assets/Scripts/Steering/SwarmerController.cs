@@ -40,7 +40,7 @@ public class SwarmerController : MonoBehaviour {
 		//Blend the steerings
 		bsTest.AddBehavior (arriveContributer, 0.5f);
 		bsTest.AddBehavior (alignContributer, 0.5f);
-		//bsTest.AddBehavior (sepContributer, 0.5f);
+		bsTest.AddBehavior (sepContributer, 2.0f);
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
@@ -52,8 +52,6 @@ public class SwarmerController : MonoBehaviour {
 		transform.position = transform.position + (velocity * Time.deltaTime);
 		transform.Rotate (0, 0, rotationVelo * Time.deltaTime);
 
-
-		//velocity = velocity + (nextArrive.linear * Time.deltaTime);
 		velocity = velocity + (blendedBehavior.linear * Time.deltaTime);
 		if (blendedBehavior.stop)
 			rotationVelo = 0;

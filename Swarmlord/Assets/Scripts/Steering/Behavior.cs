@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Behavior : MonoBehaviour {
+public abstract class Behavior {
 
 	public abstract Steering GetSteering();
 	/*

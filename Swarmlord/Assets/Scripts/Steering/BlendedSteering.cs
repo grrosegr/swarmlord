@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BlendedSteering : MonoBehaviour {
+public class BlendedSteering {
 	
 	public float maxAccel; //Maximum acceleration
 	public float maxRot; //Maximum rotation
