@@ -24,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.303297, y: -7.31317329, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.36551571, y: .752072513, z: 10}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,9 +44,12 @@ MonoBehaviour:
   maxRotation: 15
   maxSpeed: 20
   maxRotationSpeed: 20
+  arriveContributer: {fileID: 0}
+  alignContributer: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   rotationVelo: 0
-  myTarget: {fileID: 0}
+  myTarget: {fileID: 100000}
+  bsTest: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
