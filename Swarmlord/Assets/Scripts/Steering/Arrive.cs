@@ -45,7 +45,7 @@ public class Arrive : Behavior {
 		Vector3 targetVelocity = direction;
 		targetVelocity = targetVelocity.normalized * targetSpeed;
 
-		returnSteering.linear = targetVelocity - character.velocity;
+		returnSteering.linear = targetVelocity - character.GetVelo();
 		returnSteering.linear = returnSteering.linear / timeToTarget;
 
 		if (returnSteering.linear.magnitude > maxAccel) {

@@ -7,14 +7,18 @@ public class SwarmerController : MonoBehaviour {
 	public float maxSpeed;
 	public float maxRotationSpeed;
 
+	public float weight_Arrive;
+	public float weight_Align;
+	public float weight_Sep;
+
 	public Steering test;
 	public Arrive arriveContributer;
 	public Align alignContributer;
 	public Separate sepContributer;
-
-	public Vector3 velocity;
-	public float rotationVelo;
 	public GameObject myTarget;
+
+	Vector3 velocity;
+	float rotationVelo;
 
 	public BlendedSteering bsTest;
 
@@ -32,15 +36,19 @@ public class SwarmerController : MonoBehaviour {
 		SteerUpdate ();
 	}
 
+	public Vector3 GetVelo () {
+		return velocity;
+	}
+
 	//Page 60
 	void SteerUpdate () {
 		//Steering nextArrive = arriveContributer.GetSteering ();
 		//Steering nextAlign = alignContributer.GetSteering ();
 
 		//Blend the steerings
-		bsTest.AddBehavior (arriveContributer, 0.5f);
-		bsTest.AddBehavior (alignContributer, 0.5f);
-		bsTest.AddBehavior (sepContributer, 2.0f);
+		bsTest.AddBehavior (arriveContributer, weight_Arrive);
+		bsTest.AddBehavior (alignContributer, weight_Align);
+		bsTest.AddBehavior (sepContributer, weight_Sep);
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
