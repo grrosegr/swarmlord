@@ -9,12 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 60: {fileID: 6000000}
   - 114: {fileID: 11400000}
-  - 50: {fileID: 5000000}
-  m_Layer: 8
-  m_Name: Player
-  m_TagString: Player
+  m_Layer: 0
+  m_Name: Swarmer
+  m_TagString: swarmer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,48 +24,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.37813401, y: -2.24841762, z: 0}
+  m_LocalPosition: {x: -13.303297, y: -7.31317329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5000000
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!60 &6000000
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: .25999999, y: .400000006}
-      - {x: -.209999993, y: .400000006}
-      - {x: -.330000013, y: .289999992}
-      - {x: -.400000006, y: .159999996}
-      - {x: -.400000006, y: -.180000007}
-      - {x: -.310000002, y: -.379999995}
-      - {x: -.209999993, y: -.400000006}
-      - {x: .230000004, y: -.400000006}
-      - {x: .289999992, y: -.360000014}
-      - {x: .400000006, y: -.180000007}
-      - {x: .400000006, y: .189999998}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,10 +37,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
+  m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 12
+  maxAcceleration: 15
+  maxRotation: 15
+  maxSpeed: 20
+  maxRotationSpeed: 20
+  velocity: {x: 0, y: 0, z: 0}
+  rotationVelo: 0
+  myTarget: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -100,7 +67,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1fa17cc5000924fd1ba675ba66e37460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
