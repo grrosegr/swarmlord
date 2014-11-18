@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Arrive {
+public class Arrive : Behavior {
 	GameObject target;
 	SwarmerController character;
 
@@ -22,7 +22,7 @@ public class Arrive {
 	}
 
 	//Page 65
-	public Steering GetSteering() {
+	public override Steering GetSteering() {
 		Steering returnSteering = new Steering ();
 
 		Vector3 direction = target.transform.position - character.transform.position;

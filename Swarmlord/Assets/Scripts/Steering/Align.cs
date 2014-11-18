@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Align {
+public class Align : Behavior {
 	GameObject target;
 	SwarmerController character;
 	
@@ -27,7 +27,7 @@ public class Align {
 		return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 	}
 	//Page 67
-	public Steering GetSteering () {
+	public override Steering GetSteering () {
 		Steering returnSteering = new Steering ();
 
 		float targetRot = target.transform.rotation.eulerAngles.z;
