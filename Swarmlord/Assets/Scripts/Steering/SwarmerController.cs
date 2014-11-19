@@ -10,14 +10,17 @@ public class SwarmerController : MonoBehaviour {
 	public float weight_Arrive;
 	public float weight_Align;
 	public float weight_Sep;
+	public float weight_Avoid;
 
 	public Steering test;
 	public Arrive arriveContributer;
 	public Align alignContributer;
 	public Separate sepContributer;
+	public AvoidObstacle avoidContributer;
+
 	public GameObject myTarget;
 
-	Vector3 velocity;
+	public Vector3 velocity;
 	float rotationVelo;
 
 	public BlendedSteering bsTest;
@@ -29,6 +32,7 @@ public class SwarmerController : MonoBehaviour {
 		alignContributer = new Align (myTarget, this);
 		bsTest = new BlendedSteering (this);
 		sepContributer = new Separate (this);
+		avoidContributer = new AvoidObstacle (this);
 	}
 	
 	// Update is called once per frame
@@ -49,6 +53,7 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (arriveContributer, weight_Arrive);
 		bsTest.AddBehavior (alignContributer, weight_Align);
 		bsTest.AddBehavior (sepContributer, weight_Sep);
+		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
