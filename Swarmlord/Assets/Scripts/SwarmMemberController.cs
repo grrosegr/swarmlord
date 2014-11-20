@@ -41,6 +41,7 @@ public class SwarmMemberController : MonoBehaviour {
 			return;
 			
 		audio.clip = ScreamSound;
+		audio.Stop();
 		audio.Play ();
 		screamed = true;
 		SpriteRenderer r = (SpriteRenderer)renderer;
@@ -67,8 +68,6 @@ public class SwarmMemberController : MonoBehaviour {
 	}
 	
 	void OnScream(Vector3 pos) {
-		SpriteRenderer r = (SpriteRenderer)renderer;
-		r.color = Color.red;
 		Scream();
 	}
 }

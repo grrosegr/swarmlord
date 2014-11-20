@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &113418986
 Rigidbody2D:
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!82 &128998450
 AudioSource:
@@ -824,6 +824,10 @@ Prefab:
       propertyPath: myTarget
       value: 
       objectReference: {fileID: 1978235697}
+    - target: {fileID: 8200000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 2120082680}
@@ -989,7 +993,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 388304697}
@@ -1011,7 +1015,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1034,7 +1038,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21200000, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Enabled: 1
   m_CastShadows: 0
@@ -1056,7 +1060,7 @@ SpriteRenderer:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.958897591, y: 1.27852559, z: 10}
@@ -1069,7 +1073,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1078,14 +1082,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &388304699
 Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000000, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Mass: 1
   m_LinearDrag: 0
@@ -1101,7 +1105,7 @@ CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5800000, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Enabled: 1
   m_Material: {fileID: 0}
@@ -1113,7 +1117,7 @@ AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8200000, guid: 309dadef23fe4473faa0c947efff47e6,
     type: 2}
-  m_PrefabInternal: {fileID: 1288541662}
+  m_PrefabInternal: {fileID: 820347448}
   m_GameObject: {fileID: 388304694}
   m_Enabled: 1
   serializedVersion: 3
@@ -1312,7 +1316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &440310227
 Rigidbody2D:
@@ -1770,7 +1774,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 698358270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.7408409, y: 21.7693367, z: 0}
+  m_LocalPosition: {x: -24.7512989, y: 19.4771042, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1974,6 +1978,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 440310222}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &820347448
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1382748272}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.958897591
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.27852559
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: myTarget
+      value: 
+      objectReference: {fileID: 1978235697}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+  m_RootGameObject: {fileID: 388304694}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1001 &827846514
@@ -2325,7 +2377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &958484921
 Rigidbody2D:
@@ -2739,7 +2791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &1093490002
 Rigidbody2D:
@@ -3605,54 +3657,6 @@ Prefab:
   m_RootGameObject: {fileID: 504221228}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &1288541662
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1382748272}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -.958897591
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.27852559
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: myTarget
-      value: 
-      objectReference: {fileID: 1978235697}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-  m_RootGameObject: {fileID: 388304694}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1312976374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4105,7 +4109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &1472155580
 Rigidbody2D:
@@ -5784,7 +5788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxAngleVisible: 45
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
-  ScreamSound: {fileID: 0}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
 --- !u!50 &2120082685
 Rigidbody2D:
@@ -5824,7 +5828,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
