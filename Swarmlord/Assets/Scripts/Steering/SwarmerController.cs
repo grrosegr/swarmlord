@@ -7,6 +7,8 @@ public class SwarmerController : MonoBehaviour {
 	public float maxSpeed;
 	public float maxRotationSpeed;
 
+	public float attackBeatlesWeight;
+
 	public float weight_Arrive;
 	public float weight_Align;
 	public float weight_Sep;
@@ -33,6 +35,12 @@ public class SwarmerController : MonoBehaviour {
 		bsTest = new BlendedSteering (this);
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
+
+		//Blend the steerings
+		bsTest.AddBehavior (arriveContributer, weight_Arrive);
+		bsTest.AddBehavior (alignContributer, weight_Align);
+		bsTest.AddBehavior (sepContributer, weight_Sep);
+		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 	}
 	
 	// Update is called once per frame
@@ -44,26 +52,24 @@ public class SwarmerController : MonoBehaviour {
 		return velocity;
 	}
 
+	public void AddNewArriveLocation (GameObject loc) {
+		Arrive nextTarget = new Arrive (loc, this);
+		bsTest.AddBehavior (nextTarget, attackBeatlesWeight);
+	}
+
 	//Page 60
 	void SteerUpdate () {
 		//Steering nextArrive = arriveContributer.GetSteering ();
 		//Steering nextAlign = alignContributer.GetSteering ();
-
-		//Blend the steerings
-		bsTest.AddBehavior (arriveContributer, weight_Arrive);
-		bsTest.AddBehavior (alignContributer, weight_Align);
-		bsTest.AddBehavior (sepContributer, weight_Sep);
-		bsTest.AddBehavior (avoidContributer, weight_Avoid);
-
-		Steering blendedBehavior = bsTest.GetSteering ();
-
 		//Steering nextArrive = arriveContributer.GetSteering ();
 		//Steering nextAlign = alignContributer.GetSteering ();
 		//Steering nextSep = sepContributer.GetSteering ();
 
+		Steering blendedBehavior = bsTest.GetSteering ();
 
-		transform.position = transform.position + (velocity * Time.deltaTime);
-		transform.Rotate (0, 0, rotationVelo * Time.deltaTime);
+		//transform.position = transform.position + (velocity * Time.deltaTime);
+		rigidbody2D.MovePosition(transform.position + (velocity * Time.deltaTime));
+		//transform.Rotate (0, 0, rotationVelo * Time.deltaTime);
 
 		velocity = velocity + (blendedBehavior.linear * Time.deltaTime);
 		if (blendedBehavior.stop)
