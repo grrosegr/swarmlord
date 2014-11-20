@@ -19,8 +19,9 @@ public class Scream : MonoBehaviour {
 		scale += ScaleSpeed;
 		transform.localScale = new Vector3(scale,scale,scale);
 		
-		if (scale > MaxScale)
-			Destroy(this);
+		if (scale > MaxScale) {
+			Destroy(gameObject);
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
