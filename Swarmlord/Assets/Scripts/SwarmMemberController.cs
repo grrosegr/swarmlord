@@ -19,7 +19,7 @@ public class SwarmMemberController : MonoBehaviour {
 	bool CanSee(GameObject other) {
 		Vector2 t_pos = other.transform.position;
 		Vector2 m_pos = transform.position;
-		Vector2 m_fwd = -transform.up;
+		Vector2 m_fwd = transform.up;
 		Vector2 to_target = t_pos - m_pos;
 		float angle = Vector2.Angle(to_target, m_fwd);
 		
