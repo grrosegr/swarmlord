@@ -27,6 +27,10 @@ public class BlendedSteering {
 		behaviors = new List<BehaviorWeight> ();
 	}
 
+	public void ResetList () {
+		behaviors = new List<BehaviorWeight> ();
+	}
+
 	//Adds a new behavior with a corresponding weight to the 
 	//list of behaviors.
 	public void AddBehavior(Behavior behavior, float weight) {

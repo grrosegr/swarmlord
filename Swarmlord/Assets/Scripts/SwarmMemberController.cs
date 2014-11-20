@@ -39,7 +39,9 @@ public class SwarmMemberController : MonoBehaviour {
 	void Scream() {
 		if (screamed)
 			return;
-			
+
+		//new seek source here
+
 		audio.clip = ScreamSound;
 		audio.Play ();
 		screamed = true;
@@ -61,6 +63,7 @@ public class SwarmMemberController : MonoBehaviour {
 		foreach (GameObject go in players) {
 			if (CanSee(go)) {
 				Scream();
+				GetComponent<SwarmerController> ().AddNewArriveLocation (go.transform.position);
 				return;
 			}
 		}
