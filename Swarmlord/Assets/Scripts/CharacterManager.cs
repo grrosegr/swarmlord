@@ -5,26 +5,47 @@ using System.Collections.Generic;
 public class CharacterManager : MonoBehaviour {
 
 	GameObject[] players;
-	GameObject currentPlayer;
-
-	// Use this for initialization
-	void Start () {
-		players = GameObject.FindGameObjectsWithTag("Player");
+	
+	private GameObject _currentPlayer;
+	private GameObject CurrentPlayer {
+		set {
+			if (_currentPlayer != value) {
+				if (_currentPlayer)
+					_currentPlayer.SendMessage("SetIsControlled", false);
+				if (value)
+					value.SendMessage("SetIsControlled", true);
+			}
+			_currentPlayer = value;
+		}
 		
-		currentPlayer = players[0];
-		currentPlayer.SendMessage("SetIsControlled", true);
+		get {
+			return _currentPlayer;
+		}
 	}
 	
-	// Update is called once per frame
+	public static CharacterManager Instance;
+
+	void Start () {
+		Instance = this;
+		players = GameObject.FindGameObjectsWithTag("Player");
+		
+		CurrentPlayer = players[0];
+	}
+	
+	public void SwitchToAlivePlayer() {
+		foreach (GameObject player in players) {
+			CharacterController2D controller = player.GetComponent<CharacterController2D>();
+			if (controller.Alive) {
+				CurrentPlayer = player;
+				break;
+			}
+		}
+	}
+	
 	void Update () {
 		for (int i = 1; i <= players.Length; i++) {
 			if (Input.GetKeyDown(i.ToString())) {
-				GameObject oldPlayer = currentPlayer;
-				currentPlayer = players[i - 1];
-				if (oldPlayer != currentPlayer) {
-					oldPlayer.SendMessage("SetIsControlled", false);
-					currentPlayer.SendMessage("SetIsControlled", true);
-				}
+				CurrentPlayer = players[i - 1];
 				break;
 			}
 		}
