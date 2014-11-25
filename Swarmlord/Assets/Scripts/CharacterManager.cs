@@ -37,9 +37,12 @@ public class CharacterManager : MonoBehaviour {
 			CharacterController2D controller = player.GetComponent<CharacterController2D>();
 			if (controller.Alive) {
 				CurrentPlayer = player;
-				break;
+				return;
 			}
 		}
+		
+		// TODO: all characters dead, reset level, show game over screen
+		Application.LoadLevel(Application.loadedLevel);
 	}
 	
 	void Update () {

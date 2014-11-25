@@ -8,7 +8,7 @@ public class CharacterController2D : MonoBehaviour {
 	private bool IsControlled;
 	
 	public float MaxHealth = 100f;
-	public float SwarmDamagePerSecond = 20f;
+	public float SwarmDamagePerSecond = 100f;
 	
 	private bool _alive;
 	public bool Alive {
