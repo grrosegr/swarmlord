@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class SwarmerController : MonoBehaviour {
@@ -23,6 +24,7 @@ public class SwarmerController : MonoBehaviour {
 	public Arrive nextBeatlesTarget;
 
 	public GameObject myTarget;
+	public List<Vector3> targetLocs;
 
 	public Vector3 velocity;
 	float rotationVelo;
