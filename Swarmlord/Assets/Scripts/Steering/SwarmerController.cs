@@ -22,11 +22,12 @@ public class SwarmerController : MonoBehaviour {
 	public Separate sepContributer;
 	public AvoidObstacle avoidContributer;
 	public Arrive nextBeatlesTarget;
+	public Arrive lastKnownContributer;
 
 	public GameObject myTarget;
-	//public List<Vector3> targetLocs;
-	public Vector3 lastKnownLocation;
 
+	public Vector3 lastKnownLocation;
+	
 	public Vector3 velocity;
 	float rotationVelo;
 
@@ -97,7 +98,18 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (alignContributer, weight_Align);
 		bsTest.AddBehavior (sepContributer, weight_Sep);
 		bsTest.AddBehavior (avoidContributer, weight_Avoid);
-		bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
+		//bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
+
+		//If no Beatle has been seen, go to the lastKnownLocation
+		if (nextBeatlesTarget.target == Vector3.zero) {
+			//print (lastKnownLocation);
+			lastKnownContributer = new Arrive(lastKnownLocation, this);
+			bsTest.AddBehavior (lastKnownContributer, attackBeatlesWeight);
+		} else {
+			//A Beatle has been seen. Go to Beatle location.
+			//print ("meep");
+			bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
+		}
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
@@ -166,6 +178,7 @@ public class SwarmerController : MonoBehaviour {
 	
 	void OnScream(Vector3 pos) {
 		Scream();
+		lastKnownLocation = pos;
 	}
 
 }

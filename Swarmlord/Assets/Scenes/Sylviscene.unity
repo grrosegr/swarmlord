@@ -84,6 +84,7 @@ GameObject:
   - 4: {fileID: 22132384}
   - 212: {fileID: 22132383}
   - 114: {fileID: 22132382}
+  - 50: {fileID: 22132385}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -106,12 +107,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 15
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &22132383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,11 +148,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22132381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.3870621, y: -31.1769257, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -12.3977165, y: -5.28996277, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!50 &22132385
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22132381}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &68614265
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,11 +214,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 68614265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.65058517, y: 10.5157681, z: 0}
-  m_LocalScale: {x: 22.2887802, y: 22.2887802, z: 1}
+  m_LocalPosition: {x: -5.74065399, y: -6.14856529, z: 0}
+  m_LocalScale: {x: 4.17141151, y: 4.17141008, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!61 &68614268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,6 +240,7 @@ GameObject:
   - 4: {fileID: 160344918}
   - 212: {fileID: 160344917}
   - 114: {fileID: 160344916}
+  - 50: {fileID: 160344919}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -240,12 +263,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 10
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &160344917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -275,11 +304,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 160344915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.5677872, y: -30.738205, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -11.7115688, y: -5.19532394, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!50 &160344919
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160344915}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &264904318
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +334,7 @@ GameObject:
   - 4: {fileID: 264904321}
   - 212: {fileID: 264904320}
   - 114: {fileID: 264904319}
+  - 50: {fileID: 264904322}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -312,12 +357,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 10
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &264904320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,33 +398,158 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264904318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.4581146, y: -24.815464, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -11.7352276, y: -3.91771626, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
---- !u!1 &1262461418
-GameObject:
+  m_RootOrder: 9
+--- !u!50 &264904322
+Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 264904318}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!1001 &636840077
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.4762535
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -10.2512093
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+  m_RootGameObject: {fileID: 1343362379}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &1343362379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+  m_PrefabInternal: {fileID: 636840077}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1262461420}
-  - 212: {fileID: 1262461419}
-  m_Layer: 0
-  m_Name: targetTest
-  m_TagString: Untagged
+  - 4: {fileID: 1343362384}
+  - 212: {fileID: 1343362383}
+  - 60: {fileID: 1343362382}
+  - 114: {fileID: 1343362381}
+  - 50: {fileID: 1343362380}
+  m_Layer: 8
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1262461419
+--- !u!50 &1343362380
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: c6bbd6b955f7f48c78f2730e70c73466,
+    type: 2}
+  m_PrefabInternal: {fileID: 636840077}
+  m_GameObject: {fileID: 1343362379}
+  m_Mass: 1
+  m_LinearDrag: 2
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1343362381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: c6bbd6b955f7f48c78f2730e70c73466,
+    type: 2}
+  m_PrefabInternal: {fileID: 636840077}
+  m_GameObject: {fileID: 1343362379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 20
+  MaxHealth: 100
+  SwarmDamagePerSecond: 100
+--- !u!60 &1343362382
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6000000, guid: c6bbd6b955f7f48c78f2730e70c73466,
+    type: 2}
+  m_PrefabInternal: {fileID: 636840077}
+  m_GameObject: {fileID: 1343362379}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: .25999999, y: .400000006}
+      - {x: -.209999993, y: .400000006}
+      - {x: -.330000013, y: .289999992}
+      - {x: -.400000006, y: .159999996}
+      - {x: -.400000006, y: -.180000007}
+      - {x: -.310000002, y: -.379999995}
+      - {x: -.209999993, y: -.400000006}
+      - {x: .230000004, y: -.400000006}
+      - {x: .289999992, y: -.360000014}
+      - {x: .400000006, y: -.180000007}
+      - {x: .400000006, y: .189999998}
+--- !u!212 &1343362383
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1262461418}
+  m_PrefabParentObject: {fileID: 21200000, guid: c6bbd6b955f7f48c78f2730e70c73466,
+    type: 2}
+  m_PrefabInternal: {fileID: 636840077}
+  m_GameObject: {fileID: 1343362379}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -388,20 +564,64 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fa17cc5000924fd1ba675ba66e37460, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1262461420
+--- !u!4 &1343362384
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1262461418}
-  m_LocalRotation: {x: 0, y: 0, z: .382683486, w: .923879564}
-  m_LocalPosition: {x: -23.4223537, y: 18.0783978, z: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: c6bbd6b955f7f48c78f2730e70c73466, type: 2}
+  m_PrefabInternal: {fileID: 636840077}
+  m_GameObject: {fileID: 1343362379}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.4762535, y: -10.2512093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
+--- !u!1001 &1393979493
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .0384712219
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .55247879
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_RootGameObject: {fileID: 1914910788}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1601270340
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +632,7 @@ GameObject:
   - 4: {fileID: 1601270343}
   - 212: {fileID: 1601270342}
   - 114: {fileID: 1601270341}
+  - 50: {fileID: 1601270344}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -434,12 +655,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 10
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &1601270342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -469,11 +696,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601270340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.9225922, y: -28.1058769, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -12.0664654, y: -4.62750387, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+--- !u!50 &1601270344
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601270340}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1756491521
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +726,7 @@ GameObject:
   - 4: {fileID: 1756491524}
   - 212: {fileID: 1756491523}
   - 114: {fileID: 1756491522}
+  - 50: {fileID: 1756491525}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -506,12 +749,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 10
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &1756491523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -541,11 +790,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756491521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.7485046, y: -29.9704437, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -11.0254421, y: -5.02970886, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
+--- !u!50 &1756491525
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756491521}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1760025031
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +820,7 @@ GameObject:
   - 4: {fileID: 1760025034}
   - 212: {fileID: 1760025033}
   - 114: {fileID: 1760025032}
+  - 50: {fileID: 1760025035}
   m_Layer: 0
   m_Name: swarmer
   m_TagString: swarmer
@@ -578,12 +843,18 @@ MonoBehaviour:
   maxRotation: 10
   maxSpeed: 10
   maxRotationSpeed: 10
+  attackBeatlesWeight: 0
   weight_Arrive: 2
   weight_Align: 2
   weight_Sep: 2
-  weight_Avoid: 10
-  myTarget: {fileID: 1262461418}
+  weight_Avoid: 20
+  myTarget: {fileID: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!212 &1760025033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -613,11 +884,66 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1760025031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.7742615, y: -27.7768364, z: 0}
+  m_LocalPosition: {x: -11.4513187, y: -4.55652094, z: 0}
+  m_LocalScale: {x: .215713397, y: .215713054, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!50 &1760025035
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760025031}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!1 &1914910788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_PrefabInternal: {fileID: 1393979493}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1914910790}
+  - 114: {fileID: 1914910789}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1914910789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 9535defbbf89a4063be2684977a0eba9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1393979493}
+  m_GameObject: {fileID: 1914910788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6700d9b06d846098015080f91d3a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1914910790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_PrefabInternal: {fileID: 1393979493}
+  m_GameObject: {fileID: 1914910788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0384712219, y: .55247879, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
 --- !u!1 &2146714453
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,4 +1027,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
