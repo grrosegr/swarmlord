@@ -64,9 +64,6 @@ public class CharacterController2D : MonoBehaviour {
 		
 		if (swarmersCurrentlyColliding > 0)
 			Health -= SwarmDamagePerSecond * Time.fixedDeltaTime;
-			
-		if (IsControlled)
-			Debug.Log (swarmersCurrentlyColliding);
 	}
 	
 	void SetIsControlled(bool isControlled) {
