@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(AudioSource))]
 public class SwarmerController : MonoBehaviour {
 	public float maxAcceleration;
 	public float maxRotation;
@@ -29,6 +30,13 @@ public class SwarmerController : MonoBehaviour {
 	float rotationVelo;
 
 	public BlendedSteering bsTest;
+	
+	public float MaxAngleVisible = 45.0f; // degrees
+	
+	private GameObject[] players;
+	
+	public GameObject ScreamPrefab;
+	public AudioClip ScreamSound;
 
 	// Use this for initialization
 	void Start () {
@@ -42,11 +50,27 @@ public class SwarmerController : MonoBehaviour {
 
 		attackBeatlesWeight = 0.0f;
 
+		players = GameObject.FindGameObjectsWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		SteerUpdate ();
+		
+		SpriteRenderer r = (SpriteRenderer)renderer;
+		
+		if (Time.time > screamResetTime) {
+			screamed = false;
+			r.color = Color.white;
+		}
+		
+		foreach (GameObject go in players) {
+			if (CanSee(go)) {
+				Scream();
+				GetComponent<SwarmerController> ().AddNewArriveLocation (go.transform.position);
+				break;
+			}
+		}
 	}
 
 	public Vector3 GetVelo () {
@@ -103,6 +127,44 @@ public class SwarmerController : MonoBehaviour {
 		Steering finalSteering = new Steering ();
 	}*/
 
-
+	bool CanSee(GameObject other) {
+		Vector2 t_pos = other.transform.position;
+		Vector2 m_pos = transform.position;
+		Vector2 m_fwd = transform.up;
+		Vector2 to_target = t_pos - m_pos;
+		float angle = Vector2.Angle(to_target, m_fwd);
+		
+		if (!(Mathf.Abs(angle) < MaxAngleVisible))
+			return false;
+		
+		RaycastHit2D hit = Physics2D.Raycast(m_pos, to_target, to_target.magnitude, LayerMask.GetMask("Obstacle"));
+		
+		return hit.collider == null;
+	}
+	
+	private bool screamed = false;
+	private float screamResetTime;
+	
+	public float ScreamResetAfter = 5.0f;
+	
+	void Scream() {
+		if (screamed)
+			return;
+		
+		//new seek source here
+		
+		audio.clip = ScreamSound;
+		audio.Stop();
+		audio.Play ();
+		screamed = true;
+		SpriteRenderer r = (SpriteRenderer)renderer;
+		r.color = Color.red;
+		Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
+		screamResetTime = Time.time + ScreamResetAfter;
+	}
+	
+	void OnScream(Vector3 pos) {
+		Scream();
+	}
 
 }
