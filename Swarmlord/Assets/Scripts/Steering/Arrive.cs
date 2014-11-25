@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Arrive : Behavior {
-	GameObject target;
+	Vector3 target;
 	SwarmerController character;
 
 	public float maxAccel;
@@ -13,7 +13,7 @@ public class Arrive : Behavior {
 
 	public float timeToTarget = 0.01f;
 
-	public Arrive(GameObject newTarget, SwarmerController newCharacter) {
+	public Arrive(Vector3 newTarget, SwarmerController newCharacter) {
 		target = newTarget;
 		character = newCharacter;
 
@@ -25,7 +25,7 @@ public class Arrive : Behavior {
 	public override Steering GetSteering() {
 		Steering returnSteering = new Steering ();
 
-		Vector3 direction = target.transform.position - character.transform.position;
+		Vector3 direction = target - character.transform.position;
 		float dist = direction.magnitude;
 
 		float targetSpeed;
@@ -55,7 +55,7 @@ public class Arrive : Behavior {
 		return returnSteering;
 	}
 
-	public void UpdateTarget(GameObject newTarget) {
+	public void UpdateTarget(Vector3 newTarget) {
 		target = newTarget;
 	}
 
