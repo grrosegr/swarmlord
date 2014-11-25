@@ -24,7 +24,8 @@ public class SwarmerController : MonoBehaviour {
 	public Arrive nextBeatlesTarget;
 
 	public GameObject myTarget;
-	public List<Vector3> targetLocs;
+	//public List<Vector3> targetLocs;
+	public Vector3 lastKnownLocation;
 
 	public Vector3 velocity;
 	float rotationVelo;
