@@ -8,6 +8,7 @@ public class CharacterController2D : MonoBehaviour {
 	private bool IsControlled;
 	
 	public float MaxHealth = 100f;
+	public float SwarmDamagePerSecond = 20f;
 	
 	private bool _alive;
 	public bool Alive {
@@ -59,14 +60,27 @@ public class CharacterController2D : MonoBehaviour {
 		velocity.x = Input.GetAxis("Horizontal") * Speed;
 		velocity.y = Input.GetAxis("Vertical") * Speed;
 		
-		rigidbody2D.MovePosition(rigidbody2D.position + velocity * Time.deltaTime);
+		rigidbody2D.MovePosition(rigidbody2D.position + velocity * Time.fixedDeltaTime);
+		
+		if (swarmersCurrentlyColliding > 0)
+			Health -= SwarmDamagePerSecond * Time.fixedDeltaTime;
+			
+		if (IsControlled)
+			Debug.Log (swarmersCurrentlyColliding);
 	}
 	
 	void SetIsControlled(bool isControlled) {
 		this.IsControlled = isControlled;
 	}
 	
-	public void ApplyDamage(float damage) {
-		Health -= damage;
+	private int swarmersCurrentlyColliding;
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.collider.tag == "swarmer")
+			swarmersCurrentlyColliding += 1;
+	}
+	
+	void OnCollisionExit2D(Collision2D collision) {
+		if (collision.collider.tag == "swarmer")
+			swarmersCurrentlyColliding -= 1;
 	}
 }

@@ -5,7 +5,6 @@ using System.Collections;
 public class SwarmMemberController : MonoBehaviour {
 
 	public float MaxAngleVisible = 45.0f; // degrees
-	public float Damage = 10f;
 	
 	private GameObject[] players;
 	
@@ -73,11 +72,5 @@ public class SwarmMemberController : MonoBehaviour {
 	
 	void OnScream(Vector3 pos) {
 		Scream();
-	}
-	
-	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.collider.tag == "Player") {
-			collision.collider.SendMessage("ApplyDamage", Damage);
-		}
 	}
 }
