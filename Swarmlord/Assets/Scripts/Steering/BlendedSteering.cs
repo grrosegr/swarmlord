@@ -52,7 +52,7 @@ public class BlendedSteering {
 			steering.linear += b.weight * bSteering.linear;
 			steering.angular += b.weight * bSteering.angular;
 
-			if(bSteering.stop) {
+			if(bSteering.stop && b.weight > 0) {
 				steering.stop = true;
 			}
 		}

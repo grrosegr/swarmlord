@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class Steering {
-	public Vector3 linear;
+	public Vector2 linear;
 	public float angular;
 	public bool stop;
 
 	public Steering() {
-		linear = new Vector3(0, 0, 0);
+		linear = Vector2.zero;
 		angular = 0.0f;
 		stop = false;
 	}

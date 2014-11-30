@@ -15,6 +15,8 @@ public class SwarmerController : MonoBehaviour {
 	public float weight_Align;
 	public float weight_Sep;
 	public float weight_Avoid;
+	public float weight_Wander;
+	public float weight_VelocityMatch;
 
 	public Steering test;
 	public Arrive arriveContributer;
@@ -22,11 +24,13 @@ public class SwarmerController : MonoBehaviour {
 	public Separate sepContributer;
 	public AvoidObstacle avoidContributer;
 	public Arrive nextBeatlesTarget;
+	public Wander wander;
+	public VelocityMatch velocityMatchContributer;
 
 	public GameObject myTarget;
 	public List<Vector3> targetLocs;
 
-	public Vector3 velocity;
+	public Vector2 velocity;
 	float rotationVelo;
 
 	public BlendedSteering bsTest;
@@ -47,6 +51,8 @@ public class SwarmerController : MonoBehaviour {
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
 		nextBeatlesTarget = new Arrive (Vector3.zero, this);
+		wander = new Wander(this);
+		velocityMatchContributer = new VelocityMatch(this);
 
 		attackBeatlesWeight = 0.0f;
 
@@ -73,7 +79,7 @@ public class SwarmerController : MonoBehaviour {
 		}
 	}
 
-	public Vector3 GetVelo () {
+	public Vector2 GetVelo () {
 		return velocity;
 	}
 
@@ -97,35 +103,26 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (sepContributer, weight_Sep);
 		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 		bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
+		bsTest.AddBehavior (wander, weight_Wander);
+		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
-		//transform.position = transform.position + (velocity * Time.deltaTime);
-		rigidbody2D.MovePosition(transform.position + (velocity * Time.deltaTime));
-		//transform.Rotate (0, 0, rotationVelo * Time.deltaTime);
+		rigidbody2D.MovePosition(rigidbody2D.position + (Vector2)(velocity * Time.deltaTime));
+		rigidbody2D.MoveRotation(rigidbody2D.rotation + rotationVelo * Time.deltaTime);
 
-		velocity = velocity + (blendedBehavior.linear * Time.deltaTime);
+		velocity += blendedBehavior.linear * Time.deltaTime;
 		if (blendedBehavior.stop)
 			rotationVelo = 0;
 		else
-			rotationVelo = rotationVelo + (blendedBehavior.angular * Time.deltaTime);
+			rotationVelo += blendedBehavior.angular * Time.deltaTime;
 
 		if (velocity.magnitude > maxSpeed) {
 			velocity = velocity.normalized * maxSpeed;
 		}
-
-		if (rotationVelo > maxRotationSpeed) {
-			rotationVelo = maxRotationSpeed;
-		}
-		else if (rotationVelo < -maxRotationSpeed) {
-			rotationVelo = -maxRotationSpeed;
-		}
+		
+		rotationVelo = Mathf.Clamp(rotationVelo, -maxRotationSpeed, maxRotationSpeed);
 	}
-
-	/*
-	void BlendSteering () {
-		Steering finalSteering = new Steering ();
-	}*/
 
 	bool CanSee(GameObject other) {
 		Vector2 t_pos = other.transform.position;

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VelocityMatch {
-	GameObject target;
+public class VelocityMatch : Behavior {
+	
 	SwarmerController character;
 	
 	public float maxAccel;
@@ -13,50 +13,27 @@ public class VelocityMatch {
 	
 	public float timeToTarget = 0.01f;
 	
-	public VelocityMatch(GameObject newTarget, SwarmerController newCharacter) {
-		target = newTarget;
+	public VelocityMatch(SwarmerController newCharacter) {
 		character = newCharacter;
 		
 		maxAccel = newCharacter.maxAcceleration;
 		maxSpeed = newCharacter.maxSpeed;
 	}
 	
-	//Page 65
-	public Steering GetSteering() {
-		Steering returnSteering = new Steering ();
+	//Page 70
+	public override Steering GetSteering() {
+		Steering steering = new Steering ();
 		
-		Vector3 direction = target.transform.position - character.transform.position;
-		float dist = direction.magnitude;
+		GameObject target = character.myTarget;
+		if (!target)
+			return steering;
 		
-		float targetSpeed;
+		steering.linear = target.rigidbody2D.velocity - character.GetVelo();
+		steering.linear /= timeToTarget;
 		
-		if (dist < targetRadius) {
-			return returnSteering;
-		}
-		
-		if (dist > slowRadius) {
-			targetSpeed = maxSpeed;
-		}
-		
-		else {
-			targetSpeed = maxSpeed * dist / slowRadius;
-		}
-		
-		Vector3 targetVelocity = direction;
-		targetVelocity = targetVelocity.normalized * targetSpeed;
-		
-		returnSteering.linear = targetVelocity - character.GetVelo();
-		returnSteering.linear = returnSteering.linear / timeToTarget;
-		
-		if (returnSteering.linear.magnitude > maxAccel) {
-			returnSteering.linear = returnSteering.linear.normalized * maxAccel;
-		}
-		
-		return returnSteering;
-	}
-	
-	public void UpdateTarget(GameObject newTarget) {
-		target = newTarget;
-	}
-	
+		if (steering.linear.magnitude > maxAccel)
+			steering.linear = steering.linear.normalized * maxAccel;
+			
+		return steering;
+	}	
 }

@@ -24,13 +24,12 @@ public class GoalTrigger : MonoBehaviour {
 	}
 	
 	private void CheckForWin() {
-		foreach (KeyValuePair<GameObject, bool> playerWithIntersection in PlayersWithIntersection) {
-			GameObject player = playerWithIntersection.Key;
-			bool intersection = playerWithIntersection.Value;
-			
-			if (!intersection)
+		foreach (bool intersects in PlayersWithIntersection.Values) {
+			if (!intersects)
 				return;
 		}
+		
+		// You win!
 		
 		NextLevel();
 	}
