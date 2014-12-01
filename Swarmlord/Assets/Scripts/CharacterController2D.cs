@@ -18,8 +18,9 @@ public class CharacterController2D : MonoBehaviour {
 		
 		private set {
 			_alive = value;
-			if (!_alive && IsControlled)
+			if (!_alive && IsControlled) {
 				CharacterManager.Instance.SwitchToAlivePlayer();
+			}
 		}
 	}
 	
@@ -53,6 +54,9 @@ public class CharacterController2D : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (!_alive && !IsControlled)
+			Destroy(gameObject);
+	
 		if (!(IsControlled && Alive))
 			return;
 	
@@ -79,5 +83,9 @@ public class CharacterController2D : MonoBehaviour {
 	void OnCollisionExit2D(Collision2D collision) {
 		if (collision.collider.tag == "swarmer")
 			swarmersCurrentlyColliding -= 1;
+	}
+	
+	public void ApplyDamage(float damage) {
+		Health -= damage;
 	}
 }
