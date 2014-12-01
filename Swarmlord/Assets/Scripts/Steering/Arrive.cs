@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Arrive : Behavior {
-	Vector3 target;
+	public Vector3 target;
 	SwarmerController character;
 
 	public float maxAccel;
