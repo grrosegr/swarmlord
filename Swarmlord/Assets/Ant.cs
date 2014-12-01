@@ -88,11 +88,11 @@ public class Ant : MonoBehaviour {
 			
 			Vector2 pos = transform.position;
 			Vector2 last = path.Last();
-			if (Vector2.Distance(pos, last) > 0.3f) {
+			if (Vector2.Distance(pos, last) > 0.6f) {
 				path.Add(pos);
 			}
 			
-			if (Vector2.Distance(pos, colonyCenter) < 0.5f) {
+			if (Vector2.Distance(pos, colonyCenter) < 0.5f || path.Count > 20) {
 				ResetPath();
 			}
 			
@@ -120,18 +120,16 @@ public class Ant : MonoBehaviour {
 		
 			Collider2D hitPlayer = Physics2D.OverlapArea(b.min, b.max, LayerMask.GetMask("Player"));
 			if (hitPlayer) {
-				hitPlayer.SendMessage("ApplyDamage", 1.0f);
+				hitPlayer.SendMessage("ApplyDamage", 2.0f);
 				
-				if (Random.value < 0.2f) {
+//				if (Random.value < 0.5f) {
 					state = State.Return;
 					SetDirection(colonyCenter - (Vector2)transform.position);
 					returnStartTime = Time.time;
-				}
+//				}
 			}
 		} else if (state == State.Return) {
-			
-		
-			if (path.Count > 0) {
+			if (path.Count > 0 && (Time.time - returnStartTime < 5.0f)) {
 				Vector2 target = path.Last();
 				
 				if (Vector2.Distance(target, transform.position) > 0.5) {
@@ -140,7 +138,9 @@ public class Ant : MonoBehaviour {
 					path.RemoveAt(path.Count - 1);
 				}
 				
-				if (Vector2.Distance(lastMark, transform.position) > 0.35f) {
+				int nearbyMarkers = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("AntMarker")).Length;
+				
+				if (Vector2.Distance(lastMark, transform.position) > 0.35f && nearbyMarkers < 8) {
 					Instantiate(marker, transform.position, Quaternion.identity);
 					lastMark = transform.position;
 				}

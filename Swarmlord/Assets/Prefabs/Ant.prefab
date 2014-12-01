@@ -78,7 +78,7 @@ MonoBehaviour:
   Speed: 9
   MaxDistanceToColony: 12
   PlayerDetectionRadius: 1
-  PheromoneDetectionRadius: 4
+  PheromoneDetectionRadius: 6
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
