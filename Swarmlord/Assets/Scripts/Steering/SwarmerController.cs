@@ -75,7 +75,7 @@ public class SwarmerController : MonoBehaviour {
 		foreach (GameObject go in players) {
 			if (go == null) continue;
 			if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
-				Scream();
+				Scream(go.transform.position);
 				AddNewArriveLocation (go.transform.position);
 				break;
 			}
@@ -158,7 +158,7 @@ public class SwarmerController : MonoBehaviour {
 	
 	public float ScreamResetAfter = 5.0f;
 	
-	void Scream() {
+	void Scream(Vector2 lastSeenPos) {
 		if (screamed)
 			return;
 		
@@ -170,13 +170,24 @@ public class SwarmerController : MonoBehaviour {
 		screamed = true;
 		SpriteRenderer r = (SpriteRenderer)renderer;
 		r.color = Color.red;
-		Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
+		
+		GameObject scream = (GameObject)Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
+		Scream controller = scream.GetComponent<Scream>();
+		controller.LastSeenTime = Time.time;
+		controller.LastSeenPosition = lastSeenPos;
+		
 		screamResetTime = Time.time + ScreamResetAfter;
 	}
 	
-	void OnScream(Vector3 pos) {
-		Scream();
-		lastKnownLocation = pos;
+	private float lastSeenTime;
+	void OnScream(Scream scream) {
+		// TODO: maybe scream again?
+//		Scream();
+
+		if (scream.LastSeenTime > lastSeenTime) {
+			lastKnownLocation = scream.LastSeenPosition;
+			lastSeenTime = scream.LastSeenTime;
+		}
 	}
 
 }

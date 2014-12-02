@@ -137,11 +137,18 @@ MonoBehaviour:
   weight_Align: .5
   weight_Sep: .5
   weight_Avoid: .200000003
+  weight_Wander: 0
+  weight_VelocityMatch: 0
   myTarget: {fileID: 0}
-  velocity: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0}
+  lastKnownLocation: {x: 0, y: 0, z: 0}
+  MaxAngleVisible: 45
+  ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
+  ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
+  ScreamResetAfter: 5
 --- !u!114 &11400002
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
