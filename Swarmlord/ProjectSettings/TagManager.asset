@@ -43,6 +43,10 @@ TagManager:
     userID: 1
     uniqueID: 2924662073
     locked: 0
+  - name: Buildings
+    userID: 4
+    uniqueID: 4029469619
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0

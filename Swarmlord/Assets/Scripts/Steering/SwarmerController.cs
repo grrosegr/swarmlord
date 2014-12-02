@@ -73,6 +73,7 @@ public class SwarmerController : MonoBehaviour {
 		}
 		
 		foreach (GameObject go in players) {
+			if (go == null) continue;
 			if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
 				Scream();
 				AddNewArriveLocation (go.transform.position);
