@@ -46,10 +46,13 @@ public class CharacterController2D : MonoBehaviour {
 			color = Color.black;
 		spriteRenderer.color = color;
 	}
+	
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		Health = MaxHealth;
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -61,8 +64,19 @@ public class CharacterController2D : MonoBehaviour {
 			return;
 	
 		Vector2 velocity = new Vector2();
-		velocity.x = Input.GetAxis("Horizontal") * Speed;
-		velocity.y = Input.GetAxis("Vertical") * Speed;
+		velocity.x = Input.GetAxis("Horizontal");
+		velocity.y = Input.GetAxis("Vertical");
+		if (velocity != Vector2.zero)
+			velocity.Normalize();
+		velocity *= Speed;
+		
+		anim.SetBool("Walking", velocity != Vector2.zero);
+		Vector2 localScale = transform.localScale;
+		if (velocity.x > 0)
+			localScale.x = Mathf.Abs(localScale.x);
+		else if (velocity.x < 0)
+			localScale.x = -Mathf.Abs (localScale.x);
+		transform.localScale = localScale;
 		
 		rigidbody2D.MovePosition(rigidbody2D.position + velocity * Time.fixedDeltaTime);
 		
@@ -74,6 +88,8 @@ public class CharacterController2D : MonoBehaviour {
 		this.IsControlled = isControlled;
 		// TODO: remove DontRequireReceiver
 		BroadcastMessage("SelectedChanged", isControlled, SendMessageOptions.DontRequireReceiver);
+		if (!isControlled)
+			anim.SetBool("Walking", false);
 	}
 	
 	private int swarmersCurrentlyColliding;
