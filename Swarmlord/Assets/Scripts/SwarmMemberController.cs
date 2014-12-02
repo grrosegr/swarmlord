@@ -61,6 +61,7 @@ public class SwarmMemberController : MonoBehaviour {
 		}
 		
 		foreach (GameObject go in players) {
+			if (go == null) continue;
 			if (CanSee(go)) {
 				Scream();
 				GetComponent<SwarmerController> ().AddNewArriveLocation (go.transform.position);
