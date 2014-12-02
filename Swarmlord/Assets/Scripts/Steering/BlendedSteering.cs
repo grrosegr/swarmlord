@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class BlendedSteering {
 	
@@ -44,15 +45,21 @@ public class BlendedSteering {
 	public Steering GetSteering() {
 		//Create the new steering structure to accumulate the combined steering.
 		Steering steering = new Steering ();
+		
+		var steerings = behaviors.Select(behaviorWeight => behaviorWeight.behavior.GetSteering());
+		var totalWeight = behaviors.Select(behaviorWeight => behaviorWeight.weight).Sum();
+		if (totalWeight <= 0)
+			Debug.LogError("Behavior weights sum to <= 0!");
 
 		foreach (BehaviorWeight b in behaviors) {
 			Steering bSteering = b.behavior.GetSteering ();
+			float weight = b.weight / totalWeight;
 
 			//Accumulate weighted steering components in steering
-			steering.linear += b.weight * bSteering.linear;
-			steering.angular += b.weight * bSteering.angular;
+			steering.linear += weight * bSteering.linear;
+			steering.angular += weight * bSteering.angular;
 
-			if(bSteering.stop && b.weight > 0) {
+			if (bSteering.stop && weight > 0) {
 				steering.stop = true;
 			}
 		}
