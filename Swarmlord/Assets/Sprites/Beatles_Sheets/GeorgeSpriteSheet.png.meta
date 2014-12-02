@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: 82febe5a3a03448bfbede503b8c5a0ef
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: GeorgeSpriteSheet_0
+    21300002: GeorgeSpriteSheet_1
+    21300004: GeorgeSpriteSheet_2
+    21300006: GeorgeSpriteSheet_3
+    21300008: GeorgeSpriteSheet_4
+    21300010: GeorgeSpriteSheet_5
+    21300012: GeorgeSpriteSheet_6
+    21300014: GeorgeSpriteSheet_7
+    21300016: GeorgeSpriteSheet_8
+    21300018: GeorgeSpriteSheet_9
+    21300020: GeorgeSpriteSheet_10
+    21300022: GeorgeSpriteSheet_11
+    21300024: GeorgeSpriteSheet_12
+    21300026: GeorgeSpriteSheet_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +39,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +56,146 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: GeorgeSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GeorgeSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
