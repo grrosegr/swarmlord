@@ -34,6 +34,8 @@ public class CharacterManager : MonoBehaviour {
 	
 	public void SwitchToAlivePlayer() {
 		foreach (GameObject player in players) {
+			if (player == null)
+				continue;
 			CharacterController2D controller = player.GetComponent<CharacterController2D>();
 			if (controller.Alive) {
 				CurrentPlayer = player;
