@@ -72,6 +72,7 @@ public class CharacterController2D : MonoBehaviour {
 	
 	void SetIsControlled(bool isControlled) {
 		this.IsControlled = isControlled;
+		BroadcastMessage("SelectedChanged", isControlled);
 	}
 	
 	private int swarmersCurrentlyColliding;

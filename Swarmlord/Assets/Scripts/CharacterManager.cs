@@ -7,8 +7,8 @@ public class CharacterManager : MonoBehaviour {
 	GameObject[] players;
 	
 	private GameObject _currentPlayer;
-	private GameObject CurrentPlayer {
-		set {
+	public GameObject CurrentPlayer {
+		private set {
 			if (_currentPlayer != value) {
 				if (_currentPlayer)
 					_currentPlayer.SendMessage("SetIsControlled", false);
