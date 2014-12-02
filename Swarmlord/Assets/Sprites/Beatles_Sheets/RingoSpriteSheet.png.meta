@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: b57d11f081905424b9bc59d3c1d9c101
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: RingoSpriteSheet_0
+    21300002: RingoSpriteSheet_1
+    21300004: RingoSpriteSheet_2
+    21300006: RingoSpriteSheet_3
+    21300008: RingoSpriteSheet_4
+    21300010: RingoSpriteSheet_5
+    21300012: RingoSpriteSheet_6
+    21300014: RingoSpriteSheet_7
+    21300016: RingoSpriteSheet_8
+    21300018: RingoSpriteSheet_9
+    21300020: RingoSpriteSheet_10
+    21300022: RingoSpriteSheet_11
+    21300024: RingoSpriteSheet_12
+    21300026: RingoSpriteSheet_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +39,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +56,146 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: RingoSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RingoSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -65,7 +65,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_1
       rect:
@@ -75,7 +75,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_2
       rect:
@@ -85,7 +85,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_3
       rect:
@@ -95,7 +95,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_4
       rect:
@@ -105,7 +105,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_5
       rect:
@@ -115,7 +115,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_6
       rect:
@@ -125,7 +125,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_7
       rect:
@@ -135,7 +135,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_8
       rect:
@@ -145,7 +145,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_9
       rect:
@@ -155,7 +155,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_10
       rect:
@@ -165,7 +165,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_11
       rect:
@@ -175,7 +175,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_12
       rect:
@@ -185,7 +185,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GeorgeSpriteSheet_13
       rect:
@@ -195,7 +195,7 @@ TextureImporter:
         width: 665
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

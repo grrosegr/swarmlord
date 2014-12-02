@@ -1,7 +1,21 @@
 fileFormatVersion: 2
 guid: 806d5235642434ad4ab5856fcb6ee64c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PaulSpriteSheet_0
+    21300002: PaulSpriteSheet_1
+    21300004: PaulSpriteSheet_2
+    21300006: PaulSpriteSheet_3
+    21300008: PaulSpriteSheet_4
+    21300010: PaulSpriteSheet_5
+    21300012: PaulSpriteSheet_6
+    21300014: PaulSpriteSheet_7
+    21300016: PaulSpriteSheet_8
+    21300018: PaulSpriteSheet_9
+    21300020: PaulSpriteSheet_10
+    21300022: PaulSpriteSheet_11
+    21300024: PaulSpriteSheet_12
+    21300026: PaulSpriteSheet_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +39,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +56,146 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PaulSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 1330
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PaulSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 0
+        width: 665
+        height: 1330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
