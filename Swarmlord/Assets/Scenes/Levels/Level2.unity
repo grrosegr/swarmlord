@@ -1,0 +1,4447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 0}
+  m_ObjectHideFlags: 0
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  m_LightProbes: {fileID: 0}
+  m_Lightmaps: []
+  m_LightmapsMode: 1
+  m_BakedColorSpace: 0
+  m_UseDualLightmapsInForward: 0
+  m_LightmapEditorSettings:
+    m_Resolution: 50
+    m_LastUsedResolution: 0
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_BounceBoost: 1
+    m_BounceIntensity: 1
+    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
+    m_SkyLightIntensity: 0
+    m_Quality: 0
+    m_Bounces: 1
+    m_FinalGatherRays: 1000
+    m_FinalGatherContrastThreshold: .0500000007
+    m_FinalGatherGradientThreshold: 0
+    m_FinalGatherInterpolationPoints: 15
+    m_AOAmount: 0
+    m_AOMaxDistance: .100000001
+    m_AOContrast: 1
+    m_LODSurfaceMappingDistance: 1
+    m_Padding: 0
+    m_TextureCompression: 0
+    m_LockAtlas: 0
+--- !u!196 &5
+NavMeshSettings:
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    widthInaccuracy: 16.666666
+    heightInaccuracy: 10
+  m_NavMesh: {fileID: 0}
+--- !u!1 &3751553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 3751554}
+  - 212: {fileID: 3751555}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3751554
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3751553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.9162941, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 14
+--- !u!212 &3751555
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3751553}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &76273572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 76273573}
+  - 212: {fileID: 76273574}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76273573
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76273572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.6763878, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 3
+--- !u!212 &76273574
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 76273572}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &236049119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 236049120}
+  - 212: {fileID: 236049121}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236049120
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236049119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.2835617, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 22
+--- !u!212 &236049121
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236049119}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &239950652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 239950654}
+  - 212: {fileID: 239950653}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &239950653
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239950652}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &239950654
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239950652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.9162979, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 17
+--- !u!1 &258063764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 258063765}
+  - 212: {fileID: 258063766}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258063765
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258063764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.5235786, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 32
+--- !u!212 &258063766
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258063764}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &275318941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 275318942}
+  - 212: {fileID: 275318943}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275318942
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275318941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4363937, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 40
+--- !u!212 &275318943
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275318941}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &286035774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 286035775}
+  - 212: {fileID: 286035776}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &286035775
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286035774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.04365921, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 31
+--- !u!212 &286035776
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286035774}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &301037811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 301037812}
+  - 212: {fileID: 301037813}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &301037812
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301037811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19638062, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 8
+--- !u!212 &301037813
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301037811}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &306223281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 306223282}
+  - 212: {fileID: 306223283}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306223282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306223281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.6764145, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 41
+--- !u!212 &306223283
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306223281}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &324118241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 324118242}
+  - 212: {fileID: 324118243}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324118242
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324118241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.0035362, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 46
+--- !u!212 &324118243
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324118241}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &334294388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 334294389}
+  - 212: {fileID: 334294390}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &334294389
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334294388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.2835617, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 4
+--- !u!212 &334294390
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334294388}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &440025809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+  m_PrefabInternal: {fileID: 2007405460}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 440025813}
+  - 114: {fileID: 440025812}
+  - 61: {fileID: 440025811}
+  - 212: {fileID: 440025810}
+  m_Layer: 0
+  m_Name: Goal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &440025810
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 7d5d7b54922a54c3885f5a14e2cca82d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007405460}
+  m_GameObject: {fileID: 440025809}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6e5b4b3d7bc244307b44e9d390b0606e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &440025811
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 7d5d7b54922a54c3885f5a14e2cca82d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007405460}
+  m_GameObject: {fileID: 440025809}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 5, y: 5}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &440025812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007405460}
+  m_GameObject: {fileID: 440025809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bf04fdadce54ca588212800af7e270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &440025813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+  m_PrefabInternal: {fileID: 2007405460}
+  m_GameObject: {fileID: 440025809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.8508797, y: 11.5742855, z: 0}
+  m_LocalScale: {x: .293626517, y: .333699316, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &441980512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441980513}
+  m_Layer: 0
+  m_Name: bg_asphalt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441980513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441980512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.94158936, y: 11.7752352, z: .001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2052001181}
+  - {fileID: 784550191}
+  - {fileID: 1253394309}
+  - {fileID: 76273573}
+  - {fileID: 334294389}
+  - {fileID: 1710037684}
+  - {fileID: 1938103784}
+  - {fileID: 2134809660}
+  - {fileID: 301037812}
+  - {fileID: 848241649}
+  - {fileID: 1559456524}
+  - {fileID: 2135073859}
+  - {fileID: 1485480248}
+  - {fileID: 556740253}
+  - {fileID: 3751554}
+  - {fileID: 1424836853}
+  - {fileID: 1704363253}
+  - {fileID: 239950654}
+  - {fileID: 2023144133}
+  - {fileID: 528126951}
+  - {fileID: 517943061}
+  - {fileID: 996089712}
+  - {fileID: 236049120}
+  - {fileID: 1006467449}
+  - {fileID: 912958006}
+  - {fileID: 546651013}
+  - {fileID: 1154211788}
+  - {fileID: 842221955}
+  - {fileID: 1244848936}
+  - {fileID: 1416232342}
+  - {fileID: 1592785692}
+  - {fileID: 286035775}
+  - {fileID: 258063765}
+  - {fileID: 1988018284}
+  - {fileID: 1558212623}
+  - {fileID: 2007580404}
+  - {fileID: 507453917}
+  - {fileID: 1586125807}
+  - {fileID: 1414776185}
+  - {fileID: 495465423}
+  - {fileID: 275318942}
+  - {fileID: 306223282}
+  - {fileID: 831676002}
+  - {fileID: 1237153241}
+  - {fileID: 748709233}
+  - {fileID: 1641136662}
+  - {fileID: 324118242}
+  - {fileID: 808979820}
+  - {fileID: 1310334966}
+  - {fileID: 1349378337}
+  - {fileID: 962375715}
+  - {fileID: 2123387201}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!1 &452573278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 452573284}
+  - 212: {fileID: 452573283}
+  - 95: {fileID: 452573282}
+  - 58: {fileID: 452573281}
+  - 50: {fileID: 452573280}
+  - 114: {fileID: 452573279}
+  m_Layer: 8
+  m_Name: John
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &452573279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
+  MaxHealth: 100
+  SwarmDamagePerSecond: 100
+--- !u!50 &452573280
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_Mass: 1
+  m_LinearDrag: 2
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!58 &452573281
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: .75999999
+  m_Center: {x: 0, y: -5.55999994}
+--- !u!95 &452573282
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed97f2db901dce843b899590405c0b88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &452573283
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 3147617549
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f4f8eaf58bf2469418f5596cbeedcd11, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &452573284
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 452573278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9981432, y: -1.20331144, z: 0}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
+  m_Children:
+  - {fileID: 1060971231}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!1 &495465422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 495465423}
+  - 212: {fileID: 495465424}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495465423
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495465422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.9162979, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 39
+--- !u!212 &495465424
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495465422}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &507453916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 507453917}
+  - 212: {fileID: 507453918}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507453917
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507453916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.9162979, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 36
+--- !u!212 &507453918
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507453916}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &517943060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 517943061}
+  - 212: {fileID: 517943062}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517943061
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517943060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.0436554, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 20
+--- !u!212 &517943062
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517943060}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &528126950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 528126951}
+  - 212: {fileID: 528126952}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528126951
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528126950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.6763916, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 19
+--- !u!212 &528126952
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528126950}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &546651012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 546651013}
+  - 212: {fileID: 546651014}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &546651013
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546651012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.7635651, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 25
+--- !u!212 &546651014
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546651012}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &556740252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 556740253}
+  - 212: {fileID: 556740254}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &556740253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556740252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4363708, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 13
+--- !u!212 &556740254
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556740252}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &748709232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 748709233}
+  - 212: {fileID: 748709234}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748709233
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748709232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.04365158, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 44
+--- !u!212 &748709234
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748709232}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &784550190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 784550191}
+  - 212: {fileID: 784550192}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784550191
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784550190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.9163017, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 1
+--- !u!212 &784550192
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784550190}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &808979819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 808979820}
+  - 212: {fileID: 808979821}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808979820
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 808979819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.763546, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 47
+--- !u!212 &808979821
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 808979819}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &831676001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 831676002}
+  - 212: {fileID: 831676003}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831676002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831676001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.283535, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 42
+--- !u!212 &831676003
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831676001}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &842221954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 842221955}
+  - 212: {fileID: 842221956}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842221955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842221954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.0035858, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 27
+--- !u!212 &842221956
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842221954}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &848241648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 848241649}
+  - 212: {fileID: 848241650}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848241649
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848241648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.0436554, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 9
+--- !u!212 &848241650
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848241648}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &872657288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_PrefabInternal: {fileID: 949933823}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 872657290}
+  - 114: {fileID: 872657289}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &872657289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 9535defbbf89a4063be2684977a0eba9,
+    type: 2}
+  m_PrefabInternal: {fileID: 949933823}
+  m_GameObject: {fileID: 872657288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6700d9b06d846098015080f91d3a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &872657290
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_PrefabInternal: {fileID: 949933823}
+  m_GameObject: {fileID: 872657288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!1 &912958005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 912958006}
+  - 212: {fileID: 912958007}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912958006
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 912958005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.0035629, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 24
+--- !u!212 &912958007
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 912958005}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &949933823
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9535defbbf89a4063be2684977a0eba9, type: 2}
+  m_RootGameObject: {fileID: 872657288}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &962375714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 962375715}
+  - 212: {fileID: 962375716}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &962375715
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962375714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 70.483551, y: 12.2395983, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 50
+--- !u!212 &962375716
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962375714}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &996089711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 996089712}
+  - 212: {fileID: 996089713}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996089712
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996089711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19638062, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 21
+--- !u!212 &996089713
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996089711}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1006467448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1006467449}
+  - 212: {fileID: 1006467450}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1006467449
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006467448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.5235672, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 23
+--- !u!212 &1006467450
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006467448}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1060971230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1060971231}
+  - 212: {fileID: 1060971233}
+  - 114: {fileID: 1060971232}
+  m_Layer: 8
+  m_Name: foot_circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060971231
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 1060971230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.0946703, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: .174999997}
+  m_Children: []
+  m_Father: {fileID: 452573284}
+  m_RootOrder: 0
+--- !u!114 &1060971232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 1060971230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2d7a4a74df94108932df619bf7f544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedOn: {fileID: 21300000, guid: b81177a1c217c40f8ac06af79b4e9edb, type: 3}
+  SelectedOff: {fileID: 21300000, guid: 08d9b9d2d01b34b5db7bcacd9d2bb9ac, type: 3}
+--- !u!212 &1060971233
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200002, guid: fc05dcca5c74c4ba29e7f04518fb4656,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395515497}
+  m_GameObject: {fileID: 1060971230}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a637e5eda1756468193a162d1d3e4134, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1154211787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1154211788}
+  - 212: {fileID: 1154211789}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1154211788
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154211787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.7635651, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 26
+--- !u!212 &1154211789
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154211787}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1237153240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1237153241}
+  - 212: {fileID: 1237153242}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237153241
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237153240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.5235558, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 43
+--- !u!212 &1237153242
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237153240}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1244848935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1244848936}
+  - 212: {fileID: 1244848937}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244848936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244848935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.7635689, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 28
+--- !u!212 &1244848937
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244848935}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1253394308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1253394309}
+  - 212: {fileID: 1253394310}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1253394309
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253394308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4363785, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 2
+--- !u!212 &1253394310
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253394308}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1310334965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1310334966}
+  - 212: {fileID: 1310334967}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310334966
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310334965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.2435532, y: 22.4795952, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 48
+--- !u!212 &1310334967
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310334965}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1349378336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1349378337}
+  - 212: {fileID: 1349378338}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349378337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1349378336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 70.4835358, y: 22.4795952, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 49
+--- !u!212 &1349378338
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1349378336}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1395515497
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.9981432
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.20331144
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
+  m_RootGameObject: {fileID: 452573278}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &1414776184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1414776185}
+  - 212: {fileID: 1414776186}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414776185
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414776184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.1563492, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 38
+--- !u!212 &1414776186
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414776184}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1416232341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1416232342}
+  - 212: {fileID: 1416232343}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416232342
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416232341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.0035591, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 29
+--- !u!212 &1416232343
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1416232341}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1424836852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1424836853}
+  - 212: {fileID: 1424836854}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424836853
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424836852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.1563454, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 15
+--- !u!212 &1424836854
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424836852}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1466935965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1466935970}
+  - 20: {fileID: 1466935969}
+  - 92: {fileID: 1466935968}
+  - 124: {fileID: 1466935967}
+  - 81: {fileID: 1466935966}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1466935966
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466935965}
+  m_Enabled: 1
+--- !u!124 &1466935967
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466935965}
+  m_Enabled: 1
+--- !u!92 &1466935968
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466935965}
+  m_Enabled: 1
+--- !u!20 &1466935969
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466935965}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!4 &1466935970
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466935965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!1 &1485480247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1485480248}
+  - 212: {fileID: 1485480249}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485480248
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485480247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.6763916, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 12
+--- !u!212 &1485480249
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485480247}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1558212622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1558212623}
+  - 212: {fileID: 1558212624}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558212623
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558212622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.676384, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 34
+--- !u!212 &1558212624
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558212622}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1559456523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1559456524}
+  - 212: {fileID: 1559456525}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559456524
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559456523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.5235672, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 10
+--- !u!212 &1559456525
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559456523}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1586125806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1586125807}
+  - 212: {fileID: 1586125808}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586125807
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586125806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.1563492, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 37
+--- !u!212 &1586125808
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586125806}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1592785691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1592785692}
+  - 212: {fileID: 1592785693}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592785692
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592785691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19637299, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 30
+--- !u!212 &1592785693
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592785691}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1641136661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1641136662}
+  - 212: {fileID: 1641136663}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641136662
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641136661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1964035, y: 22.479599, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 45
+--- !u!212 &1641136663
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641136661}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1704363252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1704363253}
+  - 212: {fileID: 1704363254}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1704363253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704363252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.1563492, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 16
+--- !u!212 &1704363254
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704363252}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1710037683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1710037684}
+  - 212: {fileID: 1710037685}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710037684
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710037683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.5235672, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 5
+--- !u!212 &1710037685
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710037683}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1872400542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1872400545}
+  - 212: {fileID: 1872400544}
+  - 60: {fileID: 1872400543}
+  m_Layer: 0
+  m_Name: level_2_alpha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1872400543
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872400542}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: -18.5799999, y: -24.3299999}
+      - {x: -18.1800003, y: -24.1900005}
+      - {x: -15.8000002, y: -23.3500004}
+      - {x: -15.3999996, y: -23.2099991}
+      - {x: -13.0200005, y: -22.3700008}
+      - {x: -12.6199999, y: -22.2299995}
+      - {x: -10.2399998, y: -21.3899994}
+      - {x: -10.1000004, y: -21.3299999}
+      - {x: -9.92000008, y: -21.2700005}
+      - {x: -8.89999962, y: -20.9099998}
+      - {x: -8.5, y: -20.7700005}
+      - {x: -6.11999989, y: -19.9300003}
+      - {x: -5.71999979, y: -19.7900009}
+      - {x: -3.33999991, y: -18.9500008}
+      - {x: -2.94000006, y: -18.8099995}
+      - {x: -.560000002, y: -17.9699993}
+      - {x: -.159999996, y: -17.8299999}
+      - {x: 2.22000003, y: -16.9899998}
+      - {x: 2.61999989, y: -16.8500004}
+      - {x: 5, y: -16.0100002}
+      - {x: 5.4000001, y: -15.8699999}
+      - {x: 7.78000021, y: -15.0299997}
+      - {x: 8.18000031, y: -14.8900003}
+      - {x: 10.5600004, y: -14.0500002}
+      - {x: 10.96, y: -13.9099998}
+      - {x: 13.3400002, y: -13.0699997}
+      - {x: 13.7399998, y: -12.9300003}
+      - {x: 14.4200001, y: -12.6899996}
+      - {x: 14.5799999, y: -12.6300001}
+      - {x: 14.7399998, y: -12.5900002}
+      - {x: 14.9399996, y: -12.7700005}
+      - {x: 15.1400003, y: -12.9300003}
+      - {x: 15.2600002, y: -13.0299997}
+      - {x: 15.5600004, y: -13.2700005}
+      - {x: 15.6800003, y: -13.3699999}
+      - {x: 15.8800001, y: -13.5299997}
+      - {x: 16, y: -13.6300001}
+      - {x: 16.2000008, y: -13.79}
+      - {x: 16.2399998, y: -13.8500004}
+      - {x: 16.3799992, y: -13.8299999}
+      - {x: 16.4200001, y: -13.79}
+      - {x: 16.6000004, y: -13.7299995}
+      - {x: 16.9400005, y: -13.6099997}
+      - {x: 17.3400002, y: -13.4700003}
+      - {x: 19.7199993, y: -12.6300001}
+      - {x: 20.1200008, y: -12.4899998}
+      - {x: 22.5, y: -11.6499996}
+      - {x: 22.8999996, y: -11.5100002}
+      - {x: 25.2800007, y: -10.6700001}
+      - {x: 25.6800003, y: -10.5299997}
+      - {x: 28.0599995, y: -9.68999958}
+      - {x: 28.4599991, y: -9.55000019}
+      - {x: 30.8400002, y: -8.71000004}
+      - {x: 31.2399998, y: -8.56999969}
+      - {x: 33.6199989, y: -7.73000002}
+      - {x: 33.7200012, y: -7.69000006}
+      - {x: 33.7200012, y: -6.88999987}
+      - {x: 33.6599998, y: -6.82999992}
+      - {x: 33.4399986, y: -6.6500001}
+      - {x: 32.4799995, y: -5.86999989}
+      - {x: 32.0600014, y: -5.53000021}
+      - {x: 31.7600002, y: -5.28999996}
+      - {x: 31.6399994, y: -5.19000006}
+      - {x: 31.4400005, y: -5.03000021}
+      - {x: 31.3199997, y: -4.92999983}
+      - {x: 31.0200005, y: -4.69000006}
+      - {x: 30.8999996, y: -4.59000015}
+      - {x: 30.7000008, y: -4.42999983}
+      - {x: 30.5799999, y: -4.32999992}
+      - {x: 30.3799992, y: -4.17000008}
+      - {x: 30.1599998, y: -3.99000001}
+      - {x: 30.0799999, y: -3.91000009}
+      - {x: 30.3600006, y: -3.80999994}
+      - {x: 32.4000015, y: -3.08999991}
+      - {x: 32.7999992, y: -2.95000005}
+      - {x: 33, y: -2.86999989}
+      - {x: 33, y: -2.30999994}
+      - {x: 32.9799995, y: -2.28999996}
+      - {x: 32.9799995, y: -.670000017}
+      - {x: 32.9599991, y: -.649999976}
+      - {x: 32.9599991, y: .970000029}
+      - {x: 32.9399986, y: .99000001}
+      - {x: 32.9399986, y: 1.85000002}
+      - {x: 32.9000015, y: 1.88999999}
+      - {x: 32.6800003, y: 2.06999993}
+      - {x: 31.2000008, y: 3.26999998}
+      - {x: 30.7800007, y: 3.6099999}
+      - {x: 30.4599991, y: 3.86999989}
+      - {x: 30.6000004, y: 3.91000009}
+      - {x: 30.7800007, y: 3.97000003}
+      - {x: 31.4599991, y: 4.21000004}
+      - {x: 31.8600006, y: 4.3499999}
+      - {x: 34.2400017, y: 5.19000006}
+      - {x: 34.6399994, y: 5.32999992}
+      - {x: 37.0200005, y: 6.17000008}
+      - {x: 37.4199982, y: 6.30999994}
+      - {x: 39.7999992, y: 7.1500001}
+      - {x: 40.2000008, y: 7.28999996}
+      - {x: 40.5400009, y: 7.40999985}
+      - {x: 40.7000008, y: 7.46999979}
+      - {x: 40.7999992, y: 7.51000023}
+      - {x: 40.7999992, y: 8.47000027}
+      - {x: 40.7200012, y: 8.55000019}
+      - {x: 40.5200005, y: 8.71000004}
+      - {x: 40.4000015, y: 8.81000042}
+      - {x: 40.0999985, y: 9.05000019}
+      - {x: 39.9799995, y: 9.14999962}
+      - {x: 39.8800011, y: 9.22999954}
+      - {x: 39.6599998, y: 9.40999985}
+      - {x: 39.3600006, y: 9.64999962}
+      - {x: 39.2400017, y: 9.75}
+      - {x: 39.2000008, y: 9.77000046}
+      - {x: 39.2000008, y: 9.89000034}
+      - {x: 39.1800003, y: 9.90999985}
+      - {x: 39.1800003, y: 11.5500002}
+      - {x: 39.1599998, y: 11.5699997}
+      - {x: 39.1599998, y: 13.1899996}
+      - {x: 39.1399994, y: 13.21}
+      - {x: 39.1399994, y: 13.8500004}
+      - {x: 39.0600014, y: 13.9300003}
+      - {x: 38.8400002, y: 14.1099997}
+      - {x: 38.0999985, y: 14.71}
+      - {x: 37.6800003, y: 15.0500002}
+      - {x: 36.7200012, y: 15.8299999}
+      - {x: 36.2000008, y: 16.25}
+      - {x: 35.5600014, y: 16.7700005}
+      - {x: 35.2599983, y: 17.0100002}
+      - {x: 35.1399994, y: 17.1100006}
+      - {x: 34.9399986, y: 17.2700005}
+      - {x: 34.8199997, y: 17.3700008}
+      - {x: 34.5200005, y: 17.6100006}
+      - {x: 34.4000015, y: 17.7099991}
+      - {x: 34.2000008, y: 17.8700008}
+      - {x: 34.0800018, y: 17.9699993}
+      - {x: 33.7799988, y: 18.2099991}
+      - {x: 33.6599998, y: 18.3099995}
+      - {x: 33.4599991, y: 18.4699993}
+      - {x: 33.3400002, y: 18.5699997}
+      - {x: 33.2400017, y: 18.6499996}
+      - {x: 32.8199997, y: 18.9899998}
+      - {x: 32.6199989, y: 19.1499996}
+      - {x: 32.5400009, y: 19.1499996}
+      - {x: 32.4199982, y: 19.1100006}
+      - {x: 32.0999985, y: 18.9899998}
+      - {x: 31.9200001, y: 18.9300003}
+      - {x: 31.5799999, y: 18.8099995}
+      - {x: 31.1800003, y: 18.6700001}
+      - {x: 29.4799995, y: 18.0699997}
+      - {x: 29.2600002, y: 17.9899998}
+      - {x: 29.1000004, y: 17.9699993}
+      - {x: 29.1000004, y: 19.25}
+      - {x: 29.0799999, y: 19.2700005}
+      - {x: 29.0799999, y: 20.6100006}
+      - {x: 28.9599991, y: 20.7299995}
+      - {x: 28.7600002, y: 20.8899994}
+      - {x: 28.6399994, y: 20.9899998}
+      - {x: 28.4400005, y: 21.1499996}
+      - {x: 28.3199997, y: 21.25}
+      - {x: 28.0200005, y: 21.4899998}
+      - {x: 27.8999996, y: 21.5900002}
+      - {x: 27.7000008, y: 21.75}
+      - {x: 27.5799999, y: 21.8500004}
+      - {x: 27.2800007, y: 22.0900002}
+      - {x: 27.1599998, y: 22.1900005}
+      - {x: 26.9599991, y: 22.3500004}
+      - {x: 26.8400002, y: 22.4500008}
+      - {x: 26.5400009, y: 22.6900005}
+      - {x: 26.4200001, y: 22.7900009}
+      - {x: 26.1200008, y: 23.0300007}
+      - {x: 26, y: 23.1299992}
+      - {x: 25.7999992, y: 23.2900009}
+      - {x: 25.6800003, y: 23.3899994}
+      - {x: 25.3799992, y: 23.6299992}
+      - {x: 25.2600002, y: 23.7299995}
+      - {x: 25.0599995, y: 23.8899994}
+      - {x: 24.9400005, y: 23.9899998}
+      - {x: 24.6399994, y: 24.2299995}
+      - {x: 24.5200005, y: 24.3299999}
+      - {x: 24.3199997, y: 24.4899998}
+      - {x: 24.2000008, y: 24.5900002}
+      - {x: 23.8999996, y: 24.8299999}
+      - {x: 23.7999992, y: 24.9300003}
+      - {x: 23.6399994, y: 24.9300003}
+      - {x: 23.4799995, y: 24.8500004}
+      - {x: 23.1399994, y: 24.7299995}
+      - {x: 22.7399998, y: 24.5900002}
+      - {x: 20.3600006, y: 23.75}
+      - {x: 19.9599991, y: 23.6100006}
+      - {x: 17.5799999, y: 22.7700005}
+      - {x: 17.1800003, y: 22.6299992}
+      - {x: 14.8000002, y: 21.7900009}
+      - {x: 14.3999996, y: 21.6499996}
+      - {x: 12.0200005, y: 20.8099995}
+      - {x: 11.6199999, y: 20.6700001}
+      - {x: 9.23999977, y: 19.8299999}
+      - {x: 8.84000015, y: 19.6900005}
+      - {x: 7.13999987, y: 19.0900002}
+      - {x: 7.05999994, y: 19.0300007}
+      - {x: 7.05999994, y: 18.1299992}
+      - {x: 7.07999992, y: 18.1100006}
+      - {x: 7.07999992, y: 16.4899998}
+      - {x: 7.0999999, y: 16.4699993}
+      - {x: 7.0999999, y: 14.8299999}
+      - {x: 7.11999989, y: 14.8100004}
+      - {x: 7.11999989, y: 13.8500004}
+      - {x: 7.05999994, y: 13.8299999}
+      - {x: 5.69999981, y: 13.3500004}
+      - {x: 5.30000019, y: 13.21}
+      - {x: 2.92000008, y: 12.3699999}
+      - {x: 2.81999993, y: 12.3299999}
+      - {x: 2.6400001, y: 12.2700005}
+      - {x: 2.57999992, y: 12.21}
+      - {x: 2.57999992, y: 10.9899998}
+      - {x: 2.5999999, y: 10.9700003}
+      - {x: 2.5999999, y: 9.35000038}
+      - {x: 2.61999989, y: 9.27000046}
+      - {x: 2.46000004, y: 9.40999985}
+      - {x: 2.27999997, y: 9.39000034}
+      - {x: 2.11999989, y: 9.31000042}
+      - {x: 1.72000003, y: 9.17000008}
+      - {x: 1.24000001, y: 9.01000023}
+      - {x: 1.12, y: 9.10999966}
+      - {x: .899999976, y: 9.27000046}
+      - {x: .779999971, y: 9.36999989}
+      - {x: .579999983, y: 9.52999973}
+      - {x: .360000014, y: 9.71000004}
+      - {x: .0399999991, y: 9.97000027}
+      - {x: -.159999996, y: 10.1300001}
+      - {x: -.280000001, y: 10.2299995}
+      - {x: -.579999983, y: 10.4700003}
+      - {x: -.699999988, y: 10.5699997}
+      - {x: -.899999976, y: 10.7299995}
+      - {x: -1.01999998, y: 10.8299999}
+      - {x: -1.22000003, y: 10.9899998}
+      - {x: -1.27999997, y: 11.0699997}
+      - {x: -1.46000004, y: 11.0500002}
+      - {x: -1.62, y: 10.9700003}
+      - {x: -2.6400001, y: 10.6099997}
+      - {x: -3.03999996, y: 10.4700003}
+      - {x: -5.42000008, y: 9.63000011}
+      - {x: -5.82000017, y: 9.48999977}
+      - {x: -8.19999981, y: 8.64999962}
+      - {x: -8.60000038, y: 8.51000023}
+      - {x: -10.9799995, y: 7.67000008}
+      - {x: -11.3800001, y: 7.53000021}
+      - {x: -13.4200001, y: 6.80999994}
+      - {x: -13.5200005, y: 6.76999998}
+      - {x: -13.5799999, y: 6.71000004}
+      - {x: -13.5799999, y: 5.63000011}
+      - {x: -13.5600004, y: 5.61000013}
+      - {x: -13.6000004, y: 5.19000006}
+      - {x: -13.6999998, y: 5.26999998}
+      - {x: -13.8199997, y: 5.36999989}
+      - {x: -14.0200005, y: 5.53000021}
+      - {x: -14.2799997, y: 5.75}
+      - {x: -14.4799995, y: 5.71000004}
+      - {x: -14.8000002, y: 5.57000017}
+      - {x: -16.5, y: 4.96999979}
+      - {x: -16.8999996, y: 4.82999992}
+      - {x: -17.9200001, y: 4.46999979}
+      - {x: -18.0400009, y: 4.38999987}
+      - {x: -18.0400009, y: 4.28999996}
+      - {x: -18.0200005, y: 4.26999998}
+      - {x: -18.0200005, y: 2.63000011}
+      - {x: -18, y: 2.6099999}
+      - {x: -18, y: 2.13000011}
+      - {x: -18.3799992, y: 1.99000001}
+      - {x: -19.7399998, y: 1.50999999}
+      - {x: -20.1399994, y: 1.37}
+      - {x: -22.1800003, y: .649999976}
+      - {x: -22.5799999, y: .50999999}
+      - {x: -24.9599991, y: -.330000013}
+      - {x: -25.3600006, y: -.469999999}
+      - {x: -25.7000008, y: -.589999974}
+      - {x: -25.7800007, y: -.629999995}
+      - {x: -25.7800007, y: -.150000006}
+      - {x: -25.8600006, y: -.0700000003}
+      - {x: -26.1800003, y: .189999998}
+      - {x: -26.6000004, y: .529999971}
+      - {x: -26.8199997, y: .709999979}
+      - {x: -27.1200008, y: .949999988}
+      - {x: -27.2399998, y: 1.04999995}
+      - {x: -27.4400005, y: 1.21000004}
+      - {x: -27.5599995, y: 1.30999994}
+      - {x: -27.8600006, y: 1.54999995}
+      - {x: -27.9799995, y: 1.64999998}
+      - {x: -28.1800003, y: 1.80999994}
+      - {x: -28.2999992, y: 1.90999997}
+      - {x: -28.6000004, y: 2.1500001}
+      - {x: -28.7199993, y: 2.25}
+      - {x: -28.9200001, y: 2.41000009}
+      - {x: -29.0400009, y: 2.50999999}
+      - {x: -29.3400002, y: 2.75}
+      - {x: -29.4599991, y: 2.8499999}
+      - {x: -29.7600002, y: 3.08999991}
+      - {x: -29.8199997, y: 3.13000011}
+      - {x: -29.8999996, y: 3.13000011}
+      - {x: -30.2000008, y: 3.02999997}
+      - {x: -30.5200005, y: 2.91000009}
+      - {x: -30.7000008, y: 2.8499999}
+      - {x: -32.4000015, y: 2.25}
+      - {x: -32.7999992, y: 2.1099999}
+      - {x: -35.1800003, y: 1.26999998}
+      - {x: -35.5800018, y: 1.13}
+      - {x: -37.9599991, y: .289999992}
+      - {x: -38.3600006, y: .150000006}
+      - {x: -39.0400009, y: -.0900000036}
+      - {x: -39.1800003, y: -.150000006}
+      - {x: -39.2000008, y: -.209999993}
+      - {x: -39.2000008, y: -.289999992}
+      - {x: -39.1800003, y: -.310000002}
+      - {x: -39.1800003, y: -1.95000005}
+      - {x: -39.1599998, y: -1.97000003}
+      - {x: -39.1399994, y: -5.23000002}
+      - {x: -39.1199989, y: -5.25}
+      - {x: -39.1199989, y: -5.78999996}
+      - {x: -39.0200005, y: -5.88999987}
+      - {x: -38.7999992, y: -6.07000017}
+      - {x: -38.5999985, y: -6.23000002}
+      - {x: -38.5400009, y: -6.30999994}
+      - {x: -38.7799988, y: -6.38999987}
+      - {x: -39.4599991, y: -6.63000011}
+      - {x: -39.8600006, y: -6.76999998}
+      - {x: -40.2000008, y: -6.88999987}
+      - {x: -40.4199982, y: -6.96999979}
+      - {x: -40.5200005, y: -7.01000023}
+      - {x: -40.5200005, y: -8.52999973}
+      - {x: -40.5, y: -8.55000019}
+      - {x: -40.5, y: -10.1899996}
+      - {x: -40.4799995, y: -10.21}
+      - {x: -40.4799995, y: -10.9499998}
+      - {x: -40.4000015, y: -11.0299997}
+      - {x: -40.0999985, y: -11.2700005}
+      - {x: -39.9799995, y: -11.3699999}
+      - {x: -39.7799988, y: -11.5299997}
+      - {x: -39.6599998, y: -11.6300001}
+      - {x: -39.3600006, y: -11.8699999}
+      - {x: -39.2400017, y: -11.9700003}
+      - {x: -39.0400009, y: -12.1300001}
+      - {x: -38.9199982, y: -12.2299995}
+      - {x: -38.7200012, y: -12.3900003}
+      - {x: -38.5, y: -12.5699997}
+      - {x: -38.1800003, y: -12.8299999}
+      - {x: -37.8800011, y: -13.0699997}
+      - {x: -37.7599983, y: -13.1700001}
+      - {x: -37.4599991, y: -13.4099998}
+      - {x: -37.3400002, y: -13.5100002}
+      - {x: -37.1399994, y: -13.6700001}
+      - {x: -37.0200005, y: -13.7700005}
+      - {x: -36.7200012, y: -14.0100002}
+      - {x: -36.5999985, y: -14.1099997}
+      - {x: -36.4000015, y: -14.2700005}
+      - {x: -36.2799988, y: -14.3699999}
+      - {x: -35.9799995, y: -14.6099997}
+      - {x: -35.8600006, y: -14.71}
+      - {x: -35.6599998, y: -14.8699999}
+      - {x: -35.5400009, y: -14.9700003}
+      - {x: -35.3400002, y: -15.1300001}
+      - {x: -35.2200012, y: -15.2299995}
+      - {x: -34.9199982, y: -15.4700003}
+      - {x: -34.7999992, y: -15.5699997}
+      - {x: -34.5, y: -15.8100004}
+      - {x: -34.3800011, y: -15.9099998}
+      - {x: -34.1800003, y: -16.0699997}
+      - {x: -34.0600014, y: -16.1700001}
+      - {x: -33.7599983, y: -16.4099998}
+      - {x: -33.5800018, y: -16.5699997}
+      - {x: -33.5, y: -16.5900002}
+      - {x: -31.7999992, y: -15.9899998}
+      - {x: -31.3999996, y: -15.8500004}
+      - {x: -31.0200005, y: -15.71}
+      - {x: -31.0200005, y: -16.0300007}
+      - {x: -31, y: -16.2099991}
+      - {x: -30.8600006, y: -16.3500004}
+      - {x: -30.7399998, y: -16.4099998}
+      - {x: -30.6200008, y: -16.5100002}
+      - {x: -30.4200001, y: -16.6700001}
+      - {x: -30.2999992, y: -16.7700005}
+      - {x: -30, y: -17.0100002}
+      - {x: -29.8799992, y: -17.1100006}
+      - {x: -29.6800003, y: -17.2700005}
+      - {x: -29.5599995, y: -17.3700008}
+      - {x: -29.2600002, y: -17.6100006}
+      - {x: -29.1399994, y: -17.7099991}
+      - {x: -28.9400005, y: -17.8700008}
+      - {x: -28.8199997, y: -17.9699993}
+      - {x: -28.5200005, y: -18.2099991}
+      - {x: -28.3999996, y: -18.3099995}
+      - {x: -28.1000004, y: -18.5499992}
+      - {x: -27.9799995, y: -18.6499996}
+      - {x: -27.7800007, y: -18.8099995}
+      - {x: -27.6599998, y: -18.9099998}
+      - {x: -27.3600006, y: -19.1499996}
+      - {x: -27.2399998, y: -19.25}
+      - {x: -27.0400009, y: -19.4099998}
+      - {x: -26.9200001, y: -19.5100002}
+      - {x: -26.7199993, y: -19.6700001}
+      - {x: -26.6000004, y: -19.7700005}
+      - {x: -26.2999992, y: -20.0100002}
+      - {x: -26.1800003, y: -20.1100006}
+      - {x: -25.9799995, y: -20.2700005}
+      - {x: -25.8600006, y: -20.3700008}
+      - {x: -25.5599995, y: -20.6100006}
+      - {x: -25.4400005, y: -20.7099991}
+      - {x: -25.1399994, y: -20.9500008}
+      - {x: -25.0200005, y: -21.0499992}
+      - {x: -24.8199997, y: -21.2099991}
+      - {x: -24.7000008, y: -21.3099995}
+      - {x: -24.3999996, y: -21.5499992}
+      - {x: -24.2800007, y: -21.6499996}
+      - {x: -24.0799999, y: -21.8099995}
+      - {x: -23.9599991, y: -21.9099998}
+      - {x: -23.6599998, y: -22.1499996}
+      - {x: -23.5400009, y: -22.25}
+      - {x: -23.3400002, y: -22.4099998}
+      - {x: -23.2199993, y: -22.5100002}
+      - {x: -22.9200001, y: -22.75}
+      - {x: -22.7999992, y: -22.8500004}
+      - {x: -22.6000004, y: -23.0100002}
+      - {x: -22.4799995, y: -23.1100006}
+      - {x: -22.1800003, y: -23.3500004}
+      - {x: -22.0599995, y: -23.4500008}
+      - {x: -21.8600006, y: -23.6100006}
+      - {x: -21.7399998, y: -23.7099991}
+      - {x: -21.4400005, y: -23.9500008}
+      - {x: -21.3199997, y: -24.0499992}
+      - {x: -21.0200005, y: -24.2900009}
+      - {x: -20.8999996, y: -24.3899994}
+      - {x: -20.4799995, y: -24.7299995}
+      - {x: -20.2800007, y: -24.8899994}
+      - {x: -20.1800003, y: -24.8899994}
+      - {x: -19.9400005, y: -24.8099995}
+    - - {x: -18.7600002, y: -18.2099991}
+      - {x: -19.8199997, y: -17.3500004}
+      - {x: -20.1399994, y: -17.0900002}
+      - {x: -20.2399998, y: -17.0100002}
+      - {x: -20.1399994, y: -16.9699993}
+      - {x: -20.0200005, y: -16.9300003}
+      - {x: -19.5200005, y: -16.75}
+      - {x: -18.8400002, y: -16.5100002}
+      - {x: -18.4400005, y: -16.3700008}
+      - {x: -17.7600002, y: -16.1299992}
+      - {x: -17.6800003, y: -16.0499992}
+      - {x: -17.6800003, y: -15.5299997}
+      - {x: -17.7000008, y: -15.5100002}
+      - {x: -17.7000008, y: -14.6300001}
+      - {x: -17.7800007, y: -14.5500002}
+      - {x: -18.0799999, y: -14.3100004}
+      - {x: -18.2000008, y: -14.21}
+      - {x: -18.3999996, y: -14.0500002}
+      - {x: -18.5200005, y: -13.9499998}
+      - {x: -18.8199997, y: -13.71}
+      - {x: -18.9400005, y: -13.6099997}
+      - {x: -19.1399994, y: -13.4499998}
+      - {x: -19.2600002, y: -13.3500004}
+      - {x: -19.5599995, y: -13.1099997}
+      - {x: -19.6800003, y: -13.0100002}
+      - {x: -19.8799992, y: -12.8500004}
+      - {x: -20, y: -12.75}
+      - {x: -20.2999992, y: -12.5100002}
+      - {x: -20.4200001, y: -12.4099998}
+      - {x: -20.6200008, y: -12.25}
+      - {x: -20.7399998, y: -12.1499996}
+      - {x: -21.0400009, y: -11.9099998}
+      - {x: -21.1599998, y: -11.8100004}
+      - {x: -21.3600006, y: -11.6499996}
+      - {x: -21.6200008, y: -11.4099998}
+      - {x: -21.7999992, y: -11.4300003}
+      - {x: -22.0599995, y: -11.5500002}
+      - {x: -22.1800003, y: -11.5900002}
+      - {x: -22.3199997, y: -11.4700003}
+      - {x: -22.5400009, y: -11.3100004}
+      - {x: -22.6200008, y: -11.3100004}
+      - {x: -23.9799995, y: -11.79}
+      - {x: -24.3799992, y: -11.9300003}
+      - {x: -26.7600002, y: -12.7700005}
+      - {x: -27.1599998, y: -12.9099998}
+      - {x: -27.5, y: -13.0299997}
+      - {x: -27.6000004, y: -13.0699997}
+      - {x: -27.7600002, y: -13.1300001}
+      - {x: -27.7600002, y: -12.0100002}
+      - {x: -27.7800007, y: -11.9899998}
+      - {x: -27.7800007, y: -11.6099997}
+      - {x: -27.9400005, y: -11.4499998}
+      - {x: -28.1399994, y: -11.29}
+      - {x: -28.2600002, y: -11.1899996}
+      - {x: -28.5599995, y: -10.9499998}
+      - {x: -28.6800003, y: -10.8500004}
+      - {x: -28.9799995, y: -10.6099997}
+      - {x: -29.1000004, y: -10.5100002}
+      - {x: -29.2000008, y: -10.4300003}
+      - {x: -29.4200001, y: -10.25}
+      - {x: -29.6200008, y: -10.0900002}
+      - {x: -29.8199997, y: -9.90999985}
+      - {x: -29.9799995, y: -9.78999996}
+      - {x: -29.9799995, y: -9.59000015}
+      - {x: -30, y: -9.56999969}
+      - {x: -30, y: -8.27000046}
+      - {x: -30.1599998, y: -8.10999966}
+      - {x: -30.3600006, y: -7.94999981}
+      - {x: -30.5799999, y: -7.76999998}
+      - {x: -30.7800007, y: -7.61000013}
+      - {x: -30.6599998, y: -7.55000019}
+      - {x: -30.4799995, y: -7.48999977}
+      - {x: -30.1399994, y: -7.36999989}
+      - {x: -29.7399998, y: -7.23000002}
+      - {x: -27.3600006, y: -6.38999987}
+      - {x: -26.9599991, y: -6.25}
+      - {x: -25.9400005, y: -5.88999987}
+      - {x: -25.7800007, y: -5.82999992}
+      - {x: -25.6599998, y: -5.8499999}
+      - {x: -25.1200008, y: -6.28999996}
+      - {x: -24.7199993, y: -6.63000011}
+      - {x: -24.6000004, y: -6.69000006}
+      - {x: -24.5599995, y: -6.69000006}
+      - {x: -23.3600006, y: -6.26999998}
+      - {x: -20.9799995, y: -5.42999983}
+      - {x: -20.5799999, y: -5.28999996}
+      - {x: -18.2000008, y: -4.44999981}
+      - {x: -17.7999992, y: -4.30999994}
+      - {x: -15.4200001, y: -3.47000003}
+      - {x: -15.0200005, y: -3.32999992}
+      - {x: -13.3199997, y: -2.73000002}
+      - {x: -13.1999998, y: -2.71000004}
+      - {x: -12.9200001, y: -2.97000003}
+      - {x: -12.6999998, y: -3.1099999}
+      - {x: -12.5799999, y: -3.21000004}
+      - {x: -12.2799997, y: -3.45000005}
+      - {x: -12.1599998, y: -3.54999995}
+      - {x: -11.96, y: -3.71000004}
+      - {x: -11.8400002, y: -3.80999994}
+      - {x: -11.54, y: -4.05000019}
+      - {x: -11.4200001, y: -4.1500001}
+      - {x: -11.2200003, y: -4.30999994}
+      - {x: -11.1000004, y: -4.40999985}
+      - {x: -11, y: -4.48999977}
+      - {x: -9.73999977, y: -5.51000023}
+      - {x: -9.61999989, y: -5.53000021}
+      - {x: -9.35999966, y: -5.44999981}
+      - {x: -9.03999996, y: -5.32999992}
+      - {x: -8.69999981, y: -5.21000004}
+      - {x: -8.30000019, y: -5.07000017}
+      - {x: -6.5999999, y: -4.46999979}
+      - {x: -6.53999996, y: -4.40999985}
+      - {x: -6.53999996, y: -3.58999991}
+      - {x: -6.48000002, y: -3.54999995}
+      - {x: -6.30000019, y: -3.49000001}
+      - {x: -5.96000004, y: -3.36999989}
+      - {x: -5.86000013, y: -3.32999992}
+      - {x: -5.67999983, y: -3.26999998}
+      - {x: -5.57999992, y: -3.19000006}
+      - {x: -5.57999992, y: -2.41000009}
+      - {x: -5.5999999, y: -2.3900001}
+      - {x: -5.5999999, y: -1.40999997}
+      - {x: -5.65999985, y: -1.35000002}
+      - {x: -5.86000013, y: -1.19000006}
+      - {x: -5.98000002, y: -1.09000003}
+      - {x: -6.4000001, y: -.75}
+      - {x: -6.57999992, y: -.589999974}
+      - {x: -6.63999987, y: -.569999993}
+      - {x: -6.71999979, y: -.569999993}
+      - {x: -7.4000001, y: -.810000002}
+      - {x: -7.5, y: -.850000024}
+      - {x: -7.5, y: .25}
+      - {x: -7.57999992, y: .330000013}
+      - {x: -8.22000027, y: .850000024}
+      - {x: -7.98000002, y: .949999988}
+      - {x: -7.76000023, y: 1.02999997}
+      - {x: -5.38000011, y: 1.87}
+      - {x: -4.98000002, y: 2.00999999}
+      - {x: -2.5999999, y: 2.8499999}
+      - {x: -2.20000005, y: 2.99000001}
+      - {x: .180000007, y: 3.82999992}
+      - {x: .579999983, y: 3.97000003}
+      - {x: 1.94000006, y: 4.44999981}
+      - {x: 2.27999997, y: 4.55000019}
+      - {x: 2.46000004, y: 4.38999987}
+      - {x: 2.68000007, y: 4.25}
+      - {x: 2.79999995, y: 4.1500001}
+      - {x: 3, y: 3.99000001}
+      - {x: 3.11999989, y: 3.8900001}
+      - {x: 3.42000008, y: 3.6500001}
+      - {x: 3.53999996, y: 3.54999995}
+      - {x: 3.74000001, y: 3.3900001}
+      - {x: 3.8599999, y: 3.28999996}
+      - {x: 4.15999985, y: 3.04999995}
+      - {x: 4.28000021, y: 2.95000005}
+      - {x: 4.48000002, y: 2.78999996}
+      - {x: 4.5999999, y: 2.69000006}
+      - {x: 4.9000001, y: 2.45000005}
+      - {x: 5.01999998, y: 2.3499999}
+      - {x: 5.21999979, y: 2.19000006}
+      - {x: 5.34000015, y: 2.08999991}
+      - {x: 5.63999987, y: 1.85000002}
+      - {x: 5.76000023, y: 1.75}
+      - {x: 6.05999994, y: 1.50999999}
+      - {x: 6.17999983, y: 1.40999997}
+      - {x: 6.30000019, y: 1.38999999}
+      - {x: 6.76000023, y: 1.54999995}
+      - {x: 8.46000004, y: 2.1500001}
+      - {x: 8.85999966, y: 2.28999996}
+      - {x: 11.2399998, y: 3.13000011}
+      - {x: 11.6400003, y: 3.26999998}
+      - {x: 14.0200005, y: 4.11000013}
+      - {x: 14.4200001, y: 4.25}
+      - {x: 15.7799997, y: 4.73000002}
+      - {x: 15.8800001, y: 4.76999998}
+      - {x: 16.0599995, y: 4.82999992}
+      - {x: 16.1200008, y: 4.88999987}
+      - {x: 16.1200008, y: 6.48999977}
+      - {x: 16.1000004, y: 6.51000023}
+      - {x: 16.1000004, y: 8.13000011}
+      - {x: 16.1399994, y: 8.25}
+      - {x: 16.2999992, y: 8.28999996}
+      - {x: 17.3199997, y: 8.64999962}
+      - {x: 17.7199993, y: 8.78999996}
+      - {x: 20.1000004, y: 9.63000011}
+      - {x: 20.5, y: 9.77000046}
+      - {x: 22.8799992, y: 10.6099997}
+      - {x: 23.2800007, y: 10.75}
+      - {x: 25.6599998, y: 11.5900002}
+      - {x: 26.0599995, y: 11.7299995}
+      - {x: 28.1000004, y: 12.4499998}
+      - {x: 28.5, y: 12.5900002}
+      - {x: 28.8400002, y: 12.71}
+      - {x: 29.0599995, y: 12.79}
+      - {x: 29.1800003, y: 12.79}
+      - {x: 29.2999992, y: 12.6899996}
+      - {x: 29.6000004, y: 12.4499998}
+      - {x: 29.7199993, y: 12.3500004}
+      - {x: 29.9200001, y: 12.1899996}
+      - {x: 30.0400009, y: 12.0900002}
+      - {x: 30.3400002, y: 11.8500004}
+      - {x: 30.4599991, y: 11.75}
+      - {x: 30.7600002, y: 11.5100002}
+      - {x: 30.8799992, y: 11.4099998}
+      - {x: 31.0799999, y: 11.25}
+      - {x: 31.2000008, y: 11.1499996}
+      - {x: 31.5, y: 10.9099998}
+      - {x: 31.6200008, y: 10.8100004}
+      - {x: 31.8199997, y: 10.6499996}
+      - {x: 31.9400005, y: 10.5500002}
+      - {x: 32.2400017, y: 10.3100004}
+      - {x: 32.3600006, y: 10.21}
+      - {x: 32.5600014, y: 10.0500002}
+      - {x: 32.6800003, y: 9.94999981}
+      - {x: 32.9799995, y: 9.71000004}
+      - {x: 33.0999985, y: 9.60999966}
+      - {x: 33.2999992, y: 9.44999981}
+      - {x: 33.4199982, y: 9.35000038}
+      - {x: 33.7200012, y: 9.10999966}
+      - {x: 33.8400002, y: 9.01000023}
+      - {x: 34.1399994, y: 8.77000046}
+      - {x: 34.2599983, y: 8.67000008}
+      - {x: 34.4599991, y: 8.51000023}
+      - {x: 34.5800018, y: 8.40999985}
+      - {x: 34.6800003, y: 8.32999992}
+      - {x: 34.7000008, y: 8.32999992}
+      - {x: 34.7799988, y: 8.25}
+      - {x: 34.7799988, y: 8.27000046}
+      - {x: 34.7400017, y: 8.25}
+      - {x: 34.6800003, y: 8.25}
+      - {x: 34.4399986, y: 8.17000008}
+      - {x: 34.1199989, y: 8.05000019}
+      - {x: 33.7200012, y: 7.90999985}
+      - {x: 31.3400002, y: 7.07000017}
+      - {x: 30.9400005, y: 6.92999983}
+      - {x: 28.5599995, y: 6.09000015}
+      - {x: 28.1599998, y: 5.94999981}
+      - {x: 27.9799995, y: 5.90999985}
+      - {x: 27.7399998, y: 6.13000011}
+      - {x: 27.5400009, y: 6.28999996}
+      - {x: 27.2999992, y: 6.23000002}
+      - {x: 26.9799995, y: 6.09000015}
+      - {x: 24.9400005, y: 5.36999989}
+      - {x: 24.5400009, y: 5.23000002}
+      - {x: 22.1599998, y: 4.38999987}
+      - {x: 21.7600002, y: 4.25}
+      - {x: 19.7199993, y: 3.52999997}
+      - {x: 19.5799999, y: 3.47000003}
+      - {x: 19.5799999, y: 4.17000008}
+      - {x: 19.4799995, y: 4.26999998}
+      - {x: 19.3799992, y: 4.3499999}
+      - {x: 19.2600002, y: 4.44999981}
+      - {x: 19.0599995, y: 4.61000013}
+      - {x: 18.9400005, y: 4.71000004}
+      - {x: 18.8400002, y: 4.78999996}
+      - {x: 18.6000004, y: 5.01000023}
+      - {x: 18.4599991, y: 4.98999977}
+      - {x: 17.9599991, y: 4.78999996}
+      - {x: 16.9400005, y: 4.42999983}
+      - {x: 16.5400009, y: 4.28999996}
+      - {x: 16.3799992, y: 4.23000002}
+      - {x: 16.3199997, y: 4.17000008}
+      - {x: 16.3199997, y: 3.71000004}
+      - {x: 16.2999992, y: 3.71000004}
+      - {x: 15.8999996, y: 3.56999993}
+      - {x: 14.54, y: 3.08999991}
+      - {x: 14.3800001, y: 3.02999997}
+      - {x: 14.3000002, y: 2.95000005}
+      - {x: 14.3000002, y: 1.75}
+      - {x: 14.3199997, y: 1.59000003}
+      - {x: 14.4399996, y: 1.47000003}
+      - {x: 14.6599998, y: 1.28999996}
+      - {x: 16.8799992, y: -.50999999}
+      - {x: 17.2000008, y: -.769999981}
+      - {x: 17.3999996, y: -.930000007}
+      - {x: 17.5200005, y: -1.02999997}
+      - {x: 17.8199997, y: -1.26999998}
+      - {x: 17.9400005, y: -1.37}
+      - {x: 18.1399994, y: -1.52999997}
+      - {x: 18.2600002, y: -1.63}
+      - {x: 18.5599995, y: -1.87}
+      - {x: 18.6800003, y: -1.97000003}
+      - {x: 18.9799995, y: -2.21000004}
+      - {x: 19.1000004, y: -2.30999994}
+      - {x: 19.2999992, y: -2.47000003}
+      - {x: 19.3999996, y: -2.56999993}
+      - {x: 19.4799995, y: -2.58999991}
+      - {x: 20.2800007, y: -2.30999994}
+      - {x: 22.6599998, y: -1.47000003}
+      - {x: 23.0599995, y: -1.33000004}
+      - {x: 23.7399998, y: -1.09000003}
+      - {x: 24.0200005, y: -1.11000001}
+      - {x: 24.7800007, y: -1.71000004}
+      - {x: 25, y: -1.88999999}
+      - {x: 25.2999992, y: -2.13000011}
+      - {x: 25.4200001, y: -2.23000002}
+      - {x: 25.7199993, y: -2.47000003}
+      - {x: 25.8400002, y: -2.56999993}
+      - {x: 26.0400009, y: -2.73000002}
+      - {x: 26.1599998, y: -2.82999992}
+      - {x: 26.4599991, y: -3.06999993}
+      - {x: 26.5799999, y: -3.17000008}
+      - {x: 26.7800007, y: -3.32999992}
+      - {x: 26.8999996, y: -3.43000007}
+      - {x: 27.1000004, y: -3.58999991}
+      - {x: 27.5200005, y: -3.93000007}
+      - {x: 27.4400005, y: -3.97000003}
+      - {x: 26.0799999, y: -4.44999981}
+      - {x: 25.6800003, y: -4.59000015}
+      - {x: 23.2999992, y: -5.42999983}
+      - {x: 22.8999996, y: -5.57000017}
+      - {x: 20.8600006, y: -6.28999996}
+      - {x: 20.4599991, y: -6.42999983}
+      - {x: 18.0799999, y: -7.26999998}
+      - {x: 17.6800003, y: -7.40999985}
+      - {x: 17, y: -7.6500001}
+      - {x: 16.7399998, y: -7.73000002}
+      - {x: 16.6399994, y: -7.63000011}
+      - {x: 16.4799995, y: -7.51000023}
+      - {x: 16.4799995, y: -7.23000002}
+      - {x: 16.3999996, y: -7.1500001}
+      - {x: 16.1000004, y: -6.90999985}
+      - {x: 15.9799995, y: -6.80999994}
+      - {x: 15.7799997, y: -6.6500001}
+      - {x: 15.6599998, y: -6.55000019}
+      - {x: 15.3599997, y: -6.30999994}
+      - {x: 15.3599997, y: -5.09000015}
+      - {x: 15.3400002, y: -5.07000017}
+      - {x: 15.3400002, y: -4.42999983}
+      - {x: 15.2799997, y: -4.36999989}
+      - {x: 15.0600004, y: -4.19000006}
+      - {x: 14.7399998, y: -3.93000007}
+      - {x: 14.96, y: -3.8499999}
+      - {x: 17, y: -3.13000011}
+      - {x: 17.0599995, y: -3.06999993}
+      - {x: 17.0599995, y: -2.30999994}
+      - {x: 16.9200001, y: -2.17000008}
+      - {x: 16.7199993, y: -2.00999999}
+      - {x: 16.5, y: -1.83000004}
+      - {x: 16.4200001, y: -1.80999994}
+      - {x: 16.2600002, y: -1.87}
+      - {x: 16.2600002, y: -1.71000004}
+      - {x: 16.1399994, y: -1.59000003}
+      - {x: 15.6999998, y: -1.23000002}
+      - {x: 14.96, y: -.629999995}
+      - {x: 14.54, y: -.289999992}
+      - {x: 14.2399998, y: -.0500000007}
+      - {x: 14.1199999, y: .0500000007}
+      - {x: 13.9200001, y: .209999993}
+      - {x: 13.8000002, y: .310000002}
+      - {x: 13.5, y: .550000012}
+      - {x: 13.3800001, y: .649999976}
+      - {x: 13.1800003, y: .810000002}
+      - {x: 13.0600004, y: .910000026}
+      - {x: 12.7600002, y: 1.14999998}
+      - {x: 12.6400003, y: 1.25}
+      - {x: 12.54, y: 1.33000004}
+      - {x: 12.3400002, y: 1.50999999}
+      - {x: 12.1599998, y: 1.63}
+      - {x: 12.1199999, y: 1.63}
+      - {x: 11.6599998, y: 1.47000003}
+      - {x: 11.2600002, y: 1.33000004}
+      - {x: 8.88000011, y: .49000001}
+      - {x: 8.47999954, y: .349999994}
+      - {x: 7.11999989, y: -.129999995}
+      - {x: 6.82000017, y: -.230000004}
+      - {x: 6.63999987, y: -.0500000007}
+      - {x: 6.4000001, y: .109999999}
+      - {x: 6.0999999, y: .349999994}
+      - {x: 5.88000011, y: .529999971}
+      - {x: 5.84000015, y: .529999971}
+      - {x: 5.65999985, y: .469999999}
+      - {x: 5.32000017, y: .349999994}
+      - {x: 4.92000008, y: .230000004}
+      - {x: 4.73999977, y: .389999986}
+      - {x: 4.4000001, y: .629999995}
+      - {x: 4.28000021, y: .730000019}
+      - {x: 3.98000002, y: .970000029}
+      - {x: 3.8599999, y: 1.07000005}
+      - {x: 3.66000009, y: 1.23000002}
+      - {x: 3.53999996, y: 1.33000004}
+      - {x: 3.24000001, y: 1.57000005}
+      - {x: 3.11999989, y: 1.66999996}
+      - {x: 2.92000008, y: 1.83000004}
+      - {x: 2.79999995, y: 1.92999995}
+      - {x: 2.5, y: 2.17000008}
+      - {x: 2.38000011, y: 2.26999998}
+      - {x: 2.07999992, y: 2.50999999}
+      - {x: 1.96000004, y: 2.6099999}
+      - {x: 1.75999999, y: 2.76999998}
+      - {x: 1.63999999, y: 2.86999989}
+      - {x: 1.24000001, y: 3.19000006}
+      - {x: 1.13999999, y: 3.19000006}
+      - {x: .119999997, y: 2.82999992}
+      - {x: -.280000001, y: 2.69000006}
+      - {x: -.620000005, y: 2.56999993}
+      - {x: -.899999976, y: 2.49000001}
+      - {x: -1.05999994, y: 2.6500001}
+      - {x: -1.27999997, y: 2.80999994}
+      - {x: -1.36000001, y: 2.82999992}
+      - {x: -1.75999999, y: 2.69000006}
+      - {x: -2.44000006, y: 2.45000005}
+      - {x: -2.83999991, y: 2.30999994}
+      - {x: -3.18000007, y: 2.19000006}
+      - {x: -3.27999997, y: 2.1500001}
+      - {x: -3.46000004, y: 2.08999991}
+      - {x: -3.55999994, y: 2.00999999}
+      - {x: -3.53999996, y: 1.52999997}
+      - {x: -3.55999994, y: 1.52999997}
+      - {x: -4.15999985, y: 1.33000004}
+      - {x: -4.32000017, y: 1.49000001}
+      - {x: -4.46000004, y: 1.57000005}
+      - {x: -4.61999989, y: 1.73000002}
+      - {x: -4.73999977, y: 1.69000006}
+      - {x: -4.96000004, y: 1.61000001}
+      - {x: -5.30000019, y: 1.49000001}
+      - {x: -5.4000001, y: 1.45000005}
+      - {x: -5.57999992, y: 1.38999999}
+      - {x: -5.63999987, y: 1.33000004}
+      - {x: -5.63999987, y: .790000021}
+      - {x: -5.65999985, y: .790000021}
+      - {x: -6.17999983, y: .610000014}
+      - {x: -6.28000021, y: .569999993}
+      - {x: -6.32000017, y: .50999999}
+      - {x: -6.32000017, y: -.0900000036}
+      - {x: -6.30000019, y: -.25}
+      - {x: -6.15999985, y: -.389999986}
+      - {x: -5.86000013, y: -.629999995}
+      - {x: -5.73999977, y: -.730000019}
+      - {x: -5.53999996, y: -.889999986}
+      - {x: -5.42000008, y: -.99000001}
+      - {x: -5.11999989, y: -1.23000002}
+      - {x: -5, y: -1.33000004}
+      - {x: -4.80000019, y: -1.49000001}
+      - {x: -4.67999983, y: -1.59000003}
+      - {x: -4.48000002, y: -1.75}
+      - {x: -4.36000013, y: -1.85000002}
+      - {x: -4.05999994, y: -2.08999991}
+      - {x: -3.94000006, y: -2.19000006}
+      - {x: -3.6400001, y: -2.43000007}
+      - {x: -3.51999998, y: -2.52999997}
+      - {x: -3.46000004, y: -2.56999993}
+      - {x: -3.38000011, y: -2.56999993}
+      - {x: -2.98000002, y: -2.43000007}
+      - {x: -2.6400001, y: -2.30999994}
+      - {x: -2.57999992, y: -2.26999998}
+      - {x: -2.44000006, y: -2.26999998}
+      - {x: -2.27999997, y: -2.30999994}
+      - {x: -1.38, y: -2.50999999}
+      - {x: -1.10000002, y: -2.56999993}
+      - {x: -.920000017, y: -2.71000004}
+      - {x: -.620000005, y: -2.95000005}
+      - {x: -.5, y: -3.04999995}
+      - {x: -.300000012, y: -3.21000004}
+      - {x: -.180000007, y: -3.30999994}
+      - {x: .119999997, y: -3.54999995}
+      - {x: .239999995, y: -3.6500001}
+      - {x: .439999998, y: -3.80999994}
+      - {x: .560000002, y: -3.91000009}
+      - {x: .860000014, y: -4.1500001}
+      - {x: .980000019, y: -4.25}
+      - {x: 1.17999995, y: -4.40999985}
+      - {x: 1.29999995, y: -4.51000023}
+      - {x: 1.60000002, y: -4.75}
+      - {x: 1.72000003, y: -4.8499999}
+      - {x: 2.01999998, y: -5.09000015}
+      - {x: 2.1400001, y: -5.19000006}
+      - {x: 2.33999991, y: -5.3499999}
+      - {x: 2.46000004, y: -5.44999981}
+      - {x: 2.75999999, y: -5.69000006}
+      - {x: 2.88000011, y: -5.78999996}
+      - {x: 3.18000007, y: -6.03000021}
+      - {x: 3.29999995, y: -6.13000011}
+      - {x: 3.5, y: -6.28999996}
+      - {x: 3.61999989, y: -6.38999987}
+      - {x: 3.92000008, y: -6.63000011}
+      - {x: 4.03999996, y: -6.73000002}
+      - {x: 4.23999977, y: -6.88999987}
+      - {x: 4.36000013, y: -6.98999977}
+      - {x: 4.65999985, y: -7.23000002}
+      - {x: 4.78000021, y: -7.32999992}
+      - {x: 4.98000002, y: -7.48999977}
+      - {x: 5.0999999, y: -7.59000015}
+      - {x: 5.4000001, y: -7.82999992}
+      - {x: 5.51999998, y: -7.92999983}
+      - {x: 5.71999979, y: -8.09000015}
+      - {x: 5.84000015, y: -8.18999958}
+      - {x: 6.13999987, y: -8.43000031}
+      - {x: 6.26000023, y: -8.52999973}
+      - {x: 6.46000004, y: -8.68999958}
+      - {x: 6.57999992, y: -8.78999996}
+      - {x: 6.88000011, y: -9.02999973}
+      - {x: 7, y: -9.13000011}
+      - {x: 7.30000019, y: -9.36999989}
+      - {x: 7.42000008, y: -9.47000027}
+      - {x: 7.61999989, y: -9.63000011}
+      - {x: 7.73999977, y: -9.72999954}
+      - {x: 7.76000023, y: -9.72999954}
+      - {x: 7.9000001, y: -9.85000038}
+      - {x: 7.88000011, y: -9.85000038}
+      - {x: 7.63999987, y: -9.93000031}
+      - {x: 5.94000006, y: -10.5299997}
+      - {x: 5.53999996, y: -10.6700001}
+      - {x: 3.5, y: -11.3900003}
+      - {x: 3.0999999, y: -11.5299997}
+      - {x: .720000029, y: -12.3699999}
+      - {x: .319999993, y: -12.5100002}
+      - {x: -2.05999994, y: -13.3500004}
+      - {x: -2.46000004, y: -13.4899998}
+      - {x: -4.84000015, y: -14.3299999}
+      - {x: -5.23999977, y: -14.4700003}
+      - {x: -7.61999989, y: -15.3100004}
+      - {x: -8.02000046, y: -15.4499998}
+      - {x: -10.3999996, y: -16.2900009}
+      - {x: -10.8000002, y: -16.4300003}
+      - {x: -13.1800003, y: -17.2700005}
+      - {x: -13.5799999, y: -17.4099998}
+      - {x: -14.1599998, y: -17.6100006}
+      - {x: -15.8599997, y: -18.2099991}
+      - {x: -16.2600002, y: -18.3500004}
+      - {x: -17.6200008, y: -18.8299999}
+      - {x: -17.8799992, y: -18.9099998}
+    - - {x: -13.2799997, y: -14.5299997}
+      - {x: -12.8800001, y: -14.3900003}
+      - {x: -10.5, y: -13.5500002}
+      - {x: -10.1000004, y: -13.4099998}
+      - {x: -8.73999977, y: -12.9300003}
+      - {x: -8.56000042, y: -12.8699999}
+      - {x: -8.5, y: -12.9300003}
+      - {x: -8.42000008, y: -12.9300003}
+      - {x: -8.23999977, y: -12.8699999}
+      - {x: -7.21999979, y: -12.5100002}
+      - {x: -6.82000017, y: -12.3699999}
+      - {x: -5.11999989, y: -11.7700005}
+      - {x: -4.92000008, y: -11.6899996}
+      - {x: -4.88000011, y: -11.5699997}
+      - {x: -2.5, y: -10.7299995}
+      - {x: -2.0999999, y: -10.5900002}
+      - {x: -1.75999999, y: -10.4700003}
+      - {x: -1.60000002, y: -10.4099998}
+      - {x: -1.5, y: -10.3699999}
+      - {x: -1.5, y: -9.75}
+      - {x: -1.51999998, y: -9.72999954}
+      - {x: -1.51999998, y: -8.10999966}
+      - {x: -1.53999996, y: -8.09000015}
+      - {x: -1.53999996, y: -6.92999983}
+      - {x: -1.62, y: -6.8499999}
+      - {x: -1.91999996, y: -6.61000013}
+      - {x: -2.03999996, y: -6.51000023}
+      - {x: -2.24000001, y: -6.3499999}
+      - {x: -2.3599999, y: -6.25}
+      - {x: -2.66000009, y: -6.01000023}
+      - {x: -2.77999997, y: -5.90999985}
+      - {x: -2.98000002, y: -5.75}
+      - {x: -3.0999999, y: -5.6500001}
+      - {x: -3.4000001, y: -5.40999985}
+      - {x: -3.44000006, y: -5.40999985}
+      - {x: -3.77999997, y: -5.53000021}
+      - {x: -3.88000011, y: -5.57000017}
+      - {x: -4.05999994, y: -5.63000011}
+      - {x: -4.21999979, y: -5.48999977}
+      - {x: -4.42000008, y: -5.32999992}
+      - {x: -4.53999996, y: -5.23000002}
+      - {x: -4.96000004, y: -4.88999987}
+      - {x: -5.15999985, y: -4.73000002}
+      - {x: -5.23999977, y: -4.67000008}
+      - {x: -5.26000023, y: -4.67000008}
+      - {x: -5.65999985, y: -4.80999994}
+      - {x: -6.67999983, y: -5.17000008}
+      - {x: -7.07999992, y: -5.30999994}
+      - {x: -9.46000004, y: -6.1500001}
+      - {x: -9.85999966, y: -6.28999996}
+      - {x: -10.8800001, y: -6.6500001}
+      - {x: -11.1000004, y: -6.73000002}
+      - {x: -11.1800003, y: -6.75}
+      - {x: -11.3599997, y: -6.57000017}
+      - {x: -11.4799995, y: -6.51000023}
+      - {x: -11.6999998, y: -6.32999992}
+      - {x: -11.7799997, y: -6.25}
+      - {x: -11.6599998, y: -6.17000008}
+      - {x: -11.5600004, y: -6.1500001}
+      - {x: -11.5, y: -6.09000015}
+      - {x: -11.5, y: -5.32999992}
+      - {x: -11.54, y: -5.28999996}
+      - {x: -11.7399998, y: -5.13000011}
+      - {x: -11.8599997, y: -5.03000021}
+      - {x: -12.1599998, y: -4.78999996}
+      - {x: -12.2799997, y: -4.69000006}
+      - {x: -12.4799995, y: -4.53000021}
+      - {x: -12.6000004, y: -4.42999983}
+      - {x: -12.8999996, y: -4.19000006}
+      - {x: -13.0200005, y: -4.09000015}
+      - {x: -13.4399996, y: -3.75}
+      - {x: -13.6599998, y: -3.56999993}
+      - {x: -13.7399998, y: -3.56999993}
+      - {x: -13.8800001, y: -3.58999991}
+      - {x: -14.1999998, y: -3.73000002}
+      - {x: -14.6000004, y: -3.86999989}
+      - {x: -16.9799995, y: -4.71000004}
+      - {x: -17.3799992, y: -4.8499999}
+      - {x: -19.7600002, y: -5.69000006}
+      - {x: -20.1599998, y: -5.82999992}
+      - {x: -22.5400009, y: -6.67000008}
+      - {x: -22.9400005, y: -6.80999994}
+      - {x: -23.2800007, y: -6.92999983}
+      - {x: -23.5, y: -7.01000023}
+      - {x: -23.6200008, y: -7.05000019}
+      - {x: -25.3199997, y: -7.6500001}
+      - {x: -25.4599991, y: -7.71000004}
+      - {x: -25.5, y: -7.67000008}
+      - {x: -26.4400005, y: -6.88999987}
+      - {x: -26.7199993, y: -6.69000006}
+      - {x: -26.7600002, y: -6.69000006}
+      - {x: -27.2199993, y: -6.8499999}
+      - {x: -27.6200008, y: -6.98999977}
+      - {x: -28.6399994, y: -7.3499999}
+      - {x: -28.7000008, y: -7.40999985}
+      - {x: -28.7000008, y: -8.43000031}
+      - {x: -28.6800003, y: -8.44999981}
+      - {x: -28.6800003, y: -9.63000011}
+      - {x: -28.6000004, y: -9.71000004}
+      - {x: -28.3799992, y: -9.89000034}
+      - {x: -28.0799999, y: -10.1300001}
+      - {x: -27.9599991, y: -10.2299995}
+      - {x: -27.6599998, y: -10.4700003}
+      - {x: -27.5400009, y: -10.5699997}
+      - {x: -27.3400002, y: -10.7299995}
+      - {x: -27.2199993, y: -10.8299999}
+      - {x: -26.9200001, y: -11.0699997}
+      - {x: -26.7999992, y: -11.1700001}
+      - {x: -26.6000004, y: -11.3299999}
+      - {x: -26.4799995, y: -11.4300003}
+      - {x: -26.3999996, y: -11.4499998}
+      - {x: -25.9400005, y: -11.29}
+      - {x: -25.6000004, y: -11.1700001}
+      - {x: -25.3400002, y: -11.0699997}
+      - {x: -25.2000008, y: -11.1899996}
+      - {x: -24.8999996, y: -11.4499998}
+      - {x: -24.8199997, y: -11.4700003}
+      - {x: -24.4200001, y: -11.3299999}
+      - {x: -23.0599995, y: -10.8500004}
+      - {x: -22.6599998, y: -10.71}
+      - {x: -21.9799995, y: -10.4700003}
+      - {x: -21.7600002, y: -10.3900003}
+      - {x: -21.6200008, y: -10.5100002}
+      - {x: -21.5, y: -10.5900002}
+      - {x: -20.8600006, y: -11.1099997}
+      - {x: -20.6399994, y: -11.29}
+      - {x: -20.3400002, y: -11.5299997}
+      - {x: -20.2199993, y: -11.6300001}
+      - {x: -19.9200001, y: -11.8699999}
+      - {x: -19.7999992, y: -11.9700003}
+      - {x: -19.6000004, y: -12.1300001}
+      - {x: -19.4799995, y: -12.2299995}
+      - {x: -19.3799992, y: -12.3100004}
+      - {x: -19.1200008, y: -12.5299997}
+      - {x: -18.9200001, y: -12.6899996}
+      - {x: -18.7999992, y: -12.79}
+      - {x: -18.5, y: -13.0299997}
+      - {x: -18.3799992, y: -13.1300001}
+      - {x: -18.1800003, y: -13.29}
+      - {x: -18.0599995, y: -13.3900003}
+      - {x: -17.7600002, y: -13.6300001}
+      - {x: -17.6399994, y: -13.7299995}
+      - {x: -17.4400005, y: -13.8900003}
+      - {x: -17.3199997, y: -13.9899998}
+      - {x: -17.0200005, y: -14.2299995}
+      - {x: -16.8999996, y: -14.3299999}
+      - {x: -16.6000004, y: -14.5699997}
+      - {x: -16.4799995, y: -14.6700001}
+      - {x: -16.2800007, y: -14.8299999}
+      - {x: -16.1599998, y: -14.9300003}
+      - {x: -15.8599997, y: -15.1700001}
+      - {x: -15.6400003, y: -15.3500004}
+      - {x: -15.4799995, y: -15.3100004}
+      - {x: -15.3199997, y: -15.25}
+--- !u!212 &1872400544
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872400542}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4d5dae99ac7bc4814ac67c0253ef8ead, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1872400545
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872400542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.9348965, y: 16.9871693, z: 0}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &1938103783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1938103784}
+  - 212: {fileID: 1938103785}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938103784
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938103783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.04364777, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 6
+--- !u!212 &1938103785
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938103783}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1988018283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1988018284}
+  - 212: {fileID: 1988018285}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1988018284
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988018283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.2835579, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 33
+--- !u!212 &1988018285
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988018283}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &2007405460
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 37.8508797
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.5742855
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7d5d7b54922a54c3885f5a14e2cca82d, type: 2}
+  m_RootGameObject: {fileID: 440025809}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &2007580403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2007580404}
+  - 212: {fileID: 2007580405}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2007580404
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007580403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4363632, y: 12.2396002, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 35
+--- !u!212 &2007580405
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007580403}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2023144132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2023144133}
+  - 212: {fileID: 2023144134}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023144133
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023144132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.4363708, y: 1.99959946, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 18
+--- !u!212 &2023144134
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023144132}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2052001180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2052001181}
+  - 212: {fileID: 2052001182}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052001181
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052001180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.1563454, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 0
+--- !u!212 &2052001182
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052001180}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2123387200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2123387201}
+  - 212: {fileID: 2123387202}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123387201
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2123387200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.2435684, y: 12.2395983, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 51
+--- !u!212 &2123387202
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2123387200}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2134809659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2134809660}
+  - 212: {fileID: 2134809661}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134809660
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2134809659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19638062, y: -18.4804001, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 7
+--- !u!212 &2134809661
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2134809659}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2135073858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2135073859}
+  - 212: {fileID: 2135073860}
+  m_Layer: 0
+  m_Name: asphalt_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2135073859
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135073858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.2835617, y: -8.24040031, z: -.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 441980513}
+  m_RootOrder: 11
+--- !u!212 &2135073860
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135073858}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 2924662073
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 238a3ac1df65e4d5088fe2456c5b8a86, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
