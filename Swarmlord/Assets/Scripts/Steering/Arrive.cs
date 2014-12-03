@@ -8,7 +8,7 @@ public class Arrive : Behavior {
 	public float maxAccel;
 	public float maxSpeed;
 
-	public float targetRadius = 0.0f;
+	public float targetRadius = 0.5f;
 	public float slowRadius = 10.0f;
 
 	public float timeToTarget = 0.01f;

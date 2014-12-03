@@ -17,6 +17,7 @@ public class SwarmerController : MonoBehaviour {
 	public float weight_Avoid;
 	public float weight_Wander;
 	public float weight_VelocityMatch;
+	public float weight_FollowPath;
 
 	public Steering test;
 	public Arrive arriveContributer;
@@ -27,11 +28,14 @@ public class SwarmerController : MonoBehaviour {
 	public Wander wander;
 	public VelocityMatch velocityMatchContributer;
 	public Arrive lastKnownContributer;
+	public FollowPath followPathContributer;
 
 	public GameObject myTarget;
 
 	public Vector2 velocity;
 	public Vector3 lastKnownLocation;
+	
+	public GameObject Path;
 	
 	float rotationVelo;
 
@@ -55,6 +59,7 @@ public class SwarmerController : MonoBehaviour {
 		nextBeatlesTarget = new Arrive (Vector3.zero, this);
 		wander = new Wander(this);
 		velocityMatchContributer = new VelocityMatch(this);
+		followPathContributer = new FollowPath(Path, this);
 
 		attackBeatlesWeight = 0.0f;
 
@@ -93,11 +98,6 @@ public class SwarmerController : MonoBehaviour {
 
 	//Page 60
 	void SteerUpdate () {
-		//Steering nextArrive = arriveContributer.GetSteering ();
-		//Steering nextAlign = alignContributer.GetSteering ();
-		//Steering nextArrive = arriveContributer.GetSteering ();
-		//Steering nextAlign = alignContributer.GetSteering ();
-		//Steering nextSep = sepContributer.GetSteering ();
 		bsTest.ResetList ();
 
 		//Blend the steerings
@@ -107,6 +107,7 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 		bsTest.AddBehavior (wander, weight_Wander);
 		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
+		bsTest.AddBehavior (followPathContributer, weight_FollowPath);
 		//bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
 
 		//If no Beatle has been seen, go to the lastKnownLocation
