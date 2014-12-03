@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GeorgeSpriteSheet 1_1
+  m_Name: GeorgeAnimationController
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: Walking
