@@ -6,7 +6,13 @@ public class Scream : MonoBehaviour {
 	public float MaxScale = 10.0f;
 	public float ScaleSpeed = 0.1f;
 
-	float scale;
+	private float scale;
+	
+	[System.NonSerialized]
+	public float LastSeenTime;
+	
+	[System.NonSerialized]
+	public Vector2 LastSeenPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +32,6 @@ public class Scream : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "swarmer")
-			other.SendMessage("OnScream", transform.position);
+			other.SendMessage("OnScream", this);
 	}
 }

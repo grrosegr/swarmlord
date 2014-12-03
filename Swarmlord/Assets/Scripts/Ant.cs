@@ -84,7 +84,7 @@ public class Ant : MonoBehaviour {
 			Bounds b = collider2D.bounds;
 			float radius = b.size.magnitude / 2;
 			
-			Vector2 front = (Vector2)transform.position + direction * radius * 2;
+//			Vector2 front = (Vector2)transform.position + direction * radius * 2;
 			
 			Vector2 pos = transform.position;
 			Vector2 last = path.Last();

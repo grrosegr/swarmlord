@@ -12,6 +12,7 @@ public class CharacterManager : MonoBehaviour {
 			if (_currentPlayer != value) {
 				if (_currentPlayer)
 					_currentPlayer.SendMessage("SetIsControlled", false);
+				Debug.Log (value.name);
 				if (value)
 					value.SendMessage("SetIsControlled", true);
 			}
