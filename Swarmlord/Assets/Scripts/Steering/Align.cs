@@ -19,8 +19,6 @@ public class Align : Behavior {
 		
 		maxAngularAccel = newCharacter.maxAcceleration;
 		maxRotation = newCharacter.maxSpeed;
-		//maxAngularAccel = 20.0f;
-		//maxRotation = 15.0f;
 	}
 
 	public static float Remap (float value, float from1, float from2, float to1, float to2) {
@@ -29,6 +27,8 @@ public class Align : Behavior {
 	//Page 67
 	public override Steering GetSteering () {
 		Steering returnSteering = new Steering ();
+		if (!target)
+			return returnSteering;
 
 		float targetRot = target.transform.rotation.eulerAngles.z;
 		float myRot = character.transform.rotation.eulerAngles.z;

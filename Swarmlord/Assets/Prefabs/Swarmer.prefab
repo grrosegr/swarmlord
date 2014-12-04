@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.958897591, y: 1.27852559, z: 10}
-  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_LocalPosition: {x: -3.01257372, y: 2.34621835, z: 10}
+  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,8 +131,8 @@ MonoBehaviour:
   maxRotation: 15
   maxSpeed: 20
   maxRotationSpeed: 20
-  attackBeatlesWeight: 5
-  weight_Arrive: .5
+  weight_AttackBeatles: 0
+  weight_FollowObject: .5
   weight_Align: .5
   weight_Sep: .5
   weight_Avoid: .200000003

@@ -16,6 +16,7 @@ public class FollowPath : Behavior {
 		this.arrive = new Arrive(Vector2.zero, controller);
 		this.pathIndex = 0;		
 		
+		Enabled = pathRoot != null;
 		if (pathRoot)
 			this.path = pathRoot.transform.Cast<Transform>().ToList(); // get children
 	}
