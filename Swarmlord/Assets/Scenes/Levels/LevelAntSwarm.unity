@@ -139,7 +139,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &339738560
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &352711491
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &428985928
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -1931,7 +1931,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -2525,7 +2525,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -3903,7 +3903,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -3991,7 +3991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!212 &947566851
@@ -4368,7 +4368,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -5173,7 +5173,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -5465,7 +5465,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -5659,7 +5659,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -6559,7 +6559,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 4
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5

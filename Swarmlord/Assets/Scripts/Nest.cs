@@ -12,6 +12,7 @@ public class Nest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		renderer.enabled = false;
 	}
 	
 	// Update is called once per frame

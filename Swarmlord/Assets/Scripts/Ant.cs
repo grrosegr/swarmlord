@@ -117,7 +117,7 @@ public class Ant : MonoBehaviour {
 				SetDirection(direction * -1);
 			}
 		
-			Collider2D hitPlayer = Physics2D.OverlapArea(b.min, b.max, LayerMask.GetMask("Player"));
+			Collider2D hitPlayer = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Player"));
 			if (hitPlayer) {
 				hitPlayer.SendMessage("ApplyDamage", 2.0f);
 				
