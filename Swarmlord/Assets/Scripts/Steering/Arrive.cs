@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Arrive : Behavior {
@@ -52,7 +52,7 @@ public class Arrive : Behavior {
 		Vector3 targetVelocity = direction;
 		targetVelocity = targetVelocity.normalized * targetSpeed;
 
-		returnSteering.linear = (Vector2)targetVelocity - character.GetVelo();
+		returnSteering.linear = (Vector2)targetVelocity - character.GetVelocity();
 		returnSteering.linear = returnSteering.linear / timeToTarget;
 
 		if (returnSteering.linear.magnitude > maxAccel) {

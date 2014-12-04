@@ -94,7 +94,7 @@ public class CharacterController2D : MonoBehaviour {
 		rigidbody2D.MovePosition(rigidbody2D.position + velocity * Time.fixedDeltaTime);
 		
 		
-		int swarmersCurrentlyColliding = Physics2D.OverlapCircleAll(transform.position, 0.5f, LayerMask.GetMask("Swarmer")).Length;
+		int swarmersCurrentlyColliding = Physics2D.OverlapCircleAll(transform.position, 1.0f, LayerMask.GetMask("Swarmer")).Length;
 		if (swarmersCurrentlyColliding > 0)
 			Health -= swarmersCurrentlyColliding * SwarmDamagePerSecond * Time.fixedDeltaTime;
 	}

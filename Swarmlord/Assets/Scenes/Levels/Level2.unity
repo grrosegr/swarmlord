@@ -137,6 +137,7 @@ GameObject:
   - 58: {fileID: 54578282}
   - 50: {fileID: 54578281}
   - 82: {fileID: 54578280}
+  - 95: {fileID: 54578286}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -214,7 +215,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -229,8 +230,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &54578283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,24 +244,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -285,7 +288,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &54578285
 Transform:
@@ -293,12 +296,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1211671105}
   m_GameObject: {fileID: 54578279}
-  m_LocalRotation: {x: 0, y: 0, z: .848599195, w: -.529036343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.55504704, y: -.538181305, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 5
+  m_RootOrder: 6
+--- !u!95 &54578286
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1211671105}
+  m_GameObject: {fileID: 54578279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &66787358
 Prefab:
   m_ObjectHideFlags: 0
@@ -328,15 +347,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .622708201
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.782454252
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -406,6 +437,7 @@ GameObject:
   - 58: {fileID: 79860228}
   - 50: {fileID: 79860227}
   - 82: {fileID: 79860226}
+  - 95: {fileID: 79860231}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -419,12 +451,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1432340786}
   m_GameObject: {fileID: 79860224}
-  m_LocalRotation: {x: 0, y: 0, z: .465631008, w: -.88497901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.4661179, y: 22.7293835, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000003, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!82 &79860226
 AudioSource:
   m_ObjectHideFlags: 0
@@ -495,7 +527,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -510,8 +542,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &79860229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,24 +556,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -566,8 +600,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &79860231
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1432340786}
+  m_GameObject: {fileID: 79860224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &96067478
 Prefab:
   m_ObjectHideFlags: 0
@@ -597,15 +647,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .622708142
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.782454193
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -625,6 +687,7 @@ GameObject:
   - 58: {fileID: 146501442}
   - 50: {fileID: 146501441}
   - 82: {fileID: 146501440}
+  - 95: {fileID: 146501445}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -638,12 +701,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1203294853}
   m_GameObject: {fileID: 146501438}
-  m_LocalRotation: {x: 0, y: 0, z: .861440182, w: -.507859111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.713913, y: 23.1092472, z: 0}
-  m_LocalScale: {x: .200000018, y: .200000018, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!82 &146501440
 AudioSource:
   m_ObjectHideFlags: 0
@@ -714,7 +777,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -729,8 +792,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &146501443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,24 +806,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -785,8 +850,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &146501445
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203294853}
+  m_GameObject: {fileID: 146501438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &213318122
 Prefab:
   m_ObjectHideFlags: 0
@@ -816,23 +897,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .115264975
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.99333483
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000003
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000003
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -1362,7 +1447,7 @@ Transform:
   m_GameObject: {fileID: 440025809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.8508797, y: 11.5742855, z: 0}
-  m_LocalScale: {x: .293626517, y: .333699316, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1444,7 +1529,7 @@ Transform:
   - {fileID: 962375715}
   - {fileID: 2123387201}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &452573278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &452573280
@@ -1639,6 +1724,7 @@ GameObject:
   - 58: {fileID: 469229636}
   - 50: {fileID: 469229635}
   - 82: {fileID: 469229634}
+  - 95: {fileID: 469229639}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -1652,12 +1738,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 2100846474}
   m_GameObject: {fileID: 469229632}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.4582748, y: 22.9464474, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!82 &469229634
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1728,7 +1814,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1743,8 +1829,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &469229637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,24 +1843,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -1799,8 +1887,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &469229639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2100846474}
+  m_GameObject: {fileID: 469229632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &495465422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,23 +2134,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .115264632
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.99333483
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000018
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .199999988
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -2231,7 +2339,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.46000004
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2284,15 +2392,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -2312,6 +2432,7 @@ GameObject:
   - 58: {fileID: 704393026}
   - 50: {fileID: 704393025}
   - 82: {fileID: 704393024}
+  - 95: {fileID: 704393029}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -2325,12 +2446,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1409176332}
   m_GameObject: {fileID: 704393022}
-  m_LocalRotation: {x: 0, y: 0, z: .848599315, w: -.529036224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 29.0473557, y: 22.9735813, z: 0}
-  m_LocalScale: {x: .199999958, y: .199999958, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!82 &704393024
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2401,7 +2522,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2416,8 +2537,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &704393027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,24 +2551,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -2472,8 +2595,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &704393029
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1409176332}
+  m_GameObject: {fileID: 704393022}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &748709232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,7 +2708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &782710604
@@ -2734,7 +2873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &803043945
@@ -2817,6 +2956,7 @@ GameObject:
   - 58: {fileID: 804210139}
   - 50: {fileID: 804210138}
   - 82: {fileID: 804210137}
+  - 95: {fileID: 804210142}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -2830,12 +2970,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 96067478}
   m_GameObject: {fileID: 804210135}
-  m_LocalRotation: {x: 0, y: 0, z: .622708142, w: -.782454193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 27.8406601, y: 22.3877735, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!82 &804210137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2906,7 +3046,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2921,8 +3061,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &804210140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2935,24 +3075,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -2977,8 +3119,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &804210142
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 96067478}
+  m_GameObject: {fileID: 804210135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &808979819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,6 +3250,7 @@ GameObject:
   - 58: {fileID: 840291234}
   - 50: {fileID: 840291233}
   - 82: {fileID: 840291232}
+  - 95: {fileID: 840291238}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -3169,7 +3328,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3184,8 +3343,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &840291235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3198,24 +3357,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -3240,7 +3401,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &840291237
 Transform:
@@ -3248,12 +3409,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1823572353}
   m_GameObject: {fileID: 840291231}
-  m_LocalRotation: {x: 0, y: 0, z: .809706271, w: -.586835444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.58610344, y: -2.54602695, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 0
+  m_RootOrder: 1
+--- !u!95 &840291238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1823572353}
+  m_GameObject: {fileID: 840291231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &842221954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,6 +3828,7 @@ GameObject:
   - 58: {fileID: 1053735430}
   - 50: {fileID: 1053735429}
   - 82: {fileID: 1053735428}
+  - 95: {fileID: 1053735434}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -3728,7 +3906,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3743,8 +3921,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1053735431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3757,24 +3935,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -3799,7 +3979,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1053735433
 Transform:
@@ -3807,12 +3987,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1961068320}
   m_GameObject: {fileID: 1053735427}
-  m_LocalRotation: {x: 0, y: 0, z: .516177833, w: -.856481493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.69071198, y: .628540039, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000018, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 3
+  m_RootOrder: 4
+--- !u!95 &1053735434
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1961068320}
+  m_GameObject: {fileID: 1053735427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1060971230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,6 +4132,7 @@ GameObject:
   - 58: {fileID: 1143203910}
   - 50: {fileID: 1143203909}
   - 82: {fileID: 1143203908}
+  - 95: {fileID: 1143203914}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -4013,7 +4210,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4028,8 +4225,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1143203911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4042,24 +4239,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -4084,7 +4283,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1143203913
 Transform:
@@ -4092,12 +4291,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 2113898578}
   m_GameObject: {fileID: 1143203907}
-  m_LocalRotation: {x: 0, y: 0, z: .861440361, w: -.507858872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.88848877, y: -.402515888, z: 0}
-  m_LocalScale: {x: .200000018, y: .200000018, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!95 &1143203914
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2113898578}
+  m_GameObject: {fileID: 1143203907}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1154211787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,23 +4392,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .861440182
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.507859111
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000018
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000018
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -4229,15 +4448,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .848599195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.529036343
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -4257,6 +4488,7 @@ GameObject:
   - 58: {fileID: 1217753265}
   - 50: {fileID: 1217753264}
   - 82: {fileID: 1217753263}
+  - 95: {fileID: 1217753269}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -4334,7 +4566,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4349,8 +4581,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1217753266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4363,24 +4595,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -4405,7 +4639,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1217753268
 Transform:
@@ -4413,12 +4647,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 545978081}
   m_GameObject: {fileID: 1217753262}
-  m_LocalRotation: {x: 0, y: 0, z: .115264632, w: -.99333483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.02259254, y: .384342194, z: 0}
-  m_LocalScale: {x: .200000018, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 6
+  m_RootOrder: 7
+--- !u!95 &1217753269
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 545978081}
+  m_GameObject: {fileID: 1217753262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1233412140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,6 +4682,7 @@ GameObject:
   - 58: {fileID: 1233412143}
   - 50: {fileID: 1233412142}
   - 82: {fileID: 1233412141}
+  - 95: {fileID: 1233412147}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -4509,7 +4760,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4524,8 +4775,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1233412144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4538,24 +4789,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -4580,7 +4833,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1233412146
 Transform:
@@ -4588,12 +4841,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 689399023}
   m_GameObject: {fileID: 1233412140}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.144128799, y: -.565314293, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!95 &1233412147
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 689399023}
+  m_GameObject: {fileID: 1233412140}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1237153240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4699,19 +4968,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2088639884}
     m_Modifications:
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.8075056
+      value: -1.1751833
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.4384799
+      value: -1.97623301
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4723,15 +4992,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -5030,7 +5303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &1373456641
@@ -5190,23 +5463,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .848599315
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.529036224
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .199999958
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .199999958
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -5226,6 +5503,7 @@ GameObject:
   - 58: {fileID: 1409338123}
   - 50: {fileID: 1409338122}
   - 82: {fileID: 1409338121}
+  - 95: {fileID: 1409338127}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -5303,7 +5581,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5318,8 +5596,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1409338124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5332,24 +5610,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -5374,7 +5654,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1409338126
 Transform:
@@ -5382,12 +5662,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1251527148}
   m_GameObject: {fileID: 1409338120}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 14.8075056, y: 3.4384799, z: 10}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1751833, y: -1.97623301, z: 0}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2088639884}
+  m_RootOrder: 0
+--- !u!95 &1409338127
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1251527148}
+  m_GameObject: {fileID: 1409338120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1414776184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,23 +5863,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .465631008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.88497901
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000003
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000003
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -5713,23 +6013,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .465631455
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.884978712
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
-      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .199999988
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .199999988
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -6143,6 +6447,7 @@ GameObject:
   - 58: {fileID: 1730286550}
   - 50: {fileID: 1730286549}
   - 82: {fileID: 1730286548}
+  - 95: {fileID: 1730286553}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -6156,12 +6461,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 213318122}
   m_GameObject: {fileID: 1730286546}
-  m_LocalRotation: {x: 0, y: 0, z: .115264975, w: -.99333483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.6249924, y: 23.8961048, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000003, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!82 &1730286548
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6232,7 +6537,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6247,8 +6552,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1730286551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6261,24 +6566,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -6303,8 +6610,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1730286553
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 213318122}
+  m_GameObject: {fileID: 1730286546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1748801840
 Prefab:
   m_ObjectHideFlags: 0
@@ -6334,23 +6657,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .516178191
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.856481254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .199999988
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000018
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -6370,6 +6697,7 @@ GameObject:
   - 58: {fileID: 1764709489}
   - 50: {fileID: 1764709488}
   - 82: {fileID: 1764709487}
+  - 95: {fileID: 1764709493}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -6447,7 +6775,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6462,8 +6790,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1764709490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6476,24 +6804,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -6518,7 +6848,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1764709492
 Transform:
@@ -6526,12 +6856,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1511687665}
   m_GameObject: {fileID: 1764709486}
-  m_LocalRotation: {x: 0, y: 0, z: .465631455, w: -.884978712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.86371613, y: -.782378674, z: 0}
-  m_LocalScale: {x: .199999988, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 1
+  m_RootOrder: 2
+--- !u!95 &1764709493
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1511687665}
+  m_GameObject: {fileID: 1764709486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1771127368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6545,6 +6891,7 @@ GameObject:
   - 58: {fileID: 1771127371}
   - 50: {fileID: 1771127370}
   - 82: {fileID: 1771127369}
+  - 95: {fileID: 1771127375}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -6622,7 +6969,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6637,8 +6984,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1771127372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6651,24 +6998,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -6693,7 +7042,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1771127374
 Transform:
@@ -6701,12 +7050,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1748801840}
   m_GameObject: {fileID: 1771127368}
-  m_LocalRotation: {x: 0, y: 0, z: .516178191, w: -.856481254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.9116898, y: 24.1403065, z: 0}
-  m_LocalScale: {x: .200000018, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 10
+  m_RootOrder: 11
+--- !u!95 &1771127375
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748801840}
+  m_GameObject: {fileID: 1771127368}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1772454351
 GameObject:
   m_ObjectHideFlags: 0
@@ -6720,6 +7085,7 @@ GameObject:
   - 58: {fileID: 1772454354}
   - 50: {fileID: 1772454353}
   - 82: {fileID: 1772454352}
+  - 95: {fileID: 1772454358}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -6797,7 +7163,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6812,8 +7178,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1772454355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6826,24 +7192,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -6868,7 +7236,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1772454357
 Transform:
@@ -6876,12 +7244,28 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 66787358}
   m_GameObject: {fileID: 1772454351}
-  m_LocalRotation: {x: 0, y: 0, z: .622708201, w: -.782454252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.76174355, y: -1.12398911, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 7
+  m_RootOrder: 8
+--- !u!95 &1772454358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 66787358}
+  m_GameObject: {fileID: 1772454351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1815925398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6895,6 +7279,7 @@ GameObject:
   - 58: {fileID: 1815925402}
   - 50: {fileID: 1815925401}
   - 82: {fileID: 1815925400}
+  - 95: {fileID: 1815925405}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -6908,12 +7293,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_PrefabInternal: {fileID: 1820693785}
   m_GameObject: {fileID: 1815925398}
-  m_LocalRotation: {x: 0, y: 0, z: .80970633, w: -.586835325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.0162964, y: 20.9657345, z: 0}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 2088639884}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!82 &1815925400
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6984,7 +7369,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6999,8 +7384,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!114 &1815925403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7013,24 +7398,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
+  weight_AttackBeatles: 1
   weight_FollowObject: 0
   weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
@@ -7055,8 +7442,24 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1815925405
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 309dadef23fe4473faa0c947efff47e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1820693785}
+  m_GameObject: {fileID: 1815925398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1820693785
 Prefab:
   m_ObjectHideFlags: 0
@@ -7086,19 +7489,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .80970633
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.586835325
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .199999988
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -7134,15 +7545,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .809706271
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.586835444
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -8318,7 +8741,7 @@ Transform:
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1938103783
 GameObject:
   m_ObjectHideFlags: 0
@@ -8398,19 +8821,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .516177833
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.856481493
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000018
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -8756,6 +9187,7 @@ Transform:
   m_LocalPosition: {x: 15.9826889, y: 5.41471291, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1409338126}
   - {fileID: 840291237}
   - {fileID: 1764709492}
   - {fileID: 1143203913}
@@ -8773,7 +9205,7 @@ Transform:
   - {fileID: 79860225}
   - {fileID: 804210136}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &2100846474
 Prefab:
   m_ObjectHideFlags: 0
@@ -8803,15 +9235,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
@@ -8847,23 +9291,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .861440361
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.507858872
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.x
-      value: .200000018
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalScale.y
-      value: .200000018
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}

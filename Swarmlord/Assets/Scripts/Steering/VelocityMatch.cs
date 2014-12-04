@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class VelocityMatch : Behavior {
@@ -29,7 +29,7 @@ public class VelocityMatch : Behavior {
 		if (!target)
 			return steering;
 		
-		steering.linear = target.rigidbody2D.velocity - character.GetVelo();
+		steering.linear = target.rigidbody2D.velocity - character.GetVelocity();
 		steering.linear /= timeToTarget;
 		
 		if (steering.linear.magnitude > maxAccel)
