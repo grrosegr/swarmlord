@@ -40,6 +40,7 @@ public class SwarmerController : MonoBehaviour {
 	public BlendedSteering bsTest;
 	
 	public float MaxAngleVisible = 45.0f; // degrees
+	public float MaxDistanceVisible = 10.0f;
 	
 	private GameObject[] players;
 	
@@ -71,6 +72,10 @@ public class SwarmerController : MonoBehaviour {
 			screamed = false;
 			r.color = Color.white;
 		}
+		
+		Vector2 fwd = transform.up;
+		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(-MaxAngleVisible) * MaxDistanceVisible);
+		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(MaxAngleVisible) * MaxDistanceVisible);
 		
 		foreach (GameObject go in players) {
 			if (go == null) continue;
