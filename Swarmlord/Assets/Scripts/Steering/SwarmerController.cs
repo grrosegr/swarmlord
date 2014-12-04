@@ -29,7 +29,7 @@ public class SwarmerController : MonoBehaviour {
 	public VelocityMatch velocityMatchContributer;
 	public Arrive lastKnownContributer;
 	public FollowPath followPathContributer;
-	public Arrive homeContributer;
+	public StayAtHome homeContributer;
 
 	public GameObject myTarget;
 
@@ -61,7 +61,7 @@ public class SwarmerController : MonoBehaviour {
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
 		wander = new Wander(this);
-		homeContributer = new Arrive(transform.position, this);
+		homeContributer = new StayAtHome(transform.position, this);
 		velocityMatchContributer = new VelocityMatch(this);
 		followPathContributer = new FollowPath(Path, this);
 
@@ -117,7 +117,6 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 		bsTest.AddBehavior (wander, weight_Wander);
 		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
-		bsTest.AddBehavior (followPathContributer, weight_FollowPath);
 		
 		SpriteRenderer r = (SpriteRenderer)renderer;
 		
@@ -127,8 +126,9 @@ public class SwarmerController : MonoBehaviour {
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
 			r.color = Color.red;
 		} else {
-			if (lastKnownLocation == Vector3.zero)
+			if (lastKnownLocation == Vector3.zero && Path == null && myTarget == null)
 				bsTest.AddBehavior(homeContributer, weight_Home);
+			bsTest.AddBehavior (followPathContributer, weight_FollowPath);
 			
 			r.color = Color.white;	
 		}

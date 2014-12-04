@@ -14,7 +14,7 @@ public class FollowPath : Behavior {
 	public FollowPath(GameObject pathRoot, SwarmerController controller) {
 		this.controller = controller;
 		this.arrive = new Arrive(Vector2.zero, controller);
-		this.pathIndex = 0;		
+		this.pathIndex = 0;	
 		
 		Enabled = pathRoot != null;
 		if (pathRoot)

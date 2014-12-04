@@ -8,7 +8,7 @@ public class Arrive : Behavior {
 	public float maxAccel;
 	public float maxSpeed;
 
-	public float targetRadius = 0.5f;
+	public float targetRadius = 0.3f;
 	public float slowRadius = 10.0f;
 
 	public float timeToTarget = 0.01f;
@@ -32,8 +32,6 @@ public class Arrive : Behavior {
 			Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, 
 			character
 		);
-		
-//		return returnSteering;
 		
 		float dist = direction.magnitude;
 
