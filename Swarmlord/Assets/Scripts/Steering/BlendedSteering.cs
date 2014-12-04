@@ -46,11 +46,11 @@ public class BlendedSteering {
 		//Create the new steering structure to accumulate the combined steering.
 		Steering steering = new Steering ();
 		
-		var totalWeight = 1.0f;
-//			behaviors
-//			.Where(behaviorWeight => behaviorWeight.behavior.Enabled)
-//			.Select(behaviorWeight => behaviorWeight.weight)
-//			.Sum();
+		var totalWeight = //1.0f;
+			behaviors
+			.Where(behaviorWeight => behaviorWeight.behavior.Enabled)
+			.Select(behaviorWeight => behaviorWeight.weight)
+			.Sum();
 			
 		if (totalWeight <= 0) {
 			//Debug.LogError("Behavior weights sum to <= 0!");

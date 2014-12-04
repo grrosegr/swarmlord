@@ -883,7 +883,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 1855812507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 753011766}
@@ -1046,7 +1046,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 1855812507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 2063096860}
@@ -1470,7 +1470,7 @@ Transform:
   m_PrefabInternal: {fileID: 703738377}
   m_GameObject: {fileID: 452590346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3196878, y: -12.7663898, z: 10}
+  m_LocalPosition: {x: 11.9069233, y: -4.7905755, z: 10}
   m_LocalScale: {x: .100000001, y: .100000001, z: .300000012}
   m_Children: []
   m_Father: {fileID: 1663183896}
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 710643918}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -1808,7 +1808,7 @@ Transform:
   m_PrefabInternal: {fileID: 1781163124}
   m_GameObject: {fileID: 626123080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5430222, y: -3.68153095, z: 10}
+  m_LocalPosition: {x: 11.4082232, y: -2.15380955, z: 10}
   m_LocalScale: {x: .100000001, y: .100000001, z: .300000012}
   m_Children: []
   m_Father: {fileID: 1663183896}
@@ -1926,7 +1926,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 710643918}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -2149,11 +2149,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.3196878
+      value: 11.9069233
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -12.7663898
+      value: -4.7905755
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2182,7 +2182,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 710643918}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: DebugMode
       value: 1
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 1855812507}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -3898,7 +3898,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 1855812507}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 1855812507}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -4837,7 +4837,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 1855812507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 919433282}
@@ -4935,7 +4935,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 1855812507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 1093436260}
@@ -4949,8 +4949,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1663183896}
-  - 95: {fileID: 1663183898}
-  - 212: {fileID: 1663183897}
   m_Layer: 0
   m_Name: Swarmers
   m_TagString: Untagged
@@ -4980,43 +4978,6 @@ Transform:
   - {fileID: 626123081}
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!212 &1663183897
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1663183895}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!95 &1663183898
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1663183895}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0f3980cb79c494f89aa3ae2be1c08d0c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1689172618
 Prefab:
   m_ObjectHideFlags: 0
@@ -5207,7 +5168,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 710643918}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -5264,11 +5225,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.5430222
+      value: 11.4082232
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.68153095
+      value: -2.15380955
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5297,7 +5258,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 710643918}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 626123080}
@@ -5499,7 +5460,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 710643918}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
@@ -5872,7 +5833,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 710643918}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 1748480367}
@@ -6170,7 +6131,7 @@ Prefab:
     - target: {fileID: 11400000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
       propertyPath: myTarget
       value: 
-      objectReference: {fileID: 710643918}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309dadef23fe4473faa0c947efff47e6, type: 2}
   m_RootGameObject: {fileID: 1825752443}
@@ -6593,7 +6554,7 @@ MonoBehaviour:
   weight_VelocityMatch: 0
   weight_FollowPath: 0
   weight_Home: 1
-  myTarget: {fileID: 1855812507}
+  myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}

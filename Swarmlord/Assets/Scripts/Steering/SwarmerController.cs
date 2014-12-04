@@ -53,7 +53,7 @@ public class SwarmerController : MonoBehaviour {
 	private GameObject currentTarget;
 	private Animator anim;
 	
-	private Vector2 GetForward() {
+	public Vector2 GetForward() {
 		if (transform.localScale.x >= 0)
 			return transform.right;
 		else
@@ -112,7 +112,7 @@ public class SwarmerController : MonoBehaviour {
 			Scream(currentTarget.transform.position);
 	}
 
-	public Vector2 GetVelo () {
+	public Vector2 GetVelocity () {
 		return velocity;
 	}
 
@@ -132,10 +132,14 @@ public class SwarmerController : MonoBehaviour {
 		
 		//If no Beatle has been seen, go to the lastKnownLocation
 		if (lastKnownLocation != Vector3.zero && (Time.time - lastSeenTime) < 5f) {
+			if (DebugMode)
+				Debug.Log ("last known");
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
 			anim.SetInteger("Mode", 1);
 		} else {
+			if (DebugMode)
+				Debug.Log (lastKnownLocation == Vector3.zero && Path == null && myTarget == null);
 			if (lastKnownLocation == Vector3.zero && Path == null && myTarget == null)
 				bsTest.AddBehavior(homeContributer, weight_Home);
 			bsTest.AddBehavior (followPathContributer, weight_FollowPath);
