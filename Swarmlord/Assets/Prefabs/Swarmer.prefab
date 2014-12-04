@@ -13,6 +13,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 82: {fileID: 8200000}
+  - 95: {fileID: 9500000}
   m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
@@ -26,9 +27,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 17.7277336, y: -2.00836182, z: 10}
-  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.3196878, y: -12.7663898, z: 10}
+  m_LocalScale: {x: .100000001, y: .100000001, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +43,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -56,8 +57,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: 1.27999997
-  m_Center: {x: 0, y: 0}
+  m_Radius: 1.25
+  m_Center: {x: 0, y: -5.25}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -116,6 +117,21 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f20e9670d21c449785379110bd63a69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +186,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d05e3765382296409904a12b8e92f73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cf05b96fa79e14b95bdc6e7375b158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

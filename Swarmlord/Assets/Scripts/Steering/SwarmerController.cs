@@ -51,6 +51,14 @@ public class SwarmerController : MonoBehaviour {
 	public AudioClip ScreamSound;
 	
 	private GameObject currentTarget;
+	private Animator anim;
+	
+	private Vector2 GetForward() {
+		if (transform.localScale.x >= 0)
+			return transform.right;
+		else
+			return -transform.right;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -66,6 +74,8 @@ public class SwarmerController : MonoBehaviour {
 		followPathContributer = new FollowPath(Path, this);
 
 		players = GameObject.FindGameObjectsWithTag("Player");
+		
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -79,7 +89,7 @@ public class SwarmerController : MonoBehaviour {
 			r.color = Color.white;
 		}
 		
-		Vector2 fwd = transform.up;
+		Vector2 fwd = GetForward();
 		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(-MaxAngleVisible) * MaxDistanceVisible);
 		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(MaxAngleVisible) * MaxDistanceVisible);
 		
@@ -96,7 +106,7 @@ public class SwarmerController : MonoBehaviour {
 					break;
 				}
 			}
-		}
+		}	
 		
 		if (currentTarget)
 			Scream(currentTarget.transform.position);
@@ -124,19 +134,31 @@ public class SwarmerController : MonoBehaviour {
 		if (lastKnownLocation != Vector3.zero && (Time.time - lastSeenTime) < 5f) {
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
-			r.color = Color.red;
+			anim.SetInteger("Mode", 1);
 		} else {
 			if (lastKnownLocation == Vector3.zero && Path == null && myTarget == null)
 				bsTest.AddBehavior(homeContributer, weight_Home);
 			bsTest.AddBehavior (followPathContributer, weight_FollowPath);
 			
-			r.color = Color.white;	
+			anim.SetInteger("Mode", 0);
 		}
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
 		rigidbody2D.MovePosition(rigidbody2D.position + (Vector2)(velocity * Time.deltaTime));
-		rigidbody2D.MoveRotation(rigidbody2D.rotation + rotationVelo * Time.deltaTime);
+		Vector3 localScale = transform.localScale;
+		if (velocity.x > 0)
+			localScale.x = Mathf.Abs(localScale.x);
+		else if (velocity.x < 0)
+			localScale.x = -Mathf.Abs (localScale.x);
+		if (localScale != transform.localScale)
+			transform.localScale = localScale;
+//		if (DebugMode)
+//			Debug.Log (velocity);
+			
+		anim.SetBool("Walking", !Mathf.Approximately(velocity.magnitude, 0));
+			
+		//rigidbody2D.MoveRotation(rigidbody2D.rotation + rotationVelo * Time.deltaTime);
 
 		velocity += blendedBehavior.linear * Time.deltaTime;
 		if (blendedBehavior.stop)
@@ -154,7 +176,7 @@ public class SwarmerController : MonoBehaviour {
 	bool CanSee(GameObject other) {
 		Vector2 t_pos = other.transform.position;
 		Vector2 m_pos = transform.position;
-		Vector2 m_fwd = transform.up;
+		Vector2 m_fwd = GetForward();
 		Vector2 to_target = t_pos - m_pos;
 		float angle = Vector2.Angle(to_target, m_fwd);
 		
