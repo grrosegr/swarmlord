@@ -59,6 +59,12 @@ public class SwarmerController : MonoBehaviour {
 		else
 			return -transform.right;
 	}
+	
+	public Vector2 GetDirection() {
+		if (velocity != Vector2.zero)
+			return velocity.normalized;
+		return GetForward();
+	}
 
 	// Use this for initialization
 	void Start () {
