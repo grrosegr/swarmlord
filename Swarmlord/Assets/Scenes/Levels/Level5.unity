@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc05dcca5c74c4ba29e7f04518fb4656, type: 2}
@@ -195,7 +195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6b5da7985d702459ebc4f1f9213d8268, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b5da7985d702459ebc4f1f9213d8268, type: 2}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 3
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &806720235
@@ -439,7 +439,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.1245935
+  orthographic size: 2.4000001
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 3
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &1073664067
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 3
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &1099269258
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 3
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!50 &1208056544
@@ -911,7 +911,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 92ca128d698d3420cb331119e41ab206, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 92ca128d698d3420cb331119e41ab206, type: 2}
+      propertyPath: Speed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92ca128d698d3420cb331119e41ab206, type: 2}
@@ -1087,7 +1091,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ba4449eb247ff4fdcbdbbf0427685ac4, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba4449eb247ff4fdcbdbbf0427685ac4, type: 2}
@@ -3299,7 +3303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: b7d8e8d8ece064fc1aab6cd990ebe9c5, type: 2}
       propertyPath: orthographic size
-      value: 3.1245935
+      value: 2.4000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d8e8d8ece064fc1aab6cd990ebe9c5, type: 2}
