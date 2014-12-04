@@ -5,6 +5,9 @@ using System.Collections;
 public class CharacterController2D : MonoBehaviour {
 
 	public float Speed = 0.5f;
+	const float FastSpeed = 10.0f;
+	private float startSpeed;
+	
 	private bool IsControlled;
 	
 	public float MaxHealth = 100f;
@@ -53,6 +56,16 @@ public class CharacterController2D : MonoBehaviour {
 	void Start () {
 		Health = MaxHealth;
 		anim = GetComponent<Animator>();
+		startSpeed = Speed;
+	}
+	
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.G)) {
+			if (Speed == FastSpeed)
+				Speed = startSpeed;
+			else
+				Speed = FastSpeed;
+		}
 	}
 	
 	// Update is called once per frame
