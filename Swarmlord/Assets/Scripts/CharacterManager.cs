@@ -65,5 +65,7 @@ public class CharacterManager : MonoBehaviour {
 			Application.LoadLevel(PositiveMod(Application.loadedLevel + 1, Application.levelCount));
 		} else if (Input.GetKeyDown(KeyCode.P))
 			Application.LoadLevel(PositiveMod(Application.loadedLevel - 1, Application.levelCount));
+		else if (Input.GetKeyDown(KeyCode.R))
+			Application.LoadLevel(Application.loadedLevel);
 	}
 }

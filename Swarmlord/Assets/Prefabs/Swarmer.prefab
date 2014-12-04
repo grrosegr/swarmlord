@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 11.5430222, y: -3.68153095, z: 10}
+  m_LocalPosition: {x: 17.7277336, y: -2.00836182, z: 10}
   m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa314fec2b54c4ff981ec5063b96266c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugMode: 0
   maxAcceleration: 15
   maxRotationAcceleration: 90
   maxSpeed: 20
@@ -138,13 +139,14 @@ MonoBehaviour:
   weight_Avoid: 1
   weight_Wander: 1
   weight_VelocityMatch: 0
-  weight_FollowPath: 1
+  weight_FollowPath: 0
+  weight_Home: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 5
+  MaxDistanceVisible: 10
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
