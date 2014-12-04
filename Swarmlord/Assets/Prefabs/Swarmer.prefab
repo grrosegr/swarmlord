@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 82: {fileID: 8200000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Swarmer
   m_TagString: swarmer
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 14.9767952, y: -1.41033149, z: 10}
-  m_LocalScale: {x: .200000003, y: .200000003, z: .300000012}
+  m_LocalPosition: {x: 11.5430222, y: -3.68153095, z: 10}
+  m_LocalScale: {x: .200000003, y: .199999988, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,19 +131,20 @@ MonoBehaviour:
   maxRotationAcceleration: 90
   maxSpeed: 20
   maxRotationSpeed: 90
-  weight_AttackBeatles: 20
-  weight_FollowObject: 1
-  weight_Align: 1
+  weight_AttackBeatles: 1
+  weight_FollowObject: 0
+  weight_Align: 0
   weight_Sep: 1
   weight_Avoid: 1
   weight_Wander: 1
-  weight_VelocityMatch: 1
+  weight_VelocityMatch: 0
   weight_FollowPath: 1
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
+  MaxDistanceVisible: 5
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5

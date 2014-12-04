@@ -46,6 +46,8 @@ public class SwarmerController : MonoBehaviour {
 	
 	public GameObject ScreamPrefab;
 	public AudioClip ScreamSound;
+	
+	private GameObject currentTarget;
 
 	// Use this for initialization
 	void Start () {
@@ -77,15 +79,23 @@ public class SwarmerController : MonoBehaviour {
 		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(-MaxAngleVisible) * MaxDistanceVisible);
 		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(MaxAngleVisible) * MaxDistanceVisible);
 		
-		foreach (GameObject go in players) {
-			if (go == null) continue;
-			if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
-				Scream(go.transform.position);
-				lastKnownLocation = go.transform.position;
-				lastSeenTime = Time.time;
-				break;
+		if (currentTarget && !CanSee(currentTarget))
+			currentTarget = null;
+		
+		if (!currentTarget) {
+			foreach (GameObject go in players) {
+				if (go == null) continue;
+				if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
+					currentTarget = go;
+					lastKnownLocation = go.transform.position;
+					lastSeenTime = Time.time;
+					break;
+				}
 			}
 		}
+		
+		if (currentTarget)
+			Scream(currentTarget.transform.position);
 	}
 
 	public Vector2 GetVelo () {
@@ -104,12 +114,16 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (wander, weight_Wander);
 		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
 		bsTest.AddBehavior (followPathContributer, weight_FollowPath);
-
+		
+		SpriteRenderer r = (SpriteRenderer)renderer;
+		
 		//If no Beatle has been seen, go to the lastKnownLocation
-		if (lastKnownLocation != Vector3.zero) {
+		if (lastKnownLocation != Vector3.zero && (lastSeenTime - Time.time) < 5f) {
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
-		}
+			r.color = Color.red;
+		} else
+			r.color = Color.white;
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
@@ -139,6 +153,9 @@ public class SwarmerController : MonoBehaviour {
 		if (!(Mathf.Abs(angle) < MaxAngleVisible))
 			return false;
 		
+		if (!(Vector2.Distance(transform.position, other.transform.position) < MaxDistanceVisible))
+			return false;
+		
 		RaycastHit2D hit = Physics2D.Raycast(m_pos, to_target, to_target.magnitude, LayerMask.GetMask("Obstacle"));
 		
 		return hit.collider == null;
@@ -159,8 +176,6 @@ public class SwarmerController : MonoBehaviour {
 		audio.Stop();
 		audio.Play ();
 		screamed = true;
-		SpriteRenderer r = (SpriteRenderer)renderer;
-		r.color = Color.red;
 		
 		GameObject scream = (GameObject)Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
 		Scream controller = scream.GetComponent<Scream>();
@@ -175,7 +190,7 @@ public class SwarmerController : MonoBehaviour {
 		// TODO: maybe scream again?
 //		Scream();
 
-		if (scream.LastSeenTime > lastSeenTime) {
+		if (!currentTarget && scream.LastSeenTime > lastSeenTime) {
 			lastKnownLocation = scream.LastSeenPosition;
 			lastSeenTime = scream.LastSeenTime;
 		}

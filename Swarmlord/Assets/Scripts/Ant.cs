@@ -7,7 +7,7 @@ public class Ant : MonoBehaviour {
 
 	public GameObject marker;
 
-	private enum State {Wander, Follow, Return}
+	private enum State {Wander, Follow, ReturnAndMark, Return}
 
 	private Vector2 colonyCenter;
 	private Vector2 direction;
@@ -89,8 +89,10 @@ public class Ant : MonoBehaviour {
 				path.Add(pos);
 			}
 			
-			if (Vector2.Distance(pos, colonyCenter) < 0.5f || path.Count > 20) {
+			if (Vector2.Distance(pos, colonyCenter) < 0.5f) {
 				ResetPath();
+			} else if (path.Count > 30) {
+				state = State.ReturnAndMark;
 			}
 			
 			Collider2D nearbyPlayer = Physics2D.OverlapCircle(transform.position, PlayerDetectionRadius, LayerMask.GetMask("Player"));
@@ -120,12 +122,12 @@ public class Ant : MonoBehaviour {
 				hitPlayer.SendMessage("ApplyDamage", 2.0f);
 				
 //				if (Random.value < 0.5f) {
-					state = State.Return;
+					state = State.ReturnAndMark;
 					SetDirection(colonyCenter - (Vector2)transform.position);
 					returnStartTime = Time.time;
 //				}
 			}
-		} else if (state == State.Return) {
+		} else if (state == State.Return || state == State.ReturnAndMark) {
 			if (path.Count > 0 && (Time.time - returnStartTime < 5.0f)) {
 				Vector2 target = path.Last();
 				
@@ -135,13 +137,14 @@ public class Ant : MonoBehaviour {
 					path.RemoveAt(path.Count - 1);
 				}
 				
-				int nearbyMarkers = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("AntMarker")).Length;
-				
-				if (Vector2.Distance(lastMark, transform.position) > 0.35f && nearbyMarkers < 8) {
-					Instantiate(marker, transform.position, Quaternion.identity);
-					lastMark = transform.position;
+				if (state == State.ReturnAndMark) {
+					int nearbyMarkers = Physics2D.OverlapCircleAll(transform.position, 0.2f, LayerMask.GetMask("AntMarker")).Length;
+					
+					if (Vector2.Distance(lastMark, transform.position) > 0.35f && nearbyMarkers < 8) {
+						Instantiate(marker, transform.position, Quaternion.identity);
+						lastMark = transform.position;
+					}
 				}
-				
 			} else {
 				state = State.Wander;
 				ResetPath();
