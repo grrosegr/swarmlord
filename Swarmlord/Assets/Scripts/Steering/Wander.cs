@@ -27,14 +27,6 @@ public class Wander : Behavior {
 		
 		if (Time.time > changeTime)
 			NewDirection();
-			
-		Vector2 swarmerPos = controller.rigidbody2D.position;
-//		Vector2 swarmerDir = controller.GetDirection();
-//		swarmerDir.Normalize ();
-		RaycastHit2D hit = Physics2D.Raycast (swarmerPos, direction, 2.0f, LayerMask.GetMask ("Obstacle"));
-		if (hit && (changeTime - Time.time) > 0.5f) {
-			changeTime = Time.time + 0.5f;
-		}
 		
 //		steering.angular = GetBinomialRandom() * controller.maxRotationSpeed;
 		steering.linear = direction * controller.maxSpeed / 50;
