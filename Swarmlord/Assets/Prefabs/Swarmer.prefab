@@ -162,7 +162,7 @@ MonoBehaviour:
   lastKnownLocation: {x: 0, y: 0, z: 0}
   Path: {fileID: 0}
   MaxAngleVisible: 45
-  MaxDistanceVisible: 10
+  MaxDistanceVisible: 4
   ScreamPrefab: {fileID: 100000, guid: 5bd41496920b2494da6153553ff1f59d, type: 2}
   ScreamSound: {fileID: 8300000, guid: 72c73f16eefe44d568970749765786bb, type: 3}
   ScreamResetAfter: 5
