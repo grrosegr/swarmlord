@@ -102,13 +102,8 @@ public class SwarmerController : MonoBehaviour {
 
 		//If no Beatle has been seen, go to the lastKnownLocation
 		if (lastKnownLocation != Vector3.zero) {
-			//print (lastKnownLocation);
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
-		} else {
-			//A Beatle has been seen. Go to Beatle location.
-			//print ("meep");
-			bsTest.AddBehavior (nextBeatlesTarget, weight_AttackBeatles);
 		}
 
 		Steering blendedBehavior = bsTest.GetSteering ();

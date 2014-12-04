@@ -23,7 +23,7 @@ public class BlendedSteering {
 		this.character = character;
 
 		maxAccel = character.maxAcceleration;
-		maxRot = character.maxSpeed;
+		maxRot = character.maxRotationAcceleration;
 
 		behaviors = new List<BehaviorWeight> ();
 	}
