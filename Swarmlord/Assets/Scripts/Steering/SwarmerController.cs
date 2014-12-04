@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(AudioSource))]
 public class SwarmerController : MonoBehaviour {
 	public float maxAcceleration;
-	public float maxRotation;
+	public float maxRotationAcceleration;
 	public float maxSpeed;
 	public float maxRotationSpeed;
 
@@ -23,7 +23,6 @@ public class SwarmerController : MonoBehaviour {
 	public Align alignContributer;
 	public Separate sepContributer;
 	public AvoidObstacle avoidContributer;
-	public Arrive nextBeatlesTarget;
 	public Wander wander;
 	public VelocityMatch velocityMatchContributer;
 	public Arrive lastKnownContributer;
@@ -55,12 +54,9 @@ public class SwarmerController : MonoBehaviour {
 		bsTest = new BlendedSteering (this);
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
-		nextBeatlesTarget = new Arrive (Vector3.zero, this);
 		wander = new Wander(this);
 		velocityMatchContributer = new VelocityMatch(this);
 		followPathContributer = new FollowPath(Path, this);
-
-		weight_AttackBeatles = 0.0f;
 
 		players = GameObject.FindGameObjectsWithTag("Player");
 	}
@@ -80,7 +76,8 @@ public class SwarmerController : MonoBehaviour {
 			if (go == null) continue;
 			if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
 				Scream(go.transform.position);
-				AddNewArriveLocation (go.transform.position);
+				lastKnownLocation = go.transform.position;
+				lastSeenTime = Time.time;
 				break;
 			}
 		}
@@ -88,11 +85,6 @@ public class SwarmerController : MonoBehaviour {
 
 	public Vector2 GetVelo () {
 		return velocity;
-	}
-
-	public void AddNewArriveLocation (Vector3 loc) {
-		nextBeatlesTarget = new Arrive (loc, this);
-		weight_AttackBeatles = 20.0f;
 	}
 
 	//Page 60
@@ -107,10 +99,9 @@ public class SwarmerController : MonoBehaviour {
 		bsTest.AddBehavior (wander, weight_Wander);
 		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
 		bsTest.AddBehavior (followPathContributer, weight_FollowPath);
-		//bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
 
 		//If no Beatle has been seen, go to the lastKnownLocation
-		if (nextBeatlesTarget.target == Vector3.zero) {
+		if (lastKnownLocation != Vector3.zero) {
 			//print (lastKnownLocation);
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);

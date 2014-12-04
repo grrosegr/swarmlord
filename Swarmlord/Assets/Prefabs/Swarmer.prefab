@@ -136,8 +136,8 @@ MonoBehaviour:
   weight_Align: .5
   weight_Sep: .5
   weight_Avoid: .200000003
-  weight_Wander: 0
-  weight_VelocityMatch: 0
+  weight_Wander: .200000003
+  weight_VelocityMatch: .200000003
   weight_FollowPath: 0
   myTarget: {fileID: 0}
   velocity: {x: 0, y: 0}

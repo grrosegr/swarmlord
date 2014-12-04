@@ -23,9 +23,18 @@ public class Arrive : Behavior {
 
 	//Page 65
 	public override Steering GetSteering() {
-		Steering returnSteering = new Steering ();
-
 		Vector3 direction = target - character.transform.position;
+		
+		float myAngle = character.transform.rotation.eulerAngles.z + 90; // +90 because forward is up on the sprite
+		
+		Steering returnSteering = Align.GetRotationSteering(
+			myAngle, //character.transform.rotation.eulerAngles.z, 
+			Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, 
+			character
+		);
+		
+//		return returnSteering;
+		
 		float dist = direction.magnitude;
 
 		float targetSpeed;

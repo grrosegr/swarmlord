@@ -52,8 +52,10 @@ public class BlendedSteering {
 			.Select(behaviorWeight => behaviorWeight.weight)
 			.Sum();
 			
-		if (totalWeight <= 0)
-			Debug.LogError("Behavior weights sum to <= 0!");
+		if (totalWeight <= 0) {
+			//Debug.LogError("Behavior weights sum to <= 0!");
+			return steering;
+		}
 
 		foreach (BehaviorWeight b in behaviors) {
 			Steering bSteering = b.behavior.GetSteering ();
