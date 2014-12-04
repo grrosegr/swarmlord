@@ -12,7 +12,7 @@ public class CharacterManager : MonoBehaviour {
 			if (_currentPlayer != value) {
 				if (_currentPlayer)
 					_currentPlayer.SendMessage("SetIsControlled", false);
-				if (value)
+				if (value) 
 					value.SendMessage("SetIsControlled", true);
 			}
 			_currentPlayer = value;
@@ -47,6 +47,12 @@ public class CharacterManager : MonoBehaviour {
 		Application.LoadLevel(Application.loadedLevel);
 	}
 	
+	int PositiveMod(int x, int m) {
+		// To orrect for normally, how, for example
+		// -1 % 5 = -1, but we actually want 4
+		return (x + m) % m;
+	}
+	
 	void Update () {
 		for (int i = 1; i <= players.Length; i++) {
 			if (Input.GetKeyDown(i.ToString())) {
@@ -54,6 +60,12 @@ public class CharacterManager : MonoBehaviour {
 				break;
 			}
 		}
-	
+		
+		if (Input.GetKeyDown(KeyCode.N)) {
+			Application.LoadLevel(PositiveMod(Application.loadedLevel + 1, Application.levelCount));
+		} else if (Input.GetKeyDown(KeyCode.P))
+			Application.LoadLevel(PositiveMod(Application.loadedLevel - 1, Application.levelCount));
+		else if (Input.GetKeyDown(KeyCode.R))
+			Application.LoadLevel(Application.loadedLevel);
 	}
 }

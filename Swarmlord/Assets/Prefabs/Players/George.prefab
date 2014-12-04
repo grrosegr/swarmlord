@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: George
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.44508219, y: -2.31274748, z: 0}
+  m_LocalPosition: {x: -4.06396961, y: 1.07977712, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: .174999997}
   m_Children:
   - {fileID: 400000}
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 54a6c0e3fb84c468cb2913960830f940, type: 2}
+  m_Controller: {fileID: 9100000, guid: b1f0ac32a89456a49a186f3b45308175, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2d7a4a74df94108932df619bf7f544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedOn: {fileID: 21300000, guid: a637e5eda1756468193a162d1d3e4134, type: 3}
-  SelectedOff: {fileID: 21300000, guid: 2f24f4ee8cb06474e95fdd28020b82fa, type: 3}
+  SelectedOn: {fileID: 21300000, guid: 17e20ecbf036d45afb9e50cf06efc010, type: 3}
+  SelectedOff: {fileID: 21300000, guid: e53c530db063e4e6d93cd5936f2b4077, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!212 &21200000
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a637e5eda1756468193a162d1d3e4134, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e53c530db063e4e6d93cd5936f2b4077, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
 SpriteRenderer:
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 82febe5a3a03448bfbede503b8c5a0ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e237e428c1e1a7648b1c53a33630f118, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

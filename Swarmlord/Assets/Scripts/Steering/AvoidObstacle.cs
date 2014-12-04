@@ -23,7 +23,7 @@ public class AvoidObstacle : Behavior {
 		swarmerDir.Normalize ();
 
 		RaycastHit2D hit = Physics2D.Raycast (swarmerPos, swarmerDir, threshold, LayerMask.GetMask ("Obstacle"));
-		Debug.DrawRay (swarmerPos, swarmerDir * threshold, Color.red);
+//		Debug.DrawRay (swarmerPos, swarmerDir * threshold, Color.red);
 
 		if (hit.collider != null) {
 			Vector3 targetPos = hit.point + hit.normal * avoidDistance;

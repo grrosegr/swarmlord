@@ -4,59 +4,66 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class SwarmerController : MonoBehaviour {
+	public bool DebugMode;
 	public float maxAcceleration;
-	public float maxRotation;
+	public float maxRotationAcceleration;
 	public float maxSpeed;
 	public float maxRotationSpeed;
 
-	public float attackBeatlesWeight;
-
-	public float weight_Arrive;
+	public float weight_AttackBeatles;
+	public float weight_FollowObject;
 	public float weight_Align;
 	public float weight_Sep;
 	public float weight_Avoid;
 	public float weight_Wander;
 	public float weight_VelocityMatch;
+	public float weight_FollowPath;
+	public float weight_Home;
 
 	public Steering test;
-	public Arrive arriveContributer;
+	public FollowObject followObjectContributer;
 	public Align alignContributer;
 	public Separate sepContributer;
 	public AvoidObstacle avoidContributer;
-	public Arrive nextBeatlesTarget;
 	public Wander wander;
 	public VelocityMatch velocityMatchContributer;
 	public Arrive lastKnownContributer;
+	public FollowPath followPathContributer;
+	public StayAtHome homeContributer;
 
 	public GameObject myTarget;
 
 	public Vector2 velocity;
 	public Vector3 lastKnownLocation;
 	
+	public GameObject Path;
+	
 	float rotationVelo;
 
 	public BlendedSteering bsTest;
 	
 	public float MaxAngleVisible = 45.0f; // degrees
+	public float MaxDistanceVisible = 10.0f;
 	
 	private GameObject[] players;
 	
 	public GameObject ScreamPrefab;
 	public AudioClip ScreamSound;
+	
+	private GameObject currentTarget;
 
 	// Use this for initialization
 	void Start () {
 		velocity = new Vector3 (0, 0, 0);
-		arriveContributer = new Arrive (myTarget.transform.position, this);
+		followObjectContributer = new FollowObject(myTarget, this);
 		alignContributer = new Align (myTarget, this);
 		bsTest = new BlendedSteering (this);
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
-		nextBeatlesTarget = new Arrive (Vector3.zero, this);
 		wander = new Wander(this);
+		homeContributer = new StayAtHome(transform.position, this);
 		velocityMatchContributer = new VelocityMatch(this);
-
-		attackBeatlesWeight = 0.0f;
+		followPathContributer = new FollowPath(Path, this);
 
 		players = GameObject.FindGameObjectsWithTag("Player");
 	}
@@ -72,52 +79,58 @@ public class SwarmerController : MonoBehaviour {
 			r.color = Color.white;
 		}
 		
-		foreach (GameObject go in players) {
-			if (go == null) continue;
-			if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
-				Scream();
-				AddNewArriveLocation (go.transform.position);
-				break;
+		Vector2 fwd = transform.up;
+		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(-MaxAngleVisible) * MaxDistanceVisible);
+		Debug.DrawRay(transform.position, fwd.GetRotatedByDegrees(MaxAngleVisible) * MaxDistanceVisible);
+		
+		if (currentTarget && !CanSee(currentTarget))
+			currentTarget = null;
+		
+		if (!currentTarget) {
+			foreach (GameObject go in players) {
+				if (go == null) continue;
+				if (CanSee(go) && go.GetComponent<CharacterController2D>().Alive) {
+					currentTarget = go;
+					lastKnownLocation = go.transform.position;
+					lastSeenTime = Time.time;
+					break;
+				}
 			}
 		}
+		
+		if (currentTarget)
+			Scream(currentTarget.transform.position);
 	}
 
 	public Vector2 GetVelo () {
 		return velocity;
 	}
 
-	public void AddNewArriveLocation (Vector3 loc) {
-		nextBeatlesTarget = new Arrive (loc, this);
-		attackBeatlesWeight = 20.0f;
-	}
-
 	//Page 60
 	void SteerUpdate () {
-		//Steering nextArrive = arriveContributer.GetSteering ();
-		//Steering nextAlign = alignContributer.GetSteering ();
-		//Steering nextArrive = arriveContributer.GetSteering ();
-		//Steering nextAlign = alignContributer.GetSteering ();
-		//Steering nextSep = sepContributer.GetSteering ();
 		bsTest.ResetList ();
 
 		//Blend the steerings
-		bsTest.AddBehavior (arriveContributer, weight_Arrive);
+		bsTest.AddBehavior (followObjectContributer, weight_FollowObject);
 		bsTest.AddBehavior (alignContributer, weight_Align);
 		bsTest.AddBehavior (sepContributer, weight_Sep);
 		bsTest.AddBehavior (avoidContributer, weight_Avoid);
 		bsTest.AddBehavior (wander, weight_Wander);
 		bsTest.AddBehavior (velocityMatchContributer, weight_VelocityMatch);
-		//bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
-
+		
+		SpriteRenderer r = (SpriteRenderer)renderer;
+		
 		//If no Beatle has been seen, go to the lastKnownLocation
-		if (nextBeatlesTarget.target == Vector3.zero) {
-			//print (lastKnownLocation);
+		if (lastKnownLocation != Vector3.zero && (Time.time - lastSeenTime) < 5f) {
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
-			bsTest.AddBehavior (lastKnownContributer, attackBeatlesWeight);
+			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
+			r.color = Color.red;
 		} else {
-			//A Beatle has been seen. Go to Beatle location.
-			//print ("meep");
-			bsTest.AddBehavior (nextBeatlesTarget, attackBeatlesWeight);
+			if (lastKnownLocation == Vector3.zero && Path == null && myTarget == null)
+				bsTest.AddBehavior(homeContributer, weight_Home);
+			bsTest.AddBehavior (followPathContributer, weight_FollowPath);
+			
+			r.color = Color.white;	
 		}
 
 		Steering blendedBehavior = bsTest.GetSteering ();
@@ -148,6 +161,9 @@ public class SwarmerController : MonoBehaviour {
 		if (!(Mathf.Abs(angle) < MaxAngleVisible))
 			return false;
 		
+		if (!(Vector2.Distance(transform.position, other.transform.position) < MaxDistanceVisible))
+			return false;
+		
 		RaycastHit2D hit = Physics2D.Raycast(m_pos, to_target, to_target.magnitude, LayerMask.GetMask("Obstacle"));
 		
 		return hit.collider == null;
@@ -158,7 +174,7 @@ public class SwarmerController : MonoBehaviour {
 	
 	public float ScreamResetAfter = 5.0f;
 	
-	void Scream() {
+	void Scream(Vector2 lastSeenPos) {
 		if (screamed)
 			return;
 		
@@ -168,15 +184,24 @@ public class SwarmerController : MonoBehaviour {
 		audio.Stop();
 		audio.Play ();
 		screamed = true;
-		SpriteRenderer r = (SpriteRenderer)renderer;
-		r.color = Color.red;
-		Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
+		
+		GameObject scream = (GameObject)Instantiate(ScreamPrefab, transform.position, Quaternion.identity);
+		Scream controller = scream.GetComponent<Scream>();
+		controller.LastSeenTime = Time.time;
+		controller.LastSeenPosition = lastSeenPos;
+		
 		screamResetTime = Time.time + ScreamResetAfter;
 	}
 	
-	void OnScream(Vector3 pos) {
-		Scream();
-		lastKnownLocation = pos;
+	private float lastSeenTime;
+	void OnScream(Scream scream) {
+		// TODO: maybe scream again?
+//		Scream();
+
+		if (!currentTarget && scream.LastSeenTime > lastSeenTime) {
+			lastKnownLocation = scream.LastSeenPosition;
+			lastSeenTime = scream.LastSeenTime;
+		}
 	}
 
 }

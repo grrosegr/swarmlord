@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marker: {fileID: 100000, guid: 668a8dd5fab7e4333a7bd72aad82a581, type: 2}
   Speed: 9
-  MaxDistanceToColony: 12
+  MaxDistanceToColony: 20
   PlayerDetectionRadius: 1
   PheromoneDetectionRadius: 6
 --- !u!212 &21200000

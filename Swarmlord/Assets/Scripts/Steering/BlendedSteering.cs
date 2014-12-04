@@ -23,7 +23,7 @@ public class BlendedSteering {
 		this.character = character;
 
 		maxAccel = character.maxAcceleration;
-		maxRot = character.maxSpeed;
+		maxRot = character.maxRotationAcceleration;
 
 		behaviors = new List<BehaviorWeight> ();
 	}
@@ -46,10 +46,16 @@ public class BlendedSteering {
 		//Create the new steering structure to accumulate the combined steering.
 		Steering steering = new Steering ();
 		
-		var steerings = behaviors.Select(behaviorWeight => behaviorWeight.behavior.GetSteering());
-		var totalWeight = behaviors.Select(behaviorWeight => behaviorWeight.weight).Sum();
-		if (totalWeight <= 0)
-			Debug.LogError("Behavior weights sum to <= 0!");
+		var totalWeight = 1.0f;
+//			behaviors
+//			.Where(behaviorWeight => behaviorWeight.behavior.Enabled)
+//			.Select(behaviorWeight => behaviorWeight.weight)
+//			.Sum();
+			
+		if (totalWeight <= 0) {
+			//Debug.LogError("Behavior weights sum to <= 0!");
+			return steering;
+		}
 
 		foreach (BehaviorWeight b in behaviors) {
 			Steering bSteering = b.behavior.GetSteering ();

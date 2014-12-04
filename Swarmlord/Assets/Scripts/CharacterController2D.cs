@@ -5,6 +5,9 @@ using System.Collections;
 public class CharacterController2D : MonoBehaviour {
 
 	public float Speed = 0.5f;
+	const float FastSpeed = 10.0f;
+	private float startSpeed;
+	
 	private bool IsControlled;
 	
 	public float MaxHealth = 100f;
@@ -46,10 +49,23 @@ public class CharacterController2D : MonoBehaviour {
 			color = Color.black;
 		spriteRenderer.color = color;
 	}
+	
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		Health = MaxHealth;
+		anim = GetComponent<Animator>();
+		startSpeed = Speed;
+	}
+	
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.G)) {
+			if (Speed == FastSpeed)
+				Speed = startSpeed;
+			else
+				Speed = FastSpeed;
+		}
 	}
 	
 	// Update is called once per frame
@@ -61,18 +77,34 @@ public class CharacterController2D : MonoBehaviour {
 			return;
 	
 		Vector2 velocity = new Vector2();
-		velocity.x = Input.GetAxis("Horizontal") * Speed;
-		velocity.y = Input.GetAxis("Vertical") * Speed;
+		velocity.x = Input.GetAxis("Horizontal");
+		velocity.y = Input.GetAxis("Vertical");
+		if (velocity != Vector2.zero)
+			velocity.Normalize();
+		velocity *= Speed;
+		
+		anim.SetBool("Walking", velocity != Vector2.zero);
+		Vector2 localScale = transform.localScale;
+		if (velocity.x > 0)
+			localScale.x = Mathf.Abs(localScale.x);
+		else if (velocity.x < 0)
+			localScale.x = -Mathf.Abs (localScale.x);
+		transform.localScale = localScale;
 		
 		rigidbody2D.MovePosition(rigidbody2D.position + velocity * Time.fixedDeltaTime);
 		
+		
+		int swarmersCurrentlyColliding = Physics2D.OverlapCircleAll(transform.position, 0.5f, LayerMask.GetMask("Swarmer")).Length;
 		if (swarmersCurrentlyColliding > 0)
-			Health -= SwarmDamagePerSecond * Time.fixedDeltaTime;
+			Health -= swarmersCurrentlyColliding * SwarmDamagePerSecond * Time.fixedDeltaTime;
 	}
 	
 	void SetIsControlled(bool isControlled) {
 		this.IsControlled = isControlled;
-		BroadcastMessage("SelectedChanged", isControlled);
+		// TODO: remove DontRequireReceiver
+		BroadcastMessage("SelectedChanged", isControlled, SendMessageOptions.DontRequireReceiver);
+		if (!isControlled)
+			anim.SetBool("Walking", false);
 	}
 	
 	private int swarmersCurrentlyColliding;

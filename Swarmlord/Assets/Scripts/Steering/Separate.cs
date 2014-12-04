@@ -18,23 +18,19 @@ public class Separate : Behavior {
 	}
 
 	public override Steering GetSteering () {
-		//Debug.Log ("Steer!");
 		Steering returnSteering = new Steering ();
 
-		Vector3 totalStrength = new Vector3(0,0,0);
 		foreach (GameObject swarmer in targets) {
-			if(swarmer == character.gameObject) { continue;}
-			Vector3 direction = swarmer.transform.position - character.transform.position;
+			if (swarmer == character.gameObject) continue;
+			Vector2 direction = swarmer.transform.position - character.transform.position;
 			float distance = direction.magnitude;
 
 			if(distance < threshold) {
-				//Debug.Log("THRESHOLD: " + distance);
-				float thisStrength = Mathf.Min(decayCoefficient * distance * distance, maxAcceleration);
-				direction = direction.normalized;
-				totalStrength = totalStrength + (-thisStrength * direction);
+				float strength = Mathf.Min(decayCoefficient / (distance * distance), maxAcceleration);
+				returnSteering.linear += strength * -direction.normalized;
 			}
-			returnSteering.linear = totalStrength;
 		}
+		
 		return returnSteering;
 	}
 }

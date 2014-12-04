@@ -25,6 +25,7 @@ public class VelocityMatch : Behavior {
 		Steering steering = new Steering ();
 		
 		GameObject target = character.myTarget;
+		Enabled = target != null;
 		if (!target)
 			return steering;
 		

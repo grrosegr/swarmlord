@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: John
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200002}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot_circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.78240204, y: -2.51195335, z: 0}
+  m_LocalPosition: {x: -2.96570396, y: .907717228, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 400002}
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -6.0946703, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: .174999997}
+  m_LocalScale: {x: 4, y: 4, z: .174999997}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b49d5179da5b4625a6f44dffdb60f8b, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed97f2db901dce843b899590405c0b88, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb941e355d3654b7594a182de5c8367b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 4
   MaxHealth: 100
   SwarmDamagePerSecond: 100
 --- !u!114 &11400002
@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2d7a4a74df94108932df619bf7f544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedOn: {fileID: 21300000, guid: a637e5eda1756468193a162d1d3e4134, type: 3}
-  SelectedOff: {fileID: 21300000, guid: 2f24f4ee8cb06474e95fdd28020b82fa, type: 3}
+  SelectedOn: {fileID: 21300000, guid: b81177a1c217c40f8ac06af79b4e9edb, type: 3}
+  SelectedOff: {fileID: 21300000, guid: 08d9b9d2d01b34b5db7bcacd9d2bb9ac, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3147617549
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a183d026eb77e417c80b6652def5e5a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4f8eaf58bf2469418f5596cbeedcd11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
 SpriteRenderer:
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a637e5eda1756468193a162d1d3e4134, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08d9b9d2d01b34b5db7bcacd9d2bb9ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
