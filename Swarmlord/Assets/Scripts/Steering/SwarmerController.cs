@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class SwarmerController : MonoBehaviour {
+	public bool DebugMode;
 	public float maxAcceleration;
 	public float maxRotationAcceleration;
 	public float maxSpeed;
@@ -17,6 +18,7 @@ public class SwarmerController : MonoBehaviour {
 	public float weight_Wander;
 	public float weight_VelocityMatch;
 	public float weight_FollowPath;
+	public float weight_Home;
 
 	public Steering test;
 	public FollowObject followObjectContributer;
@@ -27,6 +29,7 @@ public class SwarmerController : MonoBehaviour {
 	public VelocityMatch velocityMatchContributer;
 	public Arrive lastKnownContributer;
 	public FollowPath followPathContributer;
+	public Arrive homeContributer;
 
 	public GameObject myTarget;
 
@@ -58,6 +61,7 @@ public class SwarmerController : MonoBehaviour {
 		sepContributer = new Separate (this);
 		avoidContributer = new AvoidObstacle (this);
 		wander = new Wander(this);
+		homeContributer = new Arrive(transform.position, this);
 		velocityMatchContributer = new VelocityMatch(this);
 		followPathContributer = new FollowPath(Path, this);
 
@@ -118,12 +122,16 @@ public class SwarmerController : MonoBehaviour {
 		SpriteRenderer r = (SpriteRenderer)renderer;
 		
 		//If no Beatle has been seen, go to the lastKnownLocation
-		if (lastKnownLocation != Vector3.zero && (lastSeenTime - Time.time) < 5f) {
+		if (lastKnownLocation != Vector3.zero && (Time.time - lastSeenTime) < 5f) {
 			lastKnownContributer = new Arrive(lastKnownLocation, this);
 			bsTest.AddBehavior (lastKnownContributer, weight_AttackBeatles);
 			r.color = Color.red;
-		} else
-			r.color = Color.white;
+		} else {
+			if (lastKnownLocation == Vector3.zero)
+				bsTest.AddBehavior(homeContributer, weight_Home);
+			
+			r.color = Color.white;	
+		}
 
 		Steering blendedBehavior = bsTest.GetSteering ();
 
